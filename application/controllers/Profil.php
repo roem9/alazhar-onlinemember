@@ -14,16 +14,6 @@ class Profil extends CI_CONTROLLER{
         $id = $this->session->userdata("id");
         $data['title'] = "Profil";
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
-        
-        // kelas & program
-            $data['kelas'] = [];
-            $data['program'] = [];
-            $kelas = $this->Admin_model->get_all("kelas_user", ["id_user" => $id]);
-            foreach ($kelas as $i => $kelas) {
-                $data['kelas'][$i] = $this->Admin_model->get_one("kelas", ["id_kelas" => $kelas['id_kelas']]);
-                $data['program'][$i] = $data['kelas'][$i]['program'];
-            }
-        // kelas & program
 
         $this->load->view("templates/header-user", $data);
         $this->load->view("profil/index", $data);
