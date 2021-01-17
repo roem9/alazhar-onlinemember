@@ -11,7 +11,7 @@ class Setting extends CI_CONTROLLER{
     }
 
     public function index(){
-        $id = $this->session->userdata("id");
+        $id = $this->session->userdata("id_user");
         $data['title'] = "Pengaturan";
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
         

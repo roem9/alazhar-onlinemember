@@ -16,6 +16,13 @@
             $tgl_masuk = date("Y-m-d");
             $user = $this->username($tgl_masuk);
             $password = date('dmY', strtotime($this->input->post("tgl_lahir", TRUE)));
+            $program = $this->input->post("program");
+            
+            $catatan = "";
+            foreach ($program as $pro) {
+                $catatan .= "{$pro}, ";
+            }
+
             $data = [
                 "nama" => $this->input->post("nama", TRUE),
                 "no_hp" => $this->input->post("no_hp", TRUE),
@@ -26,10 +33,19 @@
                 "email" => $this->input->post("email", TRUE),
                 "username" => "",
                 "password" => MD5($password),
-                "catatan" => $this->input->post("catatan", TRUE),
+                // "catatan" => $this->input->post("catatan", TRUE),
+                "catatan" => $catatan,
             ];
+            $id = $this->Admin_model->add_data("user", $data);
 
-            $this->Admin_model->add_data("user", $data);
+            foreach ($program as $program) {
+                $data = [
+                    "id_user" => $id,
+                    "program" => $program
+                ];
+
+                $this->Admin_model->add_data("kelas_user", $data);
+            }
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert"><i class="fa fa-check-circle text-success mr-1"></i> Berhasil mendaftarkan data Anda. Silahkan menunggu konfirmasi dari Admin melalui whatsapp<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
             redirect("registrasi");
         }

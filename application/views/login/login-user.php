@@ -21,12 +21,15 @@
 										</div>
 									</div>
 								<?php endif; ?>
-								<form action="" method="POST">
+								<form action="<?= base_url()?>auth/login" method="POST">
 									<div class="form-group">
 										<input type="text" class="form-control form-control-user" value="<?= set_value('username', '')?>" placeholder="Username" name="username" required>
 									</div>
 									<div class="form-group">
 										<input type="password" class="form-control form-control-user" value="<?= set_value('password', '')?>" placeholder="Password" name="password" required>
+									</div>
+									<div class="form-group">
+										<input type="checkbox" name="remember" id="remember" value="remember"> <label for="remember">Ingat saya</label>
 									</div>
 									<button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
 								</form>

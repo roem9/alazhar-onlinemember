@@ -4,14 +4,15 @@ class Kelas extends CI_CONTROLLER{
         parent::__construct();
         $this->load->model('Arab_model');
         $this->load->model('Admin_model');
-        if($this->session->userdata('status') != "login"){
+        if(!$this->session->userdata('id_user')){
             $this->session->set_flashdata('login', 'Maaf, Anda harus login terlebih dahulu');
-            redirect(base_url("login"));
+            redirect(base_url("auth"));
         }
     }
 
     public function index(){
-        $id = $this->session->userdata("id");
+        $id = $this->session->userdata("id_user");
+        // echo $id;
         $data['title'] = "List Kelas";
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
         
@@ -39,7 +40,7 @@ class Kelas extends CI_CONTROLLER{
     }
 
     public function ajax_list(){
-        $id = $this->session->userdata("id");
+        $id = $this->session->userdata("id_user");
         $data['kelas'] = [];
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
         $kelas = $this->Admin_model->get_all("kelas_user", ["id_user" => $id, "id_kelas <>" => NULL]);
@@ -62,7 +63,7 @@ class Kelas extends CI_CONTROLLER{
     }
 
     public function ajax_one(){
-        $id = $this->session->userdata("id");
+        $id = $this->session->userdata("id_user");
         $id_kelas = $_GET['id_kelas'];
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
         $data['kelas'] = $this->Admin_model->get_one("kelas", ["MD5(id_kelas)" => $id_kelas]);
@@ -87,7 +88,7 @@ class Kelas extends CI_CONTROLLER{
         foreach ($pertemuan as $i => $pertemuan) {
             $data['pertemuan'][$i] = $pertemuan;
             $data['pertemuan'][$i]['link'] = md5($pertemuan['materi']);
-            $nilai = $this->Admin_model->get_one("latihan_hifdzi_1", ["md5(id_kelas)" => $id_kelas, "pertemuan" => $pertemuan['materi'], "id_user" => $id, "latihan" => "Harian"]);
+            $nilai = $this->Admin_model->get_one("latihan_peserta", ["md5(id_kelas)" => $id_kelas, "pertemuan" => $pertemuan['materi'], "id_user" => $id, "latihan" => "Harian"]);
             if($nilai){
                 $data['pertemuan'][$i]['nilai'] = $nilai['nilai'];
             } else {
@@ -100,7 +101,7 @@ class Kelas extends CI_CONTROLLER{
         foreach ($ujian as $i => $ujian) {
             $data['ujian'][$i] = $ujian;
             $data['ujian'][$i]['link'] = md5($ujian['materi']);
-            $nilai = $this->Admin_model->get_one("latihan_hifdzi_1", ["md5(id_kelas)" => $id_kelas, "pertemuan" => $ujian['materi'], "id_user" => $id, "latihan" => "Form"]);
+            $nilai = $this->Admin_model->get_one("latihan_peserta", ["md5(id_kelas)" => $id_kelas, "pertemuan" => $ujian['materi'], "id_user" => $id, "latihan" => "Form"]);
             if($nilai){
                 $data['ujian'][$i]['nilai'] = $nilai['nilai'];
             } else {
@@ -115,7 +116,7 @@ class Kelas extends CI_CONTROLLER{
 
     // get 
         public function get_detail_kelas(){
-            $id_user = $this->session->userdata("id");
+            $id_user = $this->session->userdata('id_user');
             $id = $this->input->post("id");
             $data = $this->Admin_model->get_one("kelas", ["id_kelas" => $id]);
             $data['pertemuan'] = $this->Admin_model->get_all("materi_kelas", ["id_kelas" => $id], "id");
@@ -123,7 +124,7 @@ class Kelas extends CI_CONTROLLER{
             // nilai tugas harian 
                 foreach ($data['pertemuan'] as $i => $pertemuan) {
                     $data['nilai'][$i]['pertemuan'] = $pertemuan['materi'];
-                    $nilai = $this->Admin_model->get_one("latihan_hifdzi_1", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => $pertemuan['materi'], "latihan" => "Harian"]);
+                    $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => $pertemuan['materi'], "latihan" => "Harian"]);
                     if($nilai) {
                         $data['nilai'][$i]['nilai'] = $nilai['nilai'];
                     } else {
@@ -135,7 +136,7 @@ class Kelas extends CI_CONTROLLER{
             // nilai tugas tambahan
                 foreach ($data['pertemuan'] as $i => $pertemuan) {
                     $data['nilai_tambahan'][$i]['pertemuan'] = $pertemuan['materi'];
-                    $nilai = $this->Admin_model->get_one("latihan_hifdzi_1", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => $pertemuan['materi'], "latihan" => "Tambahan"]);
+                    $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => $pertemuan['materi'], "latihan" => "Tambahan"]);
                     if($nilai) {
                         $data['nilai_tambahan'][$i]['nilai'] = $nilai['nilai'];
                     } else {
@@ -147,7 +148,7 @@ class Kelas extends CI_CONTROLLER{
             // nilai tugas hafalan
                 foreach ($data['pertemuan'] as $i => $pertemuan) {
                     $data['nilai_hafalan'][$i]['pertemuan'] = $pertemuan['materi'];
-                    $nilai = $this->Admin_model->get_one("latihan_hifdzi_1", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => $pertemuan['materi'], "latihan" => "Hafalan"]);
+                    $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => $pertemuan['materi'], "latihan" => "Hafalan"]);
                     if($nilai) {
                         $data['nilai_hafalan'][$i]['nilai'] = $nilai['nilai'];
                     } else {
@@ -157,27 +158,27 @@ class Kelas extends CI_CONTROLLER{
             // nilai tugas hafalan
 
             // nilai ujian
-                $nilai = $this->Admin_model->get_one("latihan_hifdzi_1", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pekan 1", "latihan" => "Form"]);
+                $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pekan 1", "latihan" => "Form"]);
                 if($nilai){$data['ujian'][0] = $nilai['nilai'];} else {$data['ujian'][0] = 0;};
-                $nilai = $this->Admin_model->get_one("latihan_hifdzi_1", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pekan 1", "latihan" => "Input"]);
+                $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pekan 1", "latihan" => "Input"]);
                 if($nilai){$data['ujian'][1] = $nilai['nilai'];} else {$data['ujian'][1] = 0;};
-                $nilai = $this->Admin_model->get_one("latihan_hifdzi_1", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pekan 2", "latihan" => "Form"]);
+                $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pekan 2", "latihan" => "Form"]);
                 if($nilai){$data['ujian'][2] = $nilai['nilai'];} else {$data['ujian'][2] = 0;};
-                $nilai = $this->Admin_model->get_one("latihan_hifdzi_1", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pekan 2", "latihan" => "Input"]);
+                $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pekan 2", "latihan" => "Input"]);
                 if($nilai){$data['ujian'][3] = $nilai['nilai'];} else {$data['ujian'][3] = 0;};
-                $nilai = $this->Admin_model->get_one("latihan_hifdzi_1", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pertengahan", "latihan" => "Input"]);
+                $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pertengahan", "latihan" => "Input"]);
                 if($nilai){$data['ujian'][4] = $nilai['nilai'];} else {$data['ujian'][4] = 0;};
-                $nilai = $this->Admin_model->get_one("latihan_hifdzi_1", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pekan 3", "latihan" => "Form"]);
+                $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pekan 3", "latihan" => "Form"]);
                 if($nilai){$data['ujian'][5] = $nilai['nilai'];} else {$data['ujian'][5] = 0;};
-                $nilai = $this->Admin_model->get_one("latihan_hifdzi_1", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pekan 3", "latihan" => "Input"]);
+                $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pekan 3", "latihan" => "Input"]);
                 if($nilai){$data['ujian'][6] = $nilai['nilai'];} else {$data['ujian'][6] = 0;};
-                $nilai = $this->Admin_model->get_one("latihan_hifdzi_1", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pekan 4", "latihan" => "Form"]);
+                $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pekan 4", "latihan" => "Form"]);
                 if($nilai){$data['ujian'][7] = $nilai['nilai'];} else {$data['ujian'][7] = 0;};
-                $nilai = $this->Admin_model->get_one("latihan_hifdzi_1", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pekan 4", "latihan" => "Input"]);
+                $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Pekan 4", "latihan" => "Input"]);
                 if($nilai){$data['ujian'][8] = $nilai['nilai'];} else {$data['ujian'][8] = 0;};
-                $nilai = $this->Admin_model->get_one("latihan_hifdzi_1", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Akhir", "latihan" => "Form"]);
+                $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Akhir", "latihan" => "Form"]);
                 if($nilai){$data['ujian'][9] = $nilai['nilai'];} else {$data['ujian'][9] = 0;};
-                $nilai = $this->Admin_model->get_one("latihan_hifdzi_1", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Akhir", "latihan" => "Input"]);
+                $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Ujian Akhir", "latihan" => "Input"]);
                 if($nilai){$data['ujian'][10] = $nilai['nilai'];} else {$data['ujian'][10] = 0;};
             // nilai ujian
 
@@ -198,7 +199,7 @@ class Kelas extends CI_CONTROLLER{
 
     // add 
         public function add_hadir(){
-            $id_user = $this->session->userdata("id");
+            $id_user = $this->session->userdata('id_user');
             $data = [
                 "id_kelas" => $this->input->post("id_kelas"),
                 "pertemuan" => $this->input->post("pertemuan"),

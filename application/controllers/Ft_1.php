@@ -15,7 +15,7 @@ class Ft_1 extends CI_CONTROLLER{
         }
 
         
-        $id = $this->session->userdata('id');
+        $id = $this->session->userdata('id_user');
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
         // kelas & program
             $data['kelas'] = [];
@@ -33,7 +33,7 @@ class Ft_1 extends CI_CONTROLLER{
     }
 
     public function mufrodat(){
-        $id = $this->session->userdata('id');
+        $id = $this->session->userdata('id_user');
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
         // kelas & program
             $data['kelas'] = [];
@@ -250,7 +250,7 @@ class Ft_1 extends CI_CONTROLLER{
     }
 
     public function qowaid(){
-        $id = $this->session->userdata('id');
+        $id = $this->session->userdata('id_user');
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
         // kelas & program
             $data['kelas'] = [];
@@ -948,7 +948,7 @@ class Ft_1 extends CI_CONTROLLER{
         }
 
         public function get_tema(){
-            $id_user = $this->session->userdata('id');
+            $id_user = $this->session->userdata('id_user');
             $id = $this->input->post("id");
             $tema = $this->Ft1_model->tema();
             $bab = $this->Ft1_model->bab();
@@ -979,7 +979,7 @@ class Ft_1 extends CI_CONTROLLER{
 
     // add
         public function add_latihan(){
-            $id = $this->session->userdata('id');
+            $id = $this->session->userdata('id_user');
             $redirect = $this->input->post("redirect", TRUE);
             $latihan = $this->input->post("latihan", TRUE);
             $materi = $this->input->post("materi", TRUE);

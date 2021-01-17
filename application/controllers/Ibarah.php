@@ -12,7 +12,7 @@ class Ibarah extends CI_CONTROLLER{
     }
 
     public function awwal(){
-        $id = $this->session->userdata('id');
+        $id = $this->session->userdata('id_user');
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
         // kelas & program
             $data['kelas'] = [];

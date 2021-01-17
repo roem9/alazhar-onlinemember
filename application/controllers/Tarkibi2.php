@@ -8,14 +8,14 @@ class Tarkibi2 extends CI_CONTROLLER{
         ini_set('xdebug.var_display_max_depth', '10');
         ini_set('xdebug.var_display_max_children', '256');
         ini_set('xdebug.var_display_max_data', '1024');
-        if($this->session->userdata('status') != "login"){
+        if(!$this->session->userdata('id_user')){
             $this->session->set_flashdata('login', 'Maaf, Anda harus login terlebih dahulu');
-            redirect(base_url("login"));
+            redirect(base_url("auth"));
         }
     }
 
     public function kelas($id_kelas){
-        $id = $this->session->userdata('id');
+        $id = $this->session->userdata('id_user');
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
         $data['kelas'] = $this->Admin_model->get_one("kelas", ["MD5(id_kelas)" => $id_kelas]);
         $data['link'] = $id_kelas;
@@ -50,7 +50,7 @@ class Tarkibi2 extends CI_CONTROLLER{
             $data['latihan'] = $this->Tarkibi2_model->latihan($pertemuan['id']);
 
             // latihan
-                // $data['latihan'] = $this->Admin_model->get_one("latihan_hifdzi_1", ["MD5(id_kelas)" => $id_kelas, "pertemuan" => $data['title'], "latihan" => "Harian", "id_user" => $id]);
+                // $data['latihan'] = $this->Admin_model->get_one("latihan_peserta", ["MD5(id_kelas)" => $id_kelas, "pertemuan" => $data['title'], "latihan" => "Harian", "id_user" => $id]);
             // latihan
             
             $this->load->view("templates/header-user", $data);
@@ -64,7 +64,7 @@ class Tarkibi2 extends CI_CONTROLLER{
             $data['reload'] = "tarkibi2/kelas/".$id_kelas."?latihan=".MD5($data['materi']);
             $data['id_kelas'] = $data['kelas']['id_kelas'];
 
-            $data['latihan'] = $this->Admin_model->get_one("latihan_hifdzi_1", ["MD5(id_kelas)" => $id_kelas, "pertemuan" => $data['materi'], "latihan" => "Harian", "id_user" => $id]);
+            $data['latihan'] = $this->Admin_model->get_one("latihan_peserta", ["MD5(id_kelas)" => $id_kelas, "pertemuan" => $data['materi'], "latihan" => "Harian", "id_user" => $id]);
             
             $mufrodat = $this->Tarkibi2_model->latihan($pertemuan['id']);
 
@@ -102,7 +102,7 @@ class Tarkibi2 extends CI_CONTROLLER{
         } else if(!empty($_GET['ujian'])){
             $data['id_kelas'] = $data['kelas']['id_kelas'];
 
-            $data['latihan'] = $this->Admin_model->get_one("latihan_hifdzi_1", ["MD5(id_kelas)" => $id_kelas, "md5(pertemuan)" => $_GET['ujian'], "latihan" => "Form", "id_user" => $id]);
+            $data['latihan'] = $this->Admin_model->get_one("latihan_peserta", ["MD5(id_kelas)" => $id_kelas, "md5(pertemuan)" => $_GET['ujian'], "latihan" => "Form", "id_user" => $id]);
             
             
             if($_GET['ujian'] == md5("Ujian Pekan 1")){
@@ -875,7 +875,7 @@ class Tarkibi2 extends CI_CONTROLLER{
                 // $pertemuan = $this->Admin_model->get_all("materi_kelas", ["MD5(id_kelas)" => $id_kelas], "materi");
                 // foreach ($pertemuan as $i => $pertemuan) {
                 //     $data['pertemuan'][$i]['pertemuan'] = $pertemuan['materi'];
-                //     $data['pertemuan'][$i]['latihan'] = $this->Admin_model->get_one("latihan_hifdzi_1", ["MD5(id_kelas)" => $id_kelas, "pertemuan" => $pertemuan['materi'], "latihan" => "Form", "id_user" => $id]);
+                //     $data['pertemuan'][$i]['latihan'] = $this->Admin_model->get_one("latihan_peserta", ["MD5(id_kelas)" => $id_kelas, "pertemuan" => $pertemuan['materi'], "latihan" => "Form", "id_user" => $id]);
                 // }
             // pertemuan
     

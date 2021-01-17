@@ -15,7 +15,7 @@ class Materi extends CI_CONTROLLER{
     }
 
     public function program($materi){
-        $id = $this->session->userdata('id');
+        $id = $this->session->userdata('id_user');
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
         // kelas & program
             $data['kelas'] = [];
@@ -64,7 +64,7 @@ class Materi extends CI_CONTROLLER{
                                             $j++;
                                         }
                                     }
-                                $data['mufrodat'][$i] = $this->latihan("latihan_hifdzi_1", $id, $materi['tema'], $materi['title_arab'], $materi['title'], COUNT($mufrodat));
+                                $data['mufrodat'][$i] = $this->latihan("latihan_peserta", $id, $materi['tema'], $materi['title_arab'], $materi['title'], COUNT($mufrodat));
                                 $i++;
                             }
                         }
@@ -83,14 +83,14 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 2';
                         $data['materi'] = 'Materi Pertemuan 2';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 6","حُرُوْفُ إِنَّ وَ أَخَوَاتُهَا", "Huruf Inna dan Saudaranya", 6);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 7","حُرُوْفُ النَّوَاصِبِ", "Huruf Nashob", 6);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 8","حُرُوْفُ الْجَوَازِمِ", "Huruf Jazm", 5);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 9","حَرْفُ التَّوْكِيْدِ", "Huruf Taukid", 1);
-                        $data['mufrodat'][5] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 10","حُرُوْفُ اْلإِسْتِقْبَالِ", "Huruf Istiqbal", 2);
-                        $data['mufrodat'][6] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 11","حُرُوْفُ اْلعَطْفِ", "Huruf Athof", 9);
-                        $data['mufrodat'][7] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 12","حُرُوْفُ النَّافِي", "Huruf Nafi", 2);
-                        $data['mufrodat'][8] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 13","حُرُوْفُ اْلإِسْتِفْهَامِ", "Huruf Istifham", 2);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 6","حُرُوْفُ إِنَّ وَ أَخَوَاتُهَا", "Huruf Inna dan Saudaranya", 6);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 7","حُرُوْفُ النَّوَاصِبِ", "Huruf Nashob", 6);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 8","حُرُوْفُ الْجَوَازِمِ", "Huruf Jazm", 5);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 9","حَرْفُ التَّوْكِيْدِ", "Huruf Taukid", 1);
+                        $data['mufrodat'][5] = $this->latihan("latihan_peserta", $id, "Mufrodat 10","حُرُوْفُ اْلإِسْتِقْبَالِ", "Huruf Istiqbal", 2);
+                        $data['mufrodat'][6] = $this->latihan("latihan_peserta", $id, "Mufrodat 11","حُرُوْفُ اْلعَطْفِ", "Huruf Athof", 9);
+                        $data['mufrodat'][7] = $this->latihan("latihan_peserta", $id, "Mufrodat 12","حُرُوْفُ النَّافِي", "Huruf Nafi", 2);
+                        $data['mufrodat'][8] = $this->latihan("latihan_peserta", $id, "Mufrodat 13","حُرُوْفُ اْلإِسْتِفْهَامِ", "Huruf Istifham", 2);
                     } else if($_GET['tema'] == MD5('Pertemuan 3')){
 
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 2");
@@ -102,18 +102,18 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 3';
                         $data['materi'] = 'Materi Pertemuan 3';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 14","عَدَدٌ", "Satuan", 10);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 15","عَدَدٌ", "Belasan", 9);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 16","عَدَدٌ", "Puluhan", 8);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 17","عَدَدٌ", "Ratusan", 9);
-                        $data['mufrodat'][5] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 18","عَدَدٌ", "21-29", 9);
-                        $data['mufrodat'][6] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 19","عَدَدٌ", "31-39", 9);
-                        $data['mufrodat'][7] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 20","عَدَدٌ", "41-49", 9);
-                        $data['mufrodat'][8] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 21","عَدَدٌ", "51-59", 9);
-                        $data['mufrodat'][9] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 22","عَدَدٌ", "61-69", 9);
-                        $data['mufrodat'][10] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 23","عَدَدٌ", "71-79", 9);
-                        $data['mufrodat'][11] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 24","عَدَدٌ", "81-89", 9);
-                        $data['mufrodat'][12] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 25","عَدَدٌ", "91-99", 9);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 14","عَدَدٌ", "Satuan", 10);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 15","عَدَدٌ", "Belasan", 9);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 16","عَدَدٌ", "Puluhan", 8);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 17","عَدَدٌ", "Ratusan", 9);
+                        $data['mufrodat'][5] = $this->latihan("latihan_peserta", $id, "Mufrodat 18","عَدَدٌ", "21-29", 9);
+                        $data['mufrodat'][6] = $this->latihan("latihan_peserta", $id, "Mufrodat 19","عَدَدٌ", "31-39", 9);
+                        $data['mufrodat'][7] = $this->latihan("latihan_peserta", $id, "Mufrodat 20","عَدَدٌ", "41-49", 9);
+                        $data['mufrodat'][8] = $this->latihan("latihan_peserta", $id, "Mufrodat 21","عَدَدٌ", "51-59", 9);
+                        $data['mufrodat'][9] = $this->latihan("latihan_peserta", $id, "Mufrodat 22","عَدَدٌ", "61-69", 9);
+                        $data['mufrodat'][10] = $this->latihan("latihan_peserta", $id, "Mufrodat 23","عَدَدٌ", "71-79", 9);
+                        $data['mufrodat'][11] = $this->latihan("latihan_peserta", $id, "Mufrodat 24","عَدَدٌ", "81-89", 9);
+                        $data['mufrodat'][12] = $this->latihan("latihan_peserta", $id, "Mufrodat 25","عَدَدٌ", "91-99", 9);
                     } else if($_GET['tema'] == MD5('Pertemuan 4')){
                         
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 3");
@@ -125,10 +125,10 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 4';
                         $data['materi'] = 'Materi Pertemuan 4';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 26","ظُرُوْفُ الْمَكَانِ", "Keterangan Tempat", 10);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 27","ظُرُوْفُ الزَّمَانِ", "Keterangan Waktu Bag. 1", 8);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 28","ظُرُوْفُ الزَّمَانِ", "Keterangan Waktu Bag. 2", 8);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 29","ظُرُوْفُ الزَّمَانِ", "Keterangan Waktu Bag. 3", 6);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 26","ظُرُوْفُ الْمَكَانِ", "Keterangan Tempat", 10);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 27","ظُرُوْفُ الزَّمَانِ", "Keterangan Waktu Bag. 1", 8);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 28","ظُرُوْفُ الزَّمَانِ", "Keterangan Waktu Bag. 2", 8);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 29","ظُرُوْفُ الزَّمَانِ", "Keterangan Waktu Bag. 3", 6);
                     } else if($_GET['tema'] == MD5('Pertemuan 5')){
                         
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 4");
@@ -140,13 +140,13 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 5';
                         $data['materi'] = 'Materi Pertemuan 5';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 30","أَعْضَاءُ الْبَدَنِ", "Anggota Tubuh Bag. 1", 8);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 31","أَعْضَاءُ الْبَدَنِ", "Anggota Tubuh Bag. 2", 8);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 32","أَعْضَاءُ الْبَدَنِ", "Anggota Tubuh Bag. 3", 8);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 33","أَعْضَاءُ الْبَدَنِ", "Anggota Tubuh Bag. 4", 8);
-                        $data['mufrodat'][5] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 34","أَعْضَاءُ الْبَدَنِ", "Anggota Tubuh Bag. 5", 8);
-                        $data['mufrodat'][6] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 35","أَعْضَاءُ الْبَدَنِ", "Anggota Tubuh Bag. 6", 6);
-                        $data['mufrodat'][7] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 36","أَعْضَاءُ الْبَدَنِ", "Anggota Tubuh Bag. 7", 5);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 30","أَعْضَاءُ الْبَدَنِ", "Anggota Tubuh Bag. 1", 8);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 31","أَعْضَاءُ الْبَدَنِ", "Anggota Tubuh Bag. 2", 8);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 32","أَعْضَاءُ الْبَدَنِ", "Anggota Tubuh Bag. 3", 8);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 33","أَعْضَاءُ الْبَدَنِ", "Anggota Tubuh Bag. 4", 8);
+                        $data['mufrodat'][5] = $this->latihan("latihan_peserta", $id, "Mufrodat 34","أَعْضَاءُ الْبَدَنِ", "Anggota Tubuh Bag. 5", 8);
+                        $data['mufrodat'][6] = $this->latihan("latihan_peserta", $id, "Mufrodat 35","أَعْضَاءُ الْبَدَنِ", "Anggota Tubuh Bag. 6", 6);
+                        $data['mufrodat'][7] = $this->latihan("latihan_peserta", $id, "Mufrodat 36","أَعْضَاءُ الْبَدَنِ", "Anggota Tubuh Bag. 7", 5);
                     } else if($_GET['tema'] == MD5('Pertemuan 6')){
                         
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 5");
@@ -158,15 +158,15 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 6';
                         $data['materi'] = 'Materi Pertemuan 6';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 37","الأَفْعَالُ عَنْ أَعْضَاءِ الْبَدَنِ", "Pekerjaan Tentang Anggota Tubuh Bag. 1", 5);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 38","الأَفْعَالُ عَنْ أَعْضَاءِ الْبَدَنِ", "Pekerjaan Tentang Anggota Tubuh Bag. 2", 5);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 39","الأَفْعَالُ عَنْ أَعْضَاءِ الْبَدَنِ", "Pekerjaan Tentang Anggota Tubuh Bag. 3", 5);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 40","الأَفْعَالُ عَنْ أَعْضَاءِ الْبَدَنِ", "Pekerjaan Tentang Anggota Tubuh Bag. 4", 5);
-                        $data['mufrodat'][5] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 41","الأَفْعَالُ عَنْ أَعْضَاءِ الْبَدَنِ", "Pekerjaan Tentang Anggota Tubuh Bag. 5", 4);
-                        $data['mufrodat'][6] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 42","الأُسْرَةُ", "Keluarga Bag. 1", 9);
-                        $data['mufrodat'][7] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 43","الأُسْرَةُ", "Keluarga Bag. 2", 9);
-                        $data['mufrodat'][8] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 44","الأُسْرَةُ", "Keluarga Bag. 3", 8);
-                        $data['mufrodat'][9] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 45","الأُسْرَةُ", "Keluarga Bag. 4", 8);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 37","الأَفْعَالُ عَنْ أَعْضَاءِ الْبَدَنِ", "Pekerjaan Tentang Anggota Tubuh Bag. 1", 5);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 38","الأَفْعَالُ عَنْ أَعْضَاءِ الْبَدَنِ", "Pekerjaan Tentang Anggota Tubuh Bag. 2", 5);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 39","الأَفْعَالُ عَنْ أَعْضَاءِ الْبَدَنِ", "Pekerjaan Tentang Anggota Tubuh Bag. 3", 5);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 40","الأَفْعَالُ عَنْ أَعْضَاءِ الْبَدَنِ", "Pekerjaan Tentang Anggota Tubuh Bag. 4", 5);
+                        $data['mufrodat'][5] = $this->latihan("latihan_peserta", $id, "Mufrodat 41","الأَفْعَالُ عَنْ أَعْضَاءِ الْبَدَنِ", "Pekerjaan Tentang Anggota Tubuh Bag. 5", 4);
+                        $data['mufrodat'][6] = $this->latihan("latihan_peserta", $id, "Mufrodat 42","الأُسْرَةُ", "Keluarga Bag. 1", 9);
+                        $data['mufrodat'][7] = $this->latihan("latihan_peserta", $id, "Mufrodat 43","الأُسْرَةُ", "Keluarga Bag. 2", 9);
+                        $data['mufrodat'][8] = $this->latihan("latihan_peserta", $id, "Mufrodat 44","الأُسْرَةُ", "Keluarga Bag. 3", 8);
+                        $data['mufrodat'][9] = $this->latihan("latihan_peserta", $id, "Mufrodat 45","الأُسْرَةُ", "Keluarga Bag. 4", 8);
                     } else if($_GET['tema'] == MD5('Pertemuan 7')){
 
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 6");
@@ -178,10 +178,10 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 7';
                         $data['materi'] = 'Materi Pertemuan 7';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 46","اْلأَفْعَالُ عَنِ اْلأُسْرَةِ", "Pekerjaan Tentang Keluarga Bag. 1", 6);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 47","اْلأَفْعَالُ عَنِ اْلأُسْرَةِ", "Pekerjaan Tentang Keluarga Bag. 2", 6);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 48","اْلأَفْعَالُ عَنِ اْلأُسْرَةِ", "Pekerjaan Tentang Keluarga Bag. 3", 6);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 49","اْلأَفْعَالُ عَنِ اْلأُسْرَةِ", "Pekerjaan Tentang Keluarga Bag. 4", 6);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 46","اْلأَفْعَالُ عَنِ اْلأُسْرَةِ", "Pekerjaan Tentang Keluarga Bag. 1", 6);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 47","اْلأَفْعَالُ عَنِ اْلأُسْرَةِ", "Pekerjaan Tentang Keluarga Bag. 2", 6);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 48","اْلأَفْعَالُ عَنِ اْلأُسْرَةِ", "Pekerjaan Tentang Keluarga Bag. 3", 6);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 49","اْلأَفْعَالُ عَنِ اْلأُسْرَةِ", "Pekerjaan Tentang Keluarga Bag. 4", 6);
                     } else if($_GET['tema'] == MD5('Pertemuan 8')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 7");
                         if (in_array("Pertemuan 9", $pertemuan))
@@ -192,11 +192,11 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 8';
                         $data['materi'] = 'Materi Pertemuan 8';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 50","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 1", 8);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 51","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 2", 8);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 52","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 3", 8);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 53","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 4", 8);
-                        $data['mufrodat'][5] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 54","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 5", 8);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 50","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 1", 8);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 51","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 2", 8);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 52","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 3", 8);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 53","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 4", 8);
+                        $data['mufrodat'][5] = $this->latihan("latihan_peserta", $id, "Mufrodat 54","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 5", 8);
                     } else if($_GET['tema'] == MD5('Pertemuan 9')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 8");
                         if (in_array("Pertemuan 10", $pertemuan))
@@ -207,12 +207,12 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 9';
                         $data['materi'] = 'Materi Pertemuan 9';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 55","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 1", 8);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 56","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 2", 8);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 57","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 3", 7);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 58","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 4", 7);
-                        $data['mufrodat'][5] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 59","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 5", 7);
-                        $data['mufrodat'][6] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 60","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 6", 7);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 55","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 1", 8);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 56","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 2", 8);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 57","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 3", 7);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 58","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 4", 7);
+                        $data['mufrodat'][5] = $this->latihan("latihan_peserta", $id, "Mufrodat 59","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 5", 7);
+                        $data['mufrodat'][6] = $this->latihan("latihan_peserta", $id, "Mufrodat 60","أَخْلاَقُ اْلإِنْسَانِ", "Akhlak Manusia Bag. 6", 7);
                     } else if($_GET['tema'] == MD5('Pertemuan 10')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 9");
                         if (in_array("Pertemuan 11", $pertemuan))
@@ -223,11 +223,11 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 10';
                         $data['materi'] = 'Materi Pertemuan 10';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 61","آثَاثُ اْلبَيْتِ", "Perlengkapan Rumah Bag. 1", 8);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 62","آثَاثُ اْلبَيْتِ", "Perlengkapan Rumah Bag. 2", 8);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 63","آثَاثُ اْلبَيْتِ", "Perlengkapan Rumah Bag. 3", 8);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 64","آثَاثُ اْلبَيْتِ", "Perlengkapan Rumah Bag. 4", 7);
-                        $data['mufrodat'][5] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 65","آثَاثُ اْلبَيْتِ", "Perlengkapan Rumah Bag. 5", 7);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 61","آثَاثُ اْلبَيْتِ", "Perlengkapan Rumah Bag. 1", 8);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 62","آثَاثُ اْلبَيْتِ", "Perlengkapan Rumah Bag. 2", 8);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 63","آثَاثُ اْلبَيْتِ", "Perlengkapan Rumah Bag. 3", 8);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 64","آثَاثُ اْلبَيْتِ", "Perlengkapan Rumah Bag. 4", 7);
+                        $data['mufrodat'][5] = $this->latihan("latihan_peserta", $id, "Mufrodat 65","آثَاثُ اْلبَيْتِ", "Perlengkapan Rumah Bag. 5", 7);
                     } else if($_GET['tema'] == MD5('Pertemuan 11')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 10");
                         if (in_array("Pertemuan 12", $pertemuan))
@@ -238,13 +238,13 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 11';
                         $data['materi'] = 'Materi Pertemuan 11';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 66","اْلأَفْعَالُ عَنْ آثَاثِ اْلبَيْتِ", "Pekerjaan Tentang Perkakas Rumah Bag. 1", 7);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 67","اْلأَفْعَالُ عَنْ آثَاثِ اْلبَيْتِ", "Pekerjaan Tentang Perkakas Rumah Bag. 2", 6);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 68","اْلأَفْعَالُ عَنْ آثَاثِ اْلبَيْتِ", "Pekerjaan Tentang Perkakas Rumah Bag. 3", 6);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 69","الأَلْوَانُ", "Warna-warna Bag. 1", 6);
-                        $data['mufrodat'][5] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 70","الأَلْوَانُ", "Warna-warna Bag. 2", 6);
-                        $data['mufrodat'][6] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 71","الصِّفَاتُ", "Sifat Bag. 1", 8);
-                        $data['mufrodat'][7] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 72","الصِّفَاتُ", "Sifat Bag. 2", 7);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 66","اْلأَفْعَالُ عَنْ آثَاثِ اْلبَيْتِ", "Pekerjaan Tentang Perkakas Rumah Bag. 1", 7);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 67","اْلأَفْعَالُ عَنْ آثَاثِ اْلبَيْتِ", "Pekerjaan Tentang Perkakas Rumah Bag. 2", 6);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 68","اْلأَفْعَالُ عَنْ آثَاثِ اْلبَيْتِ", "Pekerjaan Tentang Perkakas Rumah Bag. 3", 6);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 69","الأَلْوَانُ", "Warna-warna Bag. 1", 6);
+                        $data['mufrodat'][5] = $this->latihan("latihan_peserta", $id, "Mufrodat 70","الأَلْوَانُ", "Warna-warna Bag. 2", 6);
+                        $data['mufrodat'][6] = $this->latihan("latihan_peserta", $id, "Mufrodat 71","الصِّفَاتُ", "Sifat Bag. 1", 8);
+                        $data['mufrodat'][7] = $this->latihan("latihan_peserta", $id, "Mufrodat 72","الصِّفَاتُ", "Sifat Bag. 2", 7);
                     } else if($_GET['tema'] == MD5('Pertemuan 12')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 11");
                         if (in_array("Pertemuan 13", $pertemuan))
@@ -255,10 +255,10 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 12';
                         $data['materi'] = 'Materi Pertemuan 12';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 73","الصِّفَاتُ", "Sifat Bag. 1", 8);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 74","الصِّفَاتُ", "Sifat Bag. 2", 8);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 75","الصِّفَاتُ", "Sifat Bag. 3", 7);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 76","الصِّفَاتُ", "Sifat Bag. 4", 7);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 73","الصِّفَاتُ", "Sifat Bag. 1", 8);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 74","الصِّفَاتُ", "Sifat Bag. 2", 8);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 75","الصِّفَاتُ", "Sifat Bag. 3", 7);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 76","الصِّفَاتُ", "Sifat Bag. 4", 7);
                     } else if($_GET['tema'] == MD5('Pertemuan 13')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 12");
                         if (in_array("Pertemuan 14", $pertemuan))
@@ -269,15 +269,15 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 13';
                         $data['materi'] = 'Materi Pertemuan 13';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 77","مَلَابِسُ وَ جَوَاهِرُ", "Pakaian dan Perhiasan Bag. 1", 8);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 78","مَلَابِسُ وَ جَوَاهِرُ", "Pakaian dan Perhiasan Bag. 2", 7);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 79","مَلَابِسُ وَ جَوَاهِرُ", "Pakaian dan Perhiasan Bag. 3", 7);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 80","مَلَابِسُ وَ جَوَاهِرُ", "Pakaian dan Perhiasan Bag. 4", 7);
-                        $data['mufrodat'][5] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 81","مَلَابِسُ وَ جَوَاهِرُ", "Pakaian dan Perhiasan Bag. 5", 7);
-                        $data['mufrodat'][6] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 82","اْلأَفْعَالُ عَنِ الْمَلَابِس", "Pekerjaan Tentang Pakaian Bag. 1", 5);
-                        $data['mufrodat'][7] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 83","اْلأَفْعَالُ عَنِ الْمَلَابِس", "Pekerjaan Tentang Pakaian Bag. 2", 5);
-                        $data['mufrodat'][8] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 84","غُرْفَةُ النَّوْمِ", "Kamar Tidur Bag. 1", 8);
-                        $data['mufrodat'][9] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 85","غُرْفَةُ النَّوْمِ", "Kamar Tidur Bag. 2", 8);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 77","مَلَابِسُ وَ جَوَاهِرُ", "Pakaian dan Perhiasan Bag. 1", 8);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 78","مَلَابِسُ وَ جَوَاهِرُ", "Pakaian dan Perhiasan Bag. 2", 7);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 79","مَلَابِسُ وَ جَوَاهِرُ", "Pakaian dan Perhiasan Bag. 3", 7);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 80","مَلَابِسُ وَ جَوَاهِرُ", "Pakaian dan Perhiasan Bag. 4", 7);
+                        $data['mufrodat'][5] = $this->latihan("latihan_peserta", $id, "Mufrodat 81","مَلَابِسُ وَ جَوَاهِرُ", "Pakaian dan Perhiasan Bag. 5", 7);
+                        $data['mufrodat'][6] = $this->latihan("latihan_peserta", $id, "Mufrodat 82","اْلأَفْعَالُ عَنِ الْمَلَابِس", "Pekerjaan Tentang Pakaian Bag. 1", 5);
+                        $data['mufrodat'][7] = $this->latihan("latihan_peserta", $id, "Mufrodat 83","اْلأَفْعَالُ عَنِ الْمَلَابِس", "Pekerjaan Tentang Pakaian Bag. 2", 5);
+                        $data['mufrodat'][8] = $this->latihan("latihan_peserta", $id, "Mufrodat 84","غُرْفَةُ النَّوْمِ", "Kamar Tidur Bag. 1", 8);
+                        $data['mufrodat'][9] = $this->latihan("latihan_peserta", $id, "Mufrodat 85","غُرْفَةُ النَّوْمِ", "Kamar Tidur Bag. 2", 8);
                     } else if($_GET['tema'] == MD5('Pertemuan 14')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 13");
                         if (in_array("Pertemuan 15", $pertemuan))
@@ -288,10 +288,10 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 14';
                         $data['materi'] = 'Materi Pertemuan 14';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 86","اْلأَفْعَالُ عَنْ غُرْفَةِ النَّوْمِ", "Pekerjaan Tentang Kamar Tidur", 7);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 87","الْمَطْبَخُ", "Dapur Bag. 1", 9);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 88","الْمَطْبَخُ", "Dapur Bag. 2", 8);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 89","الْمَطْبَخُ", "Dapur Bag. 3", 8);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 86","اْلأَفْعَالُ عَنْ غُرْفَةِ النَّوْمِ", "Pekerjaan Tentang Kamar Tidur", 7);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 87","الْمَطْبَخُ", "Dapur Bag. 1", 9);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 88","الْمَطْبَخُ", "Dapur Bag. 2", 8);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 89","الْمَطْبَخُ", "Dapur Bag. 3", 8);
                     } else if($_GET['tema'] == MD5('Pertemuan 15')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 14");
                         if (in_array("Pertemuan 16", $pertemuan))
@@ -302,10 +302,10 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 15';
                         $data['materi'] = 'Materi Pertemuan 15';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 90","اْلأَفْعَالُ عَنِ الْمَطْبَخ", "Pekerjaan Tentang Dapur Bag. 1", 8);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 91","اْلأَفْعَالُ عَنِ الْمَطْبَخ", "Pekerjaan Tentang Dapur Bag. 2", 7);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 92","الطُّعُوْمُ", "Rasa-rasa Bag. 1", 6);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 93","الطُّعُوْمُ", "Rasa-rasa Bag. 2", 6);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 90","اْلأَفْعَالُ عَنِ الْمَطْبَخ", "Pekerjaan Tentang Dapur Bag. 1", 8);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 91","اْلأَفْعَالُ عَنِ الْمَطْبَخ", "Pekerjaan Tentang Dapur Bag. 2", 7);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 92","الطُّعُوْمُ", "Rasa-rasa Bag. 1", 6);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 93","الطُّعُوْمُ", "Rasa-rasa Bag. 2", 6);
                     } else if($_GET['tema'] == MD5('Pertemuan 16')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 15");
                         if (in_array("Pertemuan 17", $pertemuan))
@@ -316,10 +316,10 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 16';
                         $data['materi'] = 'Materi Pertemuan 16';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 94","الحَمَّامُ", "Kamar Mandi Bag. 1", 10);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 95","الحَمَّامُ", "Kamar Mandi Bag. 2", 9);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 96","اْلأَفْعَالُ عَنِ الْحَمَّام", "Pekerjaan Tentang Kamar Mandi Bag. 1", 7);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 97","اْلأَفْعَالُ عَنِ الْحَمَّام", "Pekerjaan Tentang Kamar Mandi Bag. 2", 7);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 94","الحَمَّامُ", "Kamar Mandi Bag. 1", 10);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 95","الحَمَّامُ", "Kamar Mandi Bag. 2", 9);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 96","اْلأَفْعَالُ عَنِ الْحَمَّام", "Pekerjaan Tentang Kamar Mandi Bag. 1", 7);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 97","اْلأَفْعَالُ عَنِ الْحَمَّام", "Pekerjaan Tentang Kamar Mandi Bag. 2", 7);
                     } else if($_GET['tema'] == MD5('Pertemuan 17')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 16");
                         if (in_array("Pertemuan 18", $pertemuan))
@@ -330,11 +330,11 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 17';
                         $data['materi'] = 'Materi Pertemuan 17';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 98","المَدْرَسَةُ", "Sekolah Bag. 1", 7);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 99","المَدْرَسَةُ", "Sekolah Bag. 2", 7);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 100","المَدْرَسَةُ", "Sekolah Bag. 3", 7);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 101","المَدْرَسَةُ", "Sekolah Bag. 4", 7);
-                        $data['mufrodat'][5] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 102","المَدْرَسَةُ", "Sekolah Bag. 5", 7);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 98","المَدْرَسَةُ", "Sekolah Bag. 1", 7);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 99","المَدْرَسَةُ", "Sekolah Bag. 2", 7);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 100","المَدْرَسَةُ", "Sekolah Bag. 3", 7);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 101","المَدْرَسَةُ", "Sekolah Bag. 4", 7);
+                        $data['mufrodat'][5] = $this->latihan("latihan_peserta", $id, "Mufrodat 102","المَدْرَسَةُ", "Sekolah Bag. 5", 7);
                     } else if($_GET['tema'] == MD5('Pertemuan 18')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 17");
                         if (in_array("Pertemuan 19", $pertemuan))
@@ -345,15 +345,15 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 18';
                         $data['materi'] = 'Materi Pertemuan 18';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 103","المَدْرَسَةُ", "Sekolah Bag. 1", 6);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 104","المَدْرَسَةُ", "Sekolah Bag. 2", 6);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 105","لأَفْعَالُ عَنِ الْمَدْرَسَةِ", "Pekerjaan Tentang Sekolah Bag. 1", 7);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 106","لأَفْعَالُ عَنِ الْمَدْرَسَةِ", "Pekerjaan Tentang Sekolah Bag. 1", 6);
-                        $data['mufrodat'][5] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 107","لأَفْعَالُ عَنِ الْمَدْرَسَةِ", "Pekerjaan Tentang Sekolah Bag. 1", 6);
-                        $data['mufrodat'][6] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 108","الْمَرْكُوْبَاتُ", "Kendaraan-kendaraan Bag. 1", 8);
-                        $data['mufrodat'][7] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 109","الْمَرْكُوْبَاتُ", "Kendaraan-kendaraan Bag. 2", 8);
-                        $data['mufrodat'][8] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 110","الْمَرْكُوْبَاتُ", "Kendaraan-kendaraan Bag. 3", 8);
-                        $data['mufrodat'][9] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 111","الْمَرْكُوْبَاتُ", "Kendaraan-kendaraan Bag. 4", 8);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 103","المَدْرَسَةُ", "Sekolah Bag. 1", 6);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 104","المَدْرَسَةُ", "Sekolah Bag. 2", 6);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 105","لأَفْعَالُ عَنِ الْمَدْرَسَةِ", "Pekerjaan Tentang Sekolah Bag. 1", 7);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 106","لأَفْعَالُ عَنِ الْمَدْرَسَةِ", "Pekerjaan Tentang Sekolah Bag. 1", 6);
+                        $data['mufrodat'][5] = $this->latihan("latihan_peserta", $id, "Mufrodat 107","لأَفْعَالُ عَنِ الْمَدْرَسَةِ", "Pekerjaan Tentang Sekolah Bag. 1", 6);
+                        $data['mufrodat'][6] = $this->latihan("latihan_peserta", $id, "Mufrodat 108","الْمَرْكُوْبَاتُ", "Kendaraan-kendaraan Bag. 1", 8);
+                        $data['mufrodat'][7] = $this->latihan("latihan_peserta", $id, "Mufrodat 109","الْمَرْكُوْبَاتُ", "Kendaraan-kendaraan Bag. 2", 8);
+                        $data['mufrodat'][8] = $this->latihan("latihan_peserta", $id, "Mufrodat 110","الْمَرْكُوْبَاتُ", "Kendaraan-kendaraan Bag. 3", 8);
+                        $data['mufrodat'][9] = $this->latihan("latihan_peserta", $id, "Mufrodat 111","الْمَرْكُوْبَاتُ", "Kendaraan-kendaraan Bag. 4", 8);
                     } else if($_GET['tema'] == MD5('Pertemuan 19')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 18");
                         if (in_array("Pertemuan 20", $pertemuan))
@@ -364,13 +364,13 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 19';
                         $data['materi'] = 'Materi Pertemuan 19';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 112","اْلأَفْعَالُ عَنِ الْمَرْكُوْبَات", "Pekerjaan Tentang Kendaraan", 5);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 113","الْمُسْتَشْفَى", "Rumah Sakit Bag. 1", 6);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 114","الْمُسْتَشْفَى", "Rumah Sakit Bag. 2", 6);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 115","أَسْمَاءُ الْحَيَوَانَاتِ", "Nama-nama Hewan Bag. 1", 8);
-                        $data['mufrodat'][5] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 116","أَسْمَاءُ الْحَيَوَانَاتِ", "Nama-nama Hewan Bag. 2", 8);
-                        $data['mufrodat'][6] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 117","أَسْمَاءُ الْحَيَوَانَاتِ", "Nama-nama Hewan Bag. 3", 7);
-                        $data['mufrodat'][7] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 118","أَسْمَاءُ الْحَيَوَانَاتِ", "Nama-nama Hewan Bag. 4", 7);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 112","اْلأَفْعَالُ عَنِ الْمَرْكُوْبَات", "Pekerjaan Tentang Kendaraan", 5);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 113","الْمُسْتَشْفَى", "Rumah Sakit Bag. 1", 6);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 114","الْمُسْتَشْفَى", "Rumah Sakit Bag. 2", 6);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 115","أَسْمَاءُ الْحَيَوَانَاتِ", "Nama-nama Hewan Bag. 1", 8);
+                        $data['mufrodat'][5] = $this->latihan("latihan_peserta", $id, "Mufrodat 116","أَسْمَاءُ الْحَيَوَانَاتِ", "Nama-nama Hewan Bag. 2", 8);
+                        $data['mufrodat'][6] = $this->latihan("latihan_peserta", $id, "Mufrodat 117","أَسْمَاءُ الْحَيَوَانَاتِ", "Nama-nama Hewan Bag. 3", 7);
+                        $data['mufrodat'][7] = $this->latihan("latihan_peserta", $id, "Mufrodat 118","أَسْمَاءُ الْحَيَوَانَاتِ", "Nama-nama Hewan Bag. 4", 7);
                     } else if($_GET['tema'] == MD5('Pertemuan 20')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 19");
                         if (in_array("Pertemuan 21", $pertemuan))
@@ -381,12 +381,12 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 20';
                         $data['materi'] = 'Materi Pertemuan 20';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 119","أَسْمَاءُ الْحَيَوَانَاتِ", "Nama-nama Hewan Bag. 1", 8);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 120","أَسْمَاءُ الْحَيَوَانَاتِ", "Nama-nama Hewan Bag. 2", 9);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 121","أَسْمَاءُ اْلفَوَاكِهِ", "Nama-nama Buah Bag. 1", 7);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 122","أَسْمَاءُ اْلفَوَاكِهِ", "Nama-nama Buah Bag. 2", 7);
-                        $data['mufrodat'][5] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 123","أَسْمَاءُ اْلفَوَاكِهِ", "Nama-nama Buah Bag. 3", 7);
-                        $data['mufrodat'][6] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 124","اْلأَفْعَالُ عَنِ اْلفَوَاكِهِ", "Pekerjaan Tentang Buah", 7);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 119","أَسْمَاءُ الْحَيَوَانَاتِ", "Nama-nama Hewan Bag. 1", 8);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 120","أَسْمَاءُ الْحَيَوَانَاتِ", "Nama-nama Hewan Bag. 2", 9);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 121","أَسْمَاءُ اْلفَوَاكِهِ", "Nama-nama Buah Bag. 1", 7);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 122","أَسْمَاءُ اْلفَوَاكِهِ", "Nama-nama Buah Bag. 2", 7);
+                        $data['mufrodat'][5] = $this->latihan("latihan_peserta", $id, "Mufrodat 123","أَسْمَاءُ اْلفَوَاكِهِ", "Nama-nama Buah Bag. 3", 7);
+                        $data['mufrodat'][6] = $this->latihan("latihan_peserta", $id, "Mufrodat 124","اْلأَفْعَالُ عَنِ اْلفَوَاكِهِ", "Pekerjaan Tentang Buah", 7);
                     } else if($_GET['tema'] == MD5('Pertemuan 21')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 20");
                         if (in_array("Pertemuan 22", $pertemuan))
@@ -397,14 +397,14 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 21';
                         $data['materi'] = 'Materi Pertemuan 21';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 125","أَسْمَاءُ الْمَكَانِ", "Nama-nama Tempat Bag. 1", 8);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 126","أَسْمَاءُ الْمَكَانِ", "Nama-nama Tempat Bag. 2", 8);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 127","أَسْمَاءُ الْمَكَانِ", "Nama-nama Tempat Bag. 3", 8);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 128","أَسْمَاءُ الْمَكَانِ", "Nama-nama Tempat Bag. 4", 8);
-                        $data['mufrodat'][5] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 129","أَسْمَاءُ الْمَكَانِ", "Nama-nama Tempat Bag. 5", 8);
-                        $data['mufrodat'][6] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 130","أَسْمَاءُ الْمَكَانِ", "Nama-nama Tempat Bag. 6", 6);
-                        $data['mufrodat'][7] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 131","اْلأَفْعَالُ عَنِ الْمَكَانِ", "Pekerjaan Tentang Tempat Bag. 1", 5);
-                        $data['mufrodat'][8] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 132","اْلأَفْعَالُ عَنِ الْمَكَانِ", "Pekerjaan Tentang Tempat Bag. 2", 5);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 125","أَسْمَاءُ الْمَكَانِ", "Nama-nama Tempat Bag. 1", 8);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 126","أَسْمَاءُ الْمَكَانِ", "Nama-nama Tempat Bag. 2", 8);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 127","أَسْمَاءُ الْمَكَانِ", "Nama-nama Tempat Bag. 3", 8);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 128","أَسْمَاءُ الْمَكَانِ", "Nama-nama Tempat Bag. 4", 8);
+                        $data['mufrodat'][5] = $this->latihan("latihan_peserta", $id, "Mufrodat 129","أَسْمَاءُ الْمَكَانِ", "Nama-nama Tempat Bag. 5", 8);
+                        $data['mufrodat'][6] = $this->latihan("latihan_peserta", $id, "Mufrodat 130","أَسْمَاءُ الْمَكَانِ", "Nama-nama Tempat Bag. 6", 6);
+                        $data['mufrodat'][7] = $this->latihan("latihan_peserta", $id, "Mufrodat 131","اْلأَفْعَالُ عَنِ الْمَكَانِ", "Pekerjaan Tentang Tempat Bag. 1", 5);
+                        $data['mufrodat'][8] = $this->latihan("latihan_peserta", $id, "Mufrodat 132","اْلأَفْعَالُ عَنِ الْمَكَانِ", "Pekerjaan Tentang Tempat Bag. 2", 5);
                     } else if($_GET['tema'] == MD5('Pertemuan 22')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 21");
                         if (in_array("Pertemuan 23", $pertemuan))
@@ -415,10 +415,10 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 22';
                         $data['materi'] = 'Materi Pertemuan 22';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 133","العَالَمُ", "Alam Semesta Bag. 1", 9);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 134","العَالَمُ", "Alam Semesta Bag. 2", 8);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 135","العَالَمُ", "Alam Semesta Bag. 3", 8);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 136","العَالَمُ", "Alam Semesta Bag. 4", 8);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 133","العَالَمُ", "Alam Semesta Bag. 1", 9);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 134","العَالَمُ", "Alam Semesta Bag. 2", 8);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 135","العَالَمُ", "Alam Semesta Bag. 3", 8);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 136","العَالَمُ", "Alam Semesta Bag. 4", 8);
                     } else if($_GET['tema'] == MD5('Pertemuan 23')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 22");
                         if (in_array("Pertemuan 24", $pertemuan))
@@ -429,11 +429,11 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 23';
                         $data['materi'] = 'Materi Pertemuan 23';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 137","الْمِهْنَةُ", "Profesi Bag. 1", 7);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 138","الْمِهْنَةُ", "Profesi Bag. 2", 7);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 139","الْمِهْنَةُ", "Profesi Bag. 3", 7);
-                        $data['mufrodat'][4] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 140","الْمِهْنَةُ", "Profesi Bag. 4", 7);
-                        $data['mufrodat'][5] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 141","الْمِهْنَةُ", "Profesi Bag. 5", 7);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 137","الْمِهْنَةُ", "Profesi Bag. 1", 7);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 138","الْمِهْنَةُ", "Profesi Bag. 2", 7);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 139","الْمِهْنَةُ", "Profesi Bag. 3", 7);
+                        $data['mufrodat'][4] = $this->latihan("latihan_peserta", $id, "Mufrodat 140","الْمِهْنَةُ", "Profesi Bag. 4", 7);
+                        $data['mufrodat'][5] = $this->latihan("latihan_peserta", $id, "Mufrodat 141","الْمِهْنَةُ", "Profesi Bag. 5", 7);
                     } else if($_GET['tema'] == MD5('Pertemuan 24')){
                         $data['back'] = "materi/program/".MD5("Hifdzi 1")."?tema=".MD5("Pertemuan 23");
                         if (in_array("Pertemuan 25", $pertemuan))
@@ -445,9 +445,9 @@ class Materi extends CI_CONTROLLER{
                         $data['title'] = 'Pertemuan 24';
                         $data['materi'] = 'Materi Pertemuan 24';
                         $data['mufrodat'][0]['mufrodat'] = 100;
-                        $data['mufrodat'][1] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 142","الْمِهْنَةُ", "Profesi Bag. 1", 7);
-                        $data['mufrodat'][2] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 143","الْمِهْنَةُ", "Profesi Bag. 2", 8);
-                        $data['mufrodat'][3] = $this->latihan("latihan_hifdzi_1", $id, "Mufrodat 144","الفَصْلُ", "Musim", 6);
+                        $data['mufrodat'][1] = $this->latihan("latihan_peserta", $id, "Mufrodat 142","الْمِهْنَةُ", "Profesi Bag. 1", 7);
+                        $data['mufrodat'][2] = $this->latihan("latihan_peserta", $id, "Mufrodat 143","الْمِهْنَةُ", "Profesi Bag. 2", 8);
+                        $data['mufrodat'][3] = $this->latihan("latihan_peserta", $id, "Mufrodat 144","الفَصْلُ", "Musim", 6);
                     }
     
                     $this->load->view("templates/header-user", $data);
@@ -461,7 +461,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 1";
                         $data['materi'] = "Mufrodat 1";
                         $data['title'] = "Kata Tanya Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 1");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 1");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مَا",
@@ -515,7 +515,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 1";
                         $data['materi'] = "Mufrodat 2";
                         $data['title'] = "Kata Tanya Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 2");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 2");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أَيْنَ",
@@ -569,7 +569,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 1";
                         $data['materi'] = "Mufrodat 3";
                         $data['title'] = "Huruf Jar";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 3");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 3");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "بِ",
@@ -628,7 +628,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 1";
                         $data['materi'] = "Mufrodat 4";
                         $data['title'] = "Huruf Nidaa";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 4");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 4");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "يَا",
@@ -652,7 +652,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 1";
                         $data['materi'] = "Mufrodat 5";
                         $data['title'] = "Huruf Istisna";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 5");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 5");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "إِلَّا",
@@ -666,7 +666,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 2";
                         $data['materi'] = "Mufrodat 6";
                         $data['title'] = "Huruf Inna dan Saudaranya";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 6");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 6");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "إِنَّ",
@@ -705,7 +705,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 2";
                         $data['materi'] = "Mufrodat 7";
                         $data['title'] = "Huruf Nashob";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 7");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 7");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أَنْ",
@@ -744,7 +744,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 2";
                         $data['materi'] = "Mufrodat 8";
                         $data['title'] = "Huruf Jazm";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 8");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 8");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "لَمْ",
@@ -778,7 +778,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 2";
                         $data['materi'] = "Mufrodat 9";
                         $data['title'] = "Huruf Taukid";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 9");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 9");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "قَدْ",
@@ -792,7 +792,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 2";
                         $data['materi'] = "Mufrodat 10";
                         $data['title'] = "Huruf Istiqbal";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 10");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 10");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "سَ",
@@ -811,7 +811,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 2";
                         $data['materi'] = "Mufrodat 11";
                         $data['title'] = "Huruf Athof";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 11");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 11");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "وَ",
@@ -865,7 +865,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 2";
                         $data['materi'] = "Mufrodat 12";
                         $data['title'] = "Huruf Nafi";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 12");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 12");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "لَا",
@@ -884,7 +884,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 2";
                         $data['materi'] = "Mufrodat 13";
                         $data['title'] = "Huruf Istifham";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 13");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 13");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "هَلْ",
@@ -903,7 +903,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 3";
                         $data['materi'] = "Mufrodat 14";
                         $data['title'] = "Bilangan";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 14");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 14");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "وَاحِدٌ",
@@ -962,7 +962,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 3";
                         $data['materi'] = "Mufrodat 15";
                         $data['title'] = "Bilangan";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 15");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 15");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أَحَدَ عَشَرَ",
@@ -1021,7 +1021,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 3";
                         $data['materi'] = "Mufrodat 16";
                         $data['title'] = "Bilangan";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 16");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 16");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "عِشْرُوْنَ",
@@ -1070,7 +1070,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 3";
                         $data['materi'] = "Mufrodat 17";
                         $data['title'] = "Bilangan";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 17");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 17");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مِائَةٌ",
@@ -1124,7 +1124,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 3";
                         $data['materi'] = "Mufrodat 18";
                         $data['title'] = "Bilangan";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 18");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 18");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "وَاحِدٌ وَ عِشْرُوْنَ",
@@ -1178,7 +1178,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 3";
                         $data['materi'] = "Mufrodat 19";
                         $data['title'] = "Bilangan";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 19");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 19");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "وَاحِدٌ وَ ثَلَاثُوْنَ",
@@ -1232,7 +1232,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 3";
                         $data['materi'] = "Mufrodat 20";
                         $data['title'] = "Bilangan";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 20");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 20");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "وَاحِدٌ وَ أَرْبَعُوْنَ",
@@ -1286,7 +1286,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 3";
                         $data['materi'] = "Mufrodat 21";
                         $data['title'] = "Bilangan";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 21");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 21");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "وَاحِدٌ وَ خَمْسُوْنَ",
@@ -1340,7 +1340,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 3";
                         $data['materi'] = "Mufrodat 22";
                         $data['title'] = "Bilangan";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 22");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 22");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "وَاحِدٌ وَ سِتُّوْنَ",
@@ -1394,7 +1394,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 3";
                         $data['materi'] = "Mufrodat 23";
                         $data['title'] = "Bilangan";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 23");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 23");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "وَاحِدٌ وَ سَبْعُوْنَ",
@@ -1448,7 +1448,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 3";
                         $data['materi'] = "Mufrodat 24";
                         $data['title'] = "Bilangan";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 24");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 24");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "وَاحِدٌ وَ ثَمَانُوْنَ",
@@ -1502,7 +1502,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 3";
                         $data['materi'] = "Mufrodat 25";
                         $data['title'] = "Bilangan";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 25");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 25");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "وَاحِدٌ وَ تِسْعُوْنَ",
@@ -1556,7 +1556,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 4";
                         $data['materi'] = "Mufrodat 26";
                         $data['title'] = "Keterangan Tempat";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 26");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 26");
                         $data['mufrodat'] =[
                             [
                                 "kata_arab" => "أَمَامَ",
@@ -1615,7 +1615,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 4";
                         $data['materi'] = "Mufrodat 27";
                         $data['title'] = "Keterangan Waktu Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 27");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 27");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "اَلْيَوْمَ",
@@ -1664,7 +1664,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 4";
                         $data['materi'] = "Mufrodat 28";
                         $data['title'] = "Keterangan Waktu Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 28");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 28");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "صَبَاحًا",
@@ -1713,7 +1713,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 4";
                         $data['materi'] = "Mufrodat 29";
                         $data['title'] = "Keterangan Waktu Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 29");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 29");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "اَلْأُسْبُوْعُ الْمَاضِى",
@@ -1752,7 +1752,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 5";
                         $data['materi'] = "Mufrodat 30";
                         $data['title'] = "Anggota Tubuh Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 30");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 30");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "عَقْلٌ",
@@ -1801,7 +1801,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 5";
                         $data['materi'] = "Mufrodat 31";
                         $data['title'] = "Anggota Tubuh Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 31");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 31");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أَنْفٌ",
@@ -1850,7 +1850,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 5";
                         $data['materi'] = "Mufrodat 32";
                         $data['title'] = "Anggota Tubuh Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 32");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 32");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "لِحْيَةٌ",
@@ -1899,7 +1899,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 5";
                         $data['materi'] = "Mufrodat 33";
                         $data['title'] = "Anggota Tubuh Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 33");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 33");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "بَدَنٌ",
@@ -1948,7 +1948,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 5";
                         $data['materi'] = "Mufrodat 34";
                         $data['title'] = "Anggota Tubuh Bag. 5";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 34");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 34");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "سُرَّةٌ",
@@ -1997,7 +1997,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 5";
                         $data['materi'] = "Mufrodat 35";
                         $data['title'] = "Anggota Tubuh Bag. 6";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 35");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 35");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "كَعْبٌ",
@@ -2036,7 +2036,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 5";
                         $data['materi'] = "Mufrodat 36";
                         $data['title'] = "Anggota Tubuh Bag. 7";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 36");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 36");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "إِبْهَامٌ",
@@ -2070,7 +2070,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 37";
                         $data['title'] = "Pekerjaan Tentang Anggota Tubuh Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 37");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 37");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "نَظَرَ-يَنْظُرُ-نَظْرًا",
@@ -2104,7 +2104,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 38";
                         $data['title'] = "Pekerjaan Tentang Anggota Tubuh Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 38");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 38");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "ضَرَبَ-يَضْرِبُ-ضَرْبًا",
@@ -2138,7 +2138,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 39";
                         $data['title'] = "Pekerjaan Tentang Anggota Tubuh Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 39");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 39");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "رَفَسَ-يَرْفُسُ-رَفْسًا",
@@ -2172,7 +2172,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 40";
                         $data['title'] = "Pekerjaan Tentang Anggota Tubuh Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 40");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 40");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "فَكَّرَ-يُفَكِّرُ-تَفْكِيْرًا",
@@ -2206,7 +2206,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 41";
                         $data['title'] = "Pekerjaan Tentang Anggota Tubuh Bag. 5";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 41");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 41");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "تَأَمَّلَ-يَتَأَمَّلُ-تَأَمُّلاً",
@@ -2235,7 +2235,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 42";
                         $data['title'] = "Keluarga Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 42");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 42");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أَبٌ / وَالِدٌ",
@@ -2289,7 +2289,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 43";
                         $data['title'] = "Keluarga Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 43");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 43");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "حَفِيْدَةٌ",
@@ -2343,7 +2343,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 44";
                         $data['title'] = "Keluarga Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 44");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 44");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أُخْتٌ كَبِيْرَةٌ",
@@ -2392,7 +2392,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 45";
                         $data['title'] = "Keluarga Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 45");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 45");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أَرْمَلٌ",
@@ -2441,7 +2441,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 7";
                         $data['materi'] = "Mufrodat 46";
                         $data['title'] = "Pekerjaan Tentang Keluarga Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 46");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 46");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "رَبَّي-يُرَبِّي-تَرْبِيَّةً",
@@ -2480,7 +2480,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 7";
                         $data['materi'] = "Mufrodat 47";
                         $data['title'] = "Pekerjaan Tentang Keluarga Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 47");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 47");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أَهَانَ-يُهِيْنُ-إِهَانَةً",
@@ -2519,7 +2519,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 7";
                         $data['materi'] = "Mufrodat 48";
                         $data['title'] = "Pekerjaan Tentang Keluarga Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 48");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 48");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "نَصَرَ-يَنْصُرُ-نَصْرًا",
@@ -2558,7 +2558,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 7";
                         $data['materi'] = "Mufrodat 49";
                         $data['title'] = "Pekerjaan Tentang Keluarga Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 49");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 49");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "اِحْتَاجَ-يَـحْتَاجُ-اِحْتِيَاجًا",
@@ -2597,7 +2597,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 8";
                         $data['materi'] = "Mufrodat 50";
                         $data['title'] = "Akhlak Manusia Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 50");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 50");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مُتَوَاضِعٌ",
@@ -2646,7 +2646,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 8";
                         $data['materi'] = "Mufrodat 51";
                         $data['title'] = "Akhlak Manusia Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 51");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 51");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أَمِيْنٌ",
@@ -2695,7 +2695,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 8";
                         $data['materi'] = "Mufrodat 52";
                         $data['title'] = "Akhlak Manusia Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 52");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 52");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "شُـجَاعٌ",
@@ -2744,7 +2744,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 8";
                         $data['materi'] = "Mufrodat 53";
                         $data['title'] = "Akhlak Manusia Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 53");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 53");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أَنِيْقٌ",
@@ -2793,7 +2793,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 8";
                         $data['materi'] = "Mufrodat 54";
                         $data['title'] = "Akhlak Manusia Bag. 5";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 54");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 54");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مُدَلَّعٌ",
@@ -2842,7 +2842,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 9";
                         $data['materi'] = "Mufrodat 55";
                         $data['title'] = "Akhlak Manusia Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 55");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 55");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "غَبِيٌّ",
@@ -2891,7 +2891,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 9";
                         $data['materi'] = "Mufrodat 56";
                         $data['title'] = "Akhlak Manusia Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 56");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 56");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أَعْمَى",
@@ -2940,7 +2940,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 9";
                         $data['materi'] = "Mufrodat 57";
                         $data['title'] = "Akhlak Manusia Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 57");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 57");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "عَادِلٌ",
@@ -2984,7 +2984,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 9";
                         $data['materi'] = "Mufrodat 58";
                         $data['title'] = "Akhlak Manusia Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 58");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 58");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مَذْمُوْمٌ",
@@ -3028,7 +3028,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 9";
                         $data['materi'] = "Mufrodat 59";
                         $data['title'] = "Akhlak Manusia Bag. 5";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 59");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 59");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "صِحَّةٌ",
@@ -3072,7 +3072,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 9";
                         $data['materi'] = "Mufrodat 60";
                         $data['title'] = "Akhlak Manusia Bag. 6";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 60");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 60");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مُسْتَعْجِلٌ",
@@ -3116,7 +3116,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 10";
                         $data['materi'] = "Mufrodat 61";
                         $data['title'] = "Perlengkapan Rumah Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 61");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 61");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "جِدَارٌ",
@@ -3165,7 +3165,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 10";
                         $data['materi'] = "Mufrodat 62";
                         $data['title'] = "Perlengkapan Rumah Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 62");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 62");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "دَوْلَبٌ",
@@ -3214,7 +3214,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 10";
                         $data['materi'] = "Mufrodat 63";
                         $data['title'] = "Perlengkapan Rumah Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 63");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 63");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مِكْنَسَةٌ",
@@ -3263,7 +3263,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 10";
                         $data['materi'] = "Mufrodat 64";
                         $data['title'] = "Perlengkapan Rumah Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 64");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 64");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "تَقْوِيْمٌ",
@@ -3307,7 +3307,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 10";
                         $data['materi'] = "Mufrodat 65";
                         $data['title'] = "Perlengkapan Rumah Bag. 5";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 65");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 65");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "بَوَّابَةٌ",
@@ -3351,7 +3351,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 11";
                         $data['materi'] = "Mufrodat 66";
                         $data['title'] = "Pekerjaan Tentang Perkakas Rumah Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 66");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 66");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "كَنَسَ-يَكْنُسُ-كَنْسًا",
@@ -3395,7 +3395,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 11";
                         $data['materi'] = "Mufrodat 67";
                         $data['title'] = "Pekerjaan Tentang Perkakas Rumah Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 67");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 67");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "قَعَدَ-يَقْعُدُ-قُعُودًا",
@@ -3434,7 +3434,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 11";
                         $data['materi'] = "Mufrodat 68";
                         $data['title'] = "Pekerjaan Tentang Perkakas Rumah Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 68");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 68");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "صَعِدَ-يَصْعَدُ-صُعُوْدًا",
@@ -3473,7 +3473,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 11";
                         $data['materi'] = "Mufrodat 69";
                         $data['title'] = "Warna-warna Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 69");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 69");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أَسْوَدُ",
@@ -3512,7 +3512,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 11";
                         $data['materi'] = "Mufrodat 70";
                         $data['title'] = "Warna-warna Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 70");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 70");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أَخْضَرُ",
@@ -3551,7 +3551,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 11";
                         $data['materi'] = "Mufrodat 71";
                         $data['title'] = "Sifat Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 71");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 71");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "كَبِيْرٌ",
@@ -3600,7 +3600,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 11";
                         $data['materi'] = "Mufrodat 72";
                         $data['title'] = "Sifat Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 72");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 72");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "كَثِيْرٌ",
@@ -3644,7 +3644,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 12";
                         $data['materi'] = "Mufrodat 73";
                         $data['title'] = "Sifat Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 73");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 73");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "رَقِيْقٌ",
@@ -3693,7 +3693,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 12";
                         $data['materi'] = "Mufrodat 74";
                         $data['title'] = "Sifat Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 74");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 74");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "بَعِيْدٌ",
@@ -3742,7 +3742,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 12";
                         $data['materi'] = "Mufrodat 75";
                         $data['title'] = "Sifat Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 75");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 75");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "خَفِيْفٌ",
@@ -3786,7 +3786,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 12";
                         $data['materi'] = "Mufrodat 76";
                         $data['title'] = "Sifat Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 76");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 76");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "لاَئِقٌ",
@@ -3830,7 +3830,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 13";
                         $data['materi'] = "Mufrodat 77";
                         $data['title'] = "Pakaian dan Perhiasan Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 77");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 77");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "ثَوْبٌ",
@@ -3879,7 +3879,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 13";
                         $data['materi'] = "Mufrodat 78";
                         $data['title'] = "Pakaian dan Perhiasan Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 78");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 78");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "جَوْرَبٌ",
@@ -3923,7 +3923,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 13";
                         $data['materi'] = "Mufrodat 79";
                         $data['title'] = "Pakaian dan Perhiasan Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 79");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 79");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "كِسَاءٌ",
@@ -3967,7 +3967,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 13";
                         $data['materi'] = "Mufrodat 80";
                         $data['title'] = "Pakaian dan Perhiasan Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 80");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 80");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "لِبَاسٌ رَسْمِيٌّ",
@@ -4011,7 +4011,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 13";
                         $data['materi'] = "Mufrodat 81";
                         $data['title'] = "Pakaian dan Perhiasan Bag. 5";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 81");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 81");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "رَبْطَةٌ",
@@ -4055,7 +4055,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 13";
                         $data['materi'] = "Mufrodat 82";
                         $data['title'] = "Pekerjaan Tentang Pakaian Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 82");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 82");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "لَبِسَ-يَلْبَسُ-لُبْسًا",
@@ -4089,7 +4089,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 13";
                         $data['materi'] = "Mufrodat 83";
                         $data['title'] = "Pekerjaan Tentang Pakaian Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 83");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 83");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "طَوَّلَ-يُطَوِّلُ-تَطْوِيْلًا",
@@ -4123,7 +4123,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 13";
                         $data['materi'] = "Mufrodat 84";
                         $data['title'] = "Kamar Tidur Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 84");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 84");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "سَرِيْرٌ",
@@ -4172,7 +4172,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 13";
                         $data['materi'] = "Mufrodat 85";
                         $data['title'] = "Kamar Tidur Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 85");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 85");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مِرْآةٌ",
@@ -4221,7 +4221,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 14";
                         $data['materi'] = "Mufrodat 86";
                         $data['title'] = "Pekerjaan Tentang Kamar Tidur";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 86");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 86");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "نَامَ-يَنَامُ-نَوْمًا",
@@ -4265,7 +4265,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 14";
                         $data['materi'] = "Mufrodat 87";
                         $data['title'] = "Dapur Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 87");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 87");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مَوْقِدٌ",
@@ -4319,7 +4319,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 14";
                         $data['materi'] = "Mufrodat 88";
                         $data['title'] = "Dapur Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 88");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 88");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "فِنْجَانٌ",
@@ -4368,7 +4368,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 14";
                         $data['materi'] = "Mufrodat 89";
                         $data['title'] = "Dapur Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 89");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 89");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "رَفُّ الصُّحُوْنِ",
@@ -4417,7 +4417,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 15";
                         $data['materi'] = "Mufrodat 90";
                         $data['title'] = "Pekerjaan Tentang Dapur Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 90");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 90");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أَكَلَ-يَأْكُلُ-أَكْلاً",
@@ -4466,7 +4466,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 15";
                         $data['materi'] = "Mufrodat 91";
                         $data['title'] = "Pekerjaan Tentang Dapur Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 91");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 91");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "عَضَّ-يَعَضُّ-عَضًّا",
@@ -4510,7 +4510,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 15";
                         $data['materi'] = "Mufrodat 92";
                         $data['title'] = "Rasa-rasa Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 92");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 92");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "طَعْمٌ",
@@ -4549,7 +4549,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 15";
                         $data['materi'] = "Mufrodat 93";
                         $data['title'] = "Rasa-rasa Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 93");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 93");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "حِرِّيْفٌ",
@@ -4588,7 +4588,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 16";
                         $data['materi'] = "Mufrodat 94";
                         $data['title'] = "Kamar Mandi Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 94");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 94");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "بِرْكَةٌ",
@@ -4647,7 +4647,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 16";
                         $data['materi'] = "Mufrodat 95";
                         $data['title'] = "Kamar Mandi Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 95");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 95");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "دَلْوٌ",
@@ -4701,7 +4701,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 16";
                         $data['materi'] = "Mufrodat 96";
                         $data['title'] = "Pekerjaan Tentang Kamar Mandi Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 96");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 96");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "اِغْتَسَلَ-يَغْتَسِلُ-اِغْتِسَالًا",
@@ -4745,7 +4745,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 16";
                         $data['materi'] = "Mufrodat 97";
                         $data['title'] = "Pekerjaan Tentang Kamar Mandi Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 97");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 97");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "بَالَ-يَبُوْلُ-بَوْلًا",
@@ -4789,7 +4789,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 17";
                         $data['materi'] = "Mufrodat 98";
                         $data['title'] = "Sekolah Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 98");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 98");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مَدْرَسَةٌ حُكُوْمِيَّةٌ",
@@ -4833,7 +4833,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 17";
                         $data['materi'] = "Mufrodat 99";
                         $data['title'] = "Sekolah Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 99");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 99");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "إِدَارَةٌ",
@@ -4877,7 +4877,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 17";
                         $data['materi'] = "Mufrodat 100";
                         $data['title'] = "Sekolah Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 100");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 100");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "نُقُوْدٌ",
@@ -4921,7 +4921,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 17";
                         $data['materi'] = "Mufrodat 101";
                         $data['title'] = "Sekolah Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 101");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 101");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "سَبُّوْرَةٌ",
@@ -4965,7 +4965,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 17";
                         $data['materi'] = "Mufrodat 102";
                         $data['title'] = "Sekolah Bag. 5";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 102");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 102");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "قَلَمُ الرَّصَاصِ",
@@ -5009,7 +5009,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 18";
                         $data['materi'] = "Mufrodat 103";
                         $data['title'] = "Sekolah Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 103");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 103");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مَدْرَسَةٌ ثَانَوِيَّةٌ",
@@ -5048,7 +5048,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 18";
                         $data['materi'] = "Mufrodat 104";
                         $data['title'] = "Sekolah Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 104");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 104");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "نَشْرَةٌ",
@@ -5087,7 +5087,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 18";
                         $data['materi'] = "Mufrodat 105";
                         $data['title'] = "Pekerjaan Tentang Sekolah Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 105");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 105");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "ذَهَبَ-يَذْهَبُ-ذَهَابًا",
@@ -5131,7 +5131,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 18";
                         $data['materi'] = "Mufrodat 106";
                         $data['title'] = "Pekerjaan Tentang Sekolah Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 106");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 106");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "اِمْتَحَنَ-يَـمْتَحِنُ-اِمْتِحَانًا",
@@ -5170,7 +5170,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 18";
                         $data['materi'] = "Mufrodat 107";
                         $data['title'] = "Pekerjaan Tentang Sekolah Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 107");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 107");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "صَنَعَ-يَصْنَعُ-صِنَاعَةً",
@@ -5209,7 +5209,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 18";
                         $data['materi'] = "Mufrodat 108";
                         $data['title'] = "Kendaraan-kendaraan Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 108");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 108");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "دَرَّاجَةٌ",
@@ -5258,7 +5258,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 18";
                         $data['materi'] = "Mufrodat 109";
                         $data['title'] = "Kendaraan-kendaraan Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 109");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 109");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "عَرَبَةٌ",
@@ -5307,7 +5307,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 18";
                         $data['materi'] = "Mufrodat 110";
                         $data['title'] = "Kendaraan-kendaraan Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 110");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 110");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "دَبَّابَةٌ",
@@ -5356,7 +5356,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 18";
                         $data['materi'] = "Mufrodat 111";
                         $data['title'] = "Kendaraan-kendaraan Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 111");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 111");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "تَأْشِيْرَةٌ",
@@ -5405,7 +5405,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 19";
                         $data['materi'] = "Mufrodat 112";
                         $data['title'] = "Pekerjaan Tentang Kendaraan";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 112");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 112");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "قَادَ-يَقُودُ-قِيَادَةً",
@@ -5439,7 +5439,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 19";
                         $data['materi'] = "Mufrodat 113";
                         $data['title'] = "Rumah Sakit Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 113");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 113");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "طَبِيْبٌ",
@@ -5478,7 +5478,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 19";
                         $data['materi'] = "Mufrodat 114";
                         $data['title'] = "Rumah Sakit Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 114");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 114");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "طَبِيْبُ الْجَرَاحِ",
@@ -5517,7 +5517,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 19";
                         $data['materi'] = "Mufrodat 115";
                         $data['title'] = "Nama-nama Hewan Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 115");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 115");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "كَلْبٌ",
@@ -5566,7 +5566,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 19";
                         $data['materi'] = "Mufrodat 116";
                         $data['title'] = "Nama-nama Hewan Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 116");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 116");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "جَامُوْسٌ",
@@ -5615,7 +5615,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 19";
                         $data['materi'] = "Mufrodat 117";
                         $data['title'] = "Nama-nama Hewan Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 117");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 117");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "سَرَطَانُ الْبَحْرِ",
@@ -5659,7 +5659,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 19";
                         $data['materi'] = "Mufrodat 118";
                         $data['title'] = "Nama-nama Hewan Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 118");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 118");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "حِمَارٌ",
@@ -5703,7 +5703,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 20";
                         $data['materi'] = "Mufrodat 119";
                         $data['title'] = "Nama-nama Hewan Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 119");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 119");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "تِـمْسَاحٌ",
@@ -5752,7 +5752,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 20";
                         $data['materi'] = "Mufrodat 120";
                         $data['title'] = "Nama-nama Hewan Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 120");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 120");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "بَعُوْضَةٌ",
@@ -5806,7 +5806,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 20";
                         $data['materi'] = "Mufrodat 121";
                         $data['title'] = "Nama-nama Buah Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 121");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 121");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "تُفَّاحٌ",
@@ -5850,7 +5850,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 20";
                         $data['materi'] = "Mufrodat 122";
                         $data['title'] = "Nama-nama Buah Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 122");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 122");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "اَفُوْكَادُو",
@@ -5894,7 +5894,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 20";
                         $data['materi'] = "Mufrodat 123";
                         $data['title'] = "Nama-nama Buah Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 123");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 123");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "فَاكِهَةُ التِّنِيْنَ",
@@ -5938,7 +5938,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 20";
                         $data['materi'] = "Mufrodat 124";
                         $data['title'] = "Pekerjaan Tentang Buah";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 124");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 124");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "حَصَدَ-يَحْصُدُ-حَصَادًا",
@@ -5982,7 +5982,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 21";
                         $data['materi'] = "Mufrodat 125";
                         $data['title'] = "Nama-nama Tempat Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 125");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 125");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مَطْبَخٌ",
@@ -6031,7 +6031,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 21";
                         $data['materi'] = "Mufrodat 126";
                         $data['title'] = "Nama-nama Tempat Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 126");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 126");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مَـحَطَّةُ الْبِنْزِيْنِ",
@@ -6080,7 +6080,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 21";
                         $data['materi'] = "Mufrodat 127";
                         $data['title'] = "Nama-nama Tempat Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 127");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 127");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مَـحْكَـمَةٌ",
@@ -6129,7 +6129,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 21";
                         $data['materi'] = "Mufrodat 128";
                         $data['title'] = "Nama-nama Tempat Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 128");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 128");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مَتْحَفٌ",
@@ -6178,7 +6178,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 21";
                         $data['materi'] = "Mufrodat 129";
                         $data['title'] = "Nama-nama Tempat Bag. 5";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 129");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 129");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مَسْكَنٌ",
@@ -6227,7 +6227,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 21";
                         $data['materi'] = "Mufrodat 130";
                         $data['title'] = "Nama-nama Tempat Bag. 6";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 130");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 130");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "هَيْكَلٌ",
@@ -6266,7 +6266,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 21";
                         $data['materi'] = "Mufrodat 131";
                         $data['title'] = "Pekerjaan Tentang Tempat Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 131");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 131");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "جَاءَ-يَـجِيْئُ-مَـجِيْئًا",
@@ -6300,7 +6300,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 21";
                         $data['materi'] = "Mufrodat 132";
                         $data['title'] = "Pekerjaan Tentang Tempat Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 132");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 132");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "بَاتَ-يَبِيْتُ-بَيْتًا",
@@ -6334,7 +6334,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 22";
                         $data['materi'] = "Mufrodat 133";
                         $data['title'] = "Alam Semesta Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 133");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 133");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "شَـمْسٌ",
@@ -6388,7 +6388,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 22";
                         $data['materi'] = "Mufrodat 134";
                         $data['title'] = "Alam Semesta Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 134");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 134");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أَرْضٌ",
@@ -6437,7 +6437,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 22";
                         $data['materi'] = "Mufrodat 135";
                         $data['title'] = "Alam Semesta Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 135");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 135");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "شِعْبٌ",
@@ -6486,7 +6486,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 22";
                         $data['materi'] = "Mufrodat 136";
                         $data['title'] = "Alam Semesta Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 136");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 136");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "هَضْبَةٌ",
@@ -6535,7 +6535,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 23";
                         $data['materi'] = "Mufrodat 137";
                         $data['title'] = "Profesi Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 137");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 137");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مُعَلِّمٌ",
@@ -6579,7 +6579,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 23";
                         $data['materi'] = "Mufrodat 138";
                         $data['title'] = "Profesi Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 138");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 138");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مُـخْتَطِفٌ",
@@ -6623,7 +6623,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 23";
                         $data['materi'] = "Mufrodat 139";
                         $data['title'] = "Profesi Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 139");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 139");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "فَلَّاحٌ",
@@ -6667,7 +6667,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 23";
                         $data['materi'] = "Mufrodat 140";
                         $data['title'] = "Profesi Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 140");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 140");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "حَلَّاقٌ",
@@ -6711,7 +6711,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 23";
                         $data['materi'] = "Mufrodat 141";
                         $data['title'] = "Profesi Bag. 5";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 141");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 141");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "مُهَنْدِسٌ مِعْمَارِيٌّ",
@@ -6755,7 +6755,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 24";
                         $data['materi'] = "Mufrodat 142";
                         $data['title'] = "Profesi Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 142");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 142");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "عَالِمٌ",
@@ -6799,7 +6799,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 24";
                         $data['materi'] = "Mufrodat 143";
                         $data['title'] = "Profesi Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 143");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 143");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "سِكْرِتِيْرٌ",
@@ -6848,7 +6848,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 24";
                         $data['materi'] = "Mufrodat 144";
                         $data['title'] = "Musim";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 144");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 144");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "فَصْلُ الْـمَطَرِ",
@@ -8398,7 +8398,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 37";
                         $data['title'] = "Pekerjaan Tentang Anggota Tubuh Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 37");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 37");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "نَظَرَ-يَنْظُرُ-نَظْرًا",
@@ -8431,7 +8431,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 38";
                         $data['title'] = "Pekerjaan Tentang Anggota Tubuh Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 38");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 38");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "ضَرَبَ-يَضْرِبُ-ضَرْبًا",
@@ -8464,7 +8464,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 39";
                         $data['title'] = "Pekerjaan Tentang Anggota Tubuh Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 39");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 39");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "رَفَسَ-يَرْفُسُ-رَفْسًا",
@@ -8497,7 +8497,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 40";
                         $data['title'] = "Pekerjaan Tentang Anggota Tubuh Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 40");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 40");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "فَكَّرَ-يُفَكِّرُ-تَفْكِيْرًا",
@@ -8530,7 +8530,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 41";
                         $data['title'] = "Pekerjaan Tentang Anggota Tubuh Bag. 5";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 41");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 41");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "تَأَمَّلَ-يَتَأَمَّلُ-تَأَمُّلاً",
@@ -8559,7 +8559,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 42";
                         $data['title'] = "Keluarga Bag. 1";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 42");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 42");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أَبٌ",
@@ -8613,7 +8613,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 43";
                         $data['title'] = "Keluarga Bag. 2";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 43");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 43");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "حَفِيْدَةٌ",
@@ -8667,7 +8667,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 44";
                         $data['title'] = "Keluarga Bag. 3";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 44");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 44");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أُخْتٌ كَبِيْرَةٌ",
@@ -8715,7 +8715,7 @@ class Materi extends CI_CONTROLLER{
                         $data['tema'] = "Pertemuan 6";
                         $data['materi'] = "Mufrodat 45";
                         $data['title'] = "Keluarga Bag. 4";
-                        $data['latihan'] = $this->latihan_mufrodat("latihan_hifdzi_1", $id, "Mufrodat 45");
+                        $data['latihan'] = $this->latihan_mufrodat("latihan_peserta", $id, "Mufrodat 45");
                         $data['mufrodat'] = [
                             [
                                 "kata_arab" => "أَرْمَلٌ",
@@ -13253,7 +13253,7 @@ class Materi extends CI_CONTROLLER{
                         // jumlah latihan
                             $latihan = array_unique(array_column($data['mufrodat'], 'tema'));
 
-                        $data['tema'][$i] = $this->tema("latihan_hifdzi_1", $id, $pert, $pert, $pert, COUNT($data['mufrodat']), COUNT($latihan), $pertemuan);
+                        $data['tema'][$i] = $this->tema("latihan_peserta", $id, $pert, $pert, $pert, COUNT($data['mufrodat']), COUNT($latihan), $pertemuan);
                         $i++;
                     }
                 // Tema
@@ -13337,7 +13337,7 @@ class Materi extends CI_CONTROLLER{
 
     // add
         public function add_latihan(){
-            $id = $this->session->userdata('id');
+            $id = $this->session->userdata('id_user');
             $redirect = $this->input->post("redirect", TRUE);
             $latihan = $this->input->post("latihan", TRUE);
             $materi = $this->input->post("materi", TRUE);

@@ -47,10 +47,24 @@
                                         <input type="text" name="email" id="email" class="form-control form-control-sm">
                                     </div>
                                     <div class="form-group">
-                                        <label for="catatan">Kelas Yang Diambil</label>
-                                        <textarea name="catatan" id="catatan" class="form-control form-control-sm" required></textarea>
-                                        <small id="catatanHelp" class="form-text text-muted">contoh : Hifdzi 1</small>
+                                        <label for="catatan">Program Yang Diambil</label>
+                                        <!-- <small id="catatanHelp" class="form-text text-muted mt-0">Checlist program yang diambil</small> -->
+                                        <div class="row checkbox-group required">
+                                            <div class="col-6">
+                                                <input type="checkbox" class="mr-1" name="program[]" id="program1" value="Hifdzi 1"><label for="program1">Hifdzi 1</label>
+                                            </div>
+                                            <!-- <div class="col-6">
+                                                <input type="checkbox" class="mr-1" name="program[]" id="program2" value="Hifdzi 2"><label for="program2">Hifdzi 2</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="checkbox" class="mr-1" name="program[]" id="program3" value="Tarkibi 1"><label for="program3">Tarkibi 1</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="checkbox" class="mr-1" name="program[]" id="program4" value="Tarkibi 2"><label for="program4">Tarkibi 2</label>
+                                            </div> -->
+                                        </div>
                                     </div>
+                                        <!-- <textarea name="catatan" id="catatan" class="form-control form-control-sm" required></textarea> -->
                                     <div class="d-flex justify-content-end">
                                         <button type="submit" class="btn btn-sm btn-primary" id="btnSimpan">Simpan</button>
                                     </div>
@@ -67,10 +81,13 @@
 <script>
     $("#btnSimpan").click(function(){
         if(confirm("Yakin akan menyimpan data Anda?")){
-            
+            if($('div.checkbox-group.required :checkbox:checked').length == 0){
+                alert("Pilih Program terlebih dahulu")
+                return false;
+            }
         } else {
             return false
         }
-
     })
+
 </script>

@@ -255,6 +255,7 @@
             let latihan = "<?= $materi?>";
             let id_kelas = "<?= $id_kelas?>";
 
+            // console.log(id_kelas)
             $.ajax({
                 type : "POST",
                 url : "<?= base_url()?>hifdzi1/add_latihan",
@@ -272,4 +273,5 @@
             })
         }
     })
+
 </script>
