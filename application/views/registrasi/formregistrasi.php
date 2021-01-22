@@ -51,7 +51,7 @@
                                         <!-- <small id="catatanHelp" class="form-text text-muted mt-0">Checlist program yang diambil</small> -->
                                         <div class="row checkbox-group required">
                                             <?php foreach ($program as $data) :?>
-                                                <div class="col-6">
+                                                <div class="col-12 col-md-6">
                                                     <input type="checkbox" class="mr-1" name="program[]" id="<?= $data['id_program']?>" value="<?= $data['program']?>"><label for="<?= $data['id_program']?>"><?= $data['program']?></label>
                                                 </div>
                                             <?php endforeach;?>
