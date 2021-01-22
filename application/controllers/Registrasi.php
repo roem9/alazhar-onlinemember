@@ -6,6 +6,8 @@
         }
 
         public function index(){
+            $data['program'] = $this->Admin_model->get_all("program", "", "program", "ASC");
+            
             $data['title'] = 'Form Registrasi';
             $this->load->view("templates/header-login", $data);
             $this->load->view("registrasi/formregistrasi");
@@ -41,7 +43,11 @@
             foreach ($program as $program) {
                 $data = [
                     "id_user" => $id,
-                    "program" => $program
+                    "program" => $program,
+                    "nama" => $this->input->post("nama", TRUE),
+                    "alamat" => $this->input->post("alamat", TRUE),
+                    "tgl_lahir" => $this->input->post("tgl_lahir", TRUE),
+                    "t4_lahir" => $this->input->post("t4_lahir", TRUE),
                 ];
 
                 $this->Admin_model->add_data("kelas_user", $data);
