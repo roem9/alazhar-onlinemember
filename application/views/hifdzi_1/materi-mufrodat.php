@@ -12,16 +12,16 @@
                 <div class="col-12 mb-3">
                     <?php if($back != "" && $next == "") :?>
                         <div class="d-flex justify-content-start">
-                            <a href="<?= base_url()?>Hifdzi1/kelas/<?= $link?>?pertemuan=<?= $back?>" class="btn btn-sm btn-success"><i class="fa fa-arrow-left"></i></a>
+                            <a href="<?= base_url()?>Hifdzi1/kelas/<?= $link?>?pertemuan=<?= $back?>" class="btn btn-md btn-success"><i class="fa fa-arrow-left"></i></a>
                         </div>
                     <?php elseif($back != "" && $next != "") :?>
                         <div class="d-flex justify-content-between">
-                            <a href="<?= base_url()?>Hifdzi1/kelas/<?= $link?>?pertemuan=<?= $back?>" class="btn btn-sm btn-success"><i class="fa fa-arrow-left"></i></a>
-                            <a href="<?= base_url()?>Hifdzi1/kelas/<?= $link?>?pertemuan=<?= $next?>" class="btn btn-sm btn-success"><i class="fa fa-arrow-right"></i></a>
+                            <a href="<?= base_url()?>Hifdzi1/kelas/<?= $link?>?pertemuan=<?= $back?>" class="btn btn-md btn-success"><i class="fa fa-arrow-left"></i></a>
+                            <a href="<?= base_url()?>Hifdzi1/kelas/<?= $link?>?pertemuan=<?= $next?>" class="btn btn-md btn-success"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     <?php elseif($back == "" && $next != "") :?>
                         <div class="d-flex justify-content-end">
-                            <a href="<?= base_url()?>Hifdzi1/kelas/<?= $link?>?pertemuan=<?= $next?>" class="btn btn-sm btn-success"><i class="fa fa-arrow-right"></i></a>
+                            <a href="<?= base_url()?>Hifdzi1/kelas/<?= $link?>?pertemuan=<?= $next?>" class="btn btn-md btn-success"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     <?php endif;?>
                 </div>

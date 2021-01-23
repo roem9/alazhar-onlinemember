@@ -63,6 +63,10 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
         .nama{
 			position: absolute;
@@ -87,8 +91,8 @@
 			position: absolute;
 			/* left: 565px; */
             right: 230px;
-			top: 500px;
-            font-size: 22px;
+			top: 510px;
+            font-size: 25px;
             font-family: 'arab';
             direction: 'rtl';
             word-spacing: 3px;
@@ -97,9 +101,9 @@
         .p2{
 			position: absolute;
 			/* left: 570px; */
-            right: 230px;
-			top: 530px;
-            font-size: 22px;
+            right: 219px;
+			top: 560px;
+            font-size: 25px;
             font-family: 'arab';
             direction: 'rtl';
             word-spacing: 3px;
@@ -107,22 +111,41 @@
         
         .p3{
 			position: absolute;
-			left: 500;
-			top: 560px;
-            font-size: 22px;
+			right: 430;
+			top: 610px;
+            font-size: 25px;
             font-family: 'arab';
             direction: 'rtl';
             word-spacing: 3px;
         }
+        #gambar {
+            width: 100%;
+            height: 100%;
+        }
+
+        .nilai{
+			position: absolute;
+			right: 350;
+			top: 660px;
+            font-family: 'dejavusanscondensed';
+            direction: 'rtl';
+        }
     </style>
 </head>
     <body>
-        <img src="<?= base_url()?>assets/img/sertifikat/hifdzi1.jpg" alt="" srcset="">
+        <img id="gambar" src="<?= base_url()?>assets/img/sertifikat.jpg" alt="" srcset="">
         <p class="nama"><b><?= $peserta['nama']?></b></p>
         <p class="ttl"><b><?= $peserta['t4_lahir']?>, <?= tgl_indo(date("d-m-Y", strtotime($peserta['tgl_lahir'])))?></b></p>
         <p class="alamat"><b><?= $peserta['alamat']?></b></p>
 
-        <p class="p1">قَدْ دَرَسَ /دَرَسَتْ اللغة العربيّة فِي الْفَصْل "حفظي ١" مِنَ التَّارِيْخ <?= tgl_arab(date("j-m", strtotime($kelas["tgl_mulai"])))?> </p>
-        <p class="p2">إِلَى <?= tgl_arab(date("j-m", strtotime($kelas["tgl_selesai"])))?> <?= angka_arab(date("Y", strtotime($kelas["tgl_selesai"])))?> وَ قَدْ نَجَحَ /تْ فِي الإمتِحَانِ النِّهَائ بِتَقْدِيْرِيْ <u><?= $nilai?></u></p>
+        <div class="p1">قَدْ دَرَسَ /دَرَسَتْ اللغة العربيّة فِي الْفَصْل "<?= $kelas['program_arab']?>" مِنَ التَّارِيْخ <?= angka_arab(date("j", strtotime($kelas["tgl_mulai"]))) ?> مِنْ <span style="font-size: 1px">ه</span></div>
+        <div class="p2"><?= bulan_arab(date("m", strtotime($kelas["tgl_mulai"]))) ?> إِلَى <?= tgl_arab(date("j-m", strtotime($kelas["tgl_selesai"])))?> <?= angka_arab(date("Y", strtotime($kelas["tgl_selesai"])))?>، وَ قَدْ نَجَحَ /تْ فِي الإمتِحَانِ النِّهَائِ <span style="font-size:1px">ن</span></div>
+        <div class="p3">
+            بِتَقْدِيْرِيْ<span style="font-size: 1px">ه</span>
+        </div>
+        <div class="nilai">
+            <span style="font-size: 35px"><strong><?= $nilai?></strong></span><span style="font-size: 1px">ه</span>
+        </div>
+
     </body>
 </html>

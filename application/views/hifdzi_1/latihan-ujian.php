@@ -97,11 +97,11 @@
                                             </div>
                                             <?php if($i == 0) :?>
                                                 <div class="d-flex justify-content-center">
-                                                    <a id="right<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-sm btn-success text-light right"><i class="fa fa-angle-right"></i></a>
+                                                    <a id="right<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-md btn-success text-light right"><i class="fa fa-angle-right"></i></a>
                                                 </div>
                                             <?php elseif($i == 49) :?>
                                                 <div class="d-flex justify-content-center">
-                                                    <a id="left<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-sm btn-success text-light left mr-3"><i class="fa fa-angle-left"></i></a>
+                                                    <a id="left<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-md btn-success text-light left mr-3"><i class="fa fa-angle-left"></i></a>
                                                     <?php if($latihan) :?>
                                                         <a id="simpan" class="img-shadow btn btn-sm btn-success text-light mr-3">
                                                             periksa
@@ -114,8 +114,8 @@
                                                 </div>
                                             <?php else :?>
                                                 <div class="d-flex justify-content-center">
-                                                    <a id="left<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-sm btn-success text-light left mr-3"><i class="fa fa-angle-left"></i></a>
-                                                    <a id="right<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-sm btn-success text-light right"><i class="fa fa-angle-right"></i></a>
+                                                    <a id="left<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-md btn-success text-light left mr-3"><i class="fa fa-angle-left"></i></a>
+                                                    <a id="right<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-md btn-success text-light right"><i class="fa fa-angle-right"></i></a>
                                                 </div>
                                             <?php endif;?>
                                         </li>

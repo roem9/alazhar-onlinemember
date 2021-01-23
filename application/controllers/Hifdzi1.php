@@ -917,91 +917,20 @@ class Hifdzi1 extends CI_CONTROLLER{
     }
 
     public function syahadah($id_kelas){
+        
         $id = $this->session->userdata('id_user');
         $kelas = $this->Admin_model->get_one("kelas_user", ["MD5(id)" => $id_kelas, "id_user" => $id]);
 
         $data['peserta'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
         $data['kelas'] = $this->Admin_model->get_one("kelas", ["id_kelas" => $kelas['id_kelas']]);
-
-        // nilai form harian
-            $nilai_harian_form = 0;
-            $nilai = $this->Admin_model->get_all("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "latihan" => "Harian"]);
-            foreach ($nilai as $nilai) {
-                $nilai_harian_form += $nilai['nilai'];
-            }
-
-            $data['nilai_harian_form'] = ($nilai_harian_form / 24) * 0.1;
-        // nilai form harian
         
-        // nilai hafalan harian
-            $nilai_harian_hafalan = 0;
-            $nilai = $this->Admin_model->get_all("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "latihan" => "Hafalan"]);
-            foreach ($nilai as $nilai) {
-                $nilai_harian_hafalan += $nilai['nilai'];
-            }
-
-            $data['nilai_harian_hafalan'] = ($nilai_harian_hafalan / 24) * 0.3;
-        // nilai hafalan harian
+        $program = $this->Admin_model->get_one("program", ["program" => $kelas['program']]);
+        $data['kelas']['program_arab'] = $program['program_arab'];
         
-        // nilai tambahan harian
-            $nilai_harian_tambahan = 0;
-            $nilai = $this->Admin_model->get_all("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "latihan" => "Tambahan"]);
-            foreach ($nilai as $nilai) {
-                $nilai_harian_tambahan += $nilai['nilai'];
-            }
-
-            $data['nilai_harian_tambahan'] = ($nilai_harian_tambahan / 24) * 0.1;
-        // nilai tambahan harian
-
-        // nilai ujian pekanan
-            $nilai_ujian_pekanan = 0;
-            $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pekan 1", "latihan" => "Form"]);
-            if($nilai) $nilai_ujian_pekanan += $nilai['nilai'];
-            $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pekan 2", "latihan" => "Form"]);
-            if($nilai) $nilai_ujian_pekanan += $nilai['nilai'];
-            $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pekan 3", "latihan" => "Form"]);
-            if($nilai) $nilai_ujian_pekanan += $nilai['nilai'];
-            $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pekan 4", "latihan" => "Form"]);
-            if($nilai) $nilai_ujian_pekanan += $nilai['nilai'];
-            $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pekan 1", "latihan" => "Input"]);
-            if($nilai) $nilai_ujian_pekanan += $nilai['nilai'];
-            $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pekan 2", "latihan" => "Input"]);
-            if($nilai) $nilai_ujian_pekanan += $nilai['nilai'];
-            $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pekan 3", "latihan" => "Input"]);
-            if($nilai) $nilai_ujian_pekanan += $nilai['nilai'];
-            $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pekan 4", "latihan" => "Input"]);
-            if($nilai) $nilai_ujian_pekanan += $nilai['nilai'];
-
-            $data['nilai_ujian_pekanan'] = ($nilai_ujian_pekanan / 8) * 0.2;
-        // nilai ujian pekanan
-
-        // nilai ujian pertengahan
-            $nilai_ujian_pertengahan = 0;
-            $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pertengahan", "latihan" => "Input"]);
-            if($nilai) $nilai_ujian_pertengahan += $nilai['nilai']; 
-
-            $data['nilai_ujian_pertengahan'] = ($nilai_ujian_pertengahan / 1) * 0.15;
-        // nilai ujian pertengahan
+        $data['nilai'] = $kelas['nilai'];
         
-        // nilai ujian akhir
-            $nilai_ujian_akhir = 0;
-            $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Akhir", "latihan" => "Form"]);
-            if($nilai) $nilai_ujian_akhir += $nilai['nilai'];
-            $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Akhir", "latihan" => "Input"]);
-            if($nilai) $nilai_ujian_akhir += $nilai['nilai'];
-
-            $data['nilai_ujian_akhir'] = ($nilai_ujian_akhir / 2) * 0.15;
-        // nilai ujian akhir
-        $data['nilai'] = $data['nilai_harian_form'] + $data['nilai_harian_hafalan'] + $data['nilai_harian_tambahan'] + $data['nilai_ujian_pekanan'] + $data['nilai_ujian_pertengahan'] + $data['nilai_ujian_akhir'];
-
-        if($data['nilai'] >= 80 && $data['nilai'] <= 100) $data['nilai'] = "ممتاز";
-        else if($data['nilai'] >= 60 && $data['nilai'] < 80) $data['nilai'] = "جيد جدا";
-        else if($data['nilai'] >= 40 && $data['nilai'] < 60) $data['nilai'] = "جيد";
-        else if($data['nilai'] >= 20 && $data['nilai'] < 40) $data['nilai'] = "ناقص";
-        else if($data['nilai'] >= 0 && $data['nilai'] < 20) $data['nilai'] = "فاشل";
-
-
-        // echo json_encode($data);
+        // var_dump($kelas);
+        // exit();
         $defaultConfig = (new Mpdf\Config\ConfigVariables())->getDefaults();
         $fontDirs = $defaultConfig['fontDir'];
 
@@ -1011,7 +940,8 @@ class Hifdzi1 extends CI_CONTROLLER{
         $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => [210, 330], 'orientation' => 'L', 'margin_left' => '0', 'margin_right' => '0', 'margin_top' => '0', 'margin_bottom' => '0', 'fontDir' => array_merge($fontDirs, [__DIR__ . '/assets/font',]),
         'fontdata' => $fontData + [
             'arab' => [
-                'R' => 'tradbdo.ttf',
+                // 'R' => 'tradbdo.ttf',
+                'R' => 'trado.ttf',
                 'useOTL' => 0xFF,
                 'useKashida' => 75,
             ]
@@ -1019,22 +949,131 @@ class Hifdzi1 extends CI_CONTROLLER{
         ]);
         
         $mpdf->text_input_as_HTML = true; //(default = false)
-        
-        // $mpdf->autoScriptToLang = true;
-        // $mpdf->baseScript = 1;
-        // $mpdf->autoVietnamese = true;
-        // $mpdf->autoArabic = true;
-        
-        // $kwitansi['data'] = $this->Main_model->get_one("ppu_transfer", ["id" => $id]);
-        
-        
-        // $kwitansi['id'] = substr($kwitansi['data']['id'],0, 3)."/PPU-Im/".date('m', strtotime($kwitansi['data']['tgl']))."/".date('Y', strtotime($kwitansi['data']['tgl']));
-
-        // var_dump($kwitansi);
         $print = $this->load->view('hifdzi_1/sertifikat', $data, TRUE);
         $mpdf->WriteHTML($print);
-        $mpdf->Output();
+        // $mpdf->Output();
+        $mpdf->Output($data['kelas']['nama_kelas']."_".$data['peserta']['nama'].".pdf", 'I');
     }
+
+    // public function syahadah($id_kelas){
+    //     $id = $this->session->userdata('id_user');
+    //     $kelas = $this->Admin_model->get_one("kelas_user", ["MD5(id)" => $id_kelas, "id_user" => $id]);
+
+    //     $data['peserta'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
+    //     $data['kelas'] = $this->Admin_model->get_one("kelas", ["id_kelas" => $kelas['id_kelas']]);
+
+    //     // nilai form harian
+    //         $nilai_harian_form = 0;
+    //         $nilai = $this->Admin_model->get_all("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "latihan" => "Harian"]);
+    //         foreach ($nilai as $nilai) {
+    //             $nilai_harian_form += $nilai['nilai'];
+    //         }
+
+    //         $data['nilai_harian_form'] = ($nilai_harian_form / 24) * 0.1;
+    //     // nilai form harian
+        
+    //     // nilai hafalan harian
+    //         $nilai_harian_hafalan = 0;
+    //         $nilai = $this->Admin_model->get_all("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "latihan" => "Hafalan"]);
+    //         foreach ($nilai as $nilai) {
+    //             $nilai_harian_hafalan += $nilai['nilai'];
+    //         }
+
+    //         $data['nilai_harian_hafalan'] = ($nilai_harian_hafalan / 24) * 0.3;
+    //     // nilai hafalan harian
+        
+    //     // nilai tambahan harian
+    //         $nilai_harian_tambahan = 0;
+    //         $nilai = $this->Admin_model->get_all("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "latihan" => "Tambahan"]);
+    //         foreach ($nilai as $nilai) {
+    //             $nilai_harian_tambahan += $nilai['nilai'];
+    //         }
+
+    //         $data['nilai_harian_tambahan'] = ($nilai_harian_tambahan / 24) * 0.1;
+    //     // nilai tambahan harian
+
+    //     // nilai ujian pekanan
+    //         $nilai_ujian_pekanan = 0;
+    //         $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pekan 1", "latihan" => "Form"]);
+    //         if($nilai) $nilai_ujian_pekanan += $nilai['nilai'];
+    //         $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pekan 2", "latihan" => "Form"]);
+    //         if($nilai) $nilai_ujian_pekanan += $nilai['nilai'];
+    //         $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pekan 3", "latihan" => "Form"]);
+    //         if($nilai) $nilai_ujian_pekanan += $nilai['nilai'];
+    //         $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pekan 4", "latihan" => "Form"]);
+    //         if($nilai) $nilai_ujian_pekanan += $nilai['nilai'];
+    //         $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pekan 1", "latihan" => "Input"]);
+    //         if($nilai) $nilai_ujian_pekanan += $nilai['nilai'];
+    //         $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pekan 2", "latihan" => "Input"]);
+    //         if($nilai) $nilai_ujian_pekanan += $nilai['nilai'];
+    //         $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pekan 3", "latihan" => "Input"]);
+    //         if($nilai) $nilai_ujian_pekanan += $nilai['nilai'];
+    //         $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pekan 4", "latihan" => "Input"]);
+    //         if($nilai) $nilai_ujian_pekanan += $nilai['nilai'];
+
+    //         $data['nilai_ujian_pekanan'] = ($nilai_ujian_pekanan / 8) * 0.2;
+    //     // nilai ujian pekanan
+
+    //     // nilai ujian pertengahan
+    //         $nilai_ujian_pertengahan = 0;
+    //         $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Pertengahan", "latihan" => "Input"]);
+    //         if($nilai) $nilai_ujian_pertengahan += $nilai['nilai']; 
+
+    //         $data['nilai_ujian_pertengahan'] = ($nilai_ujian_pertengahan / 1) * 0.15;
+    //     // nilai ujian pertengahan
+        
+    //     // nilai ujian akhir
+    //         $nilai_ujian_akhir = 0;
+    //         $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Akhir", "latihan" => "Form"]);
+    //         if($nilai) $nilai_ujian_akhir += $nilai['nilai'];
+    //         $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $kelas['id_kelas'], "id_user" => $id, "pertemuan" => "Ujian Akhir", "latihan" => "Input"]);
+    //         if($nilai) $nilai_ujian_akhir += $nilai['nilai'];
+
+    //         $data['nilai_ujian_akhir'] = ($nilai_ujian_akhir / 2) * 0.15;
+    //     // nilai ujian akhir
+    //     $data['nilai'] = $data['nilai_harian_form'] + $data['nilai_harian_hafalan'] + $data['nilai_harian_tambahan'] + $data['nilai_ujian_pekanan'] + $data['nilai_ujian_pertengahan'] + $data['nilai_ujian_akhir'];
+
+    //     if($data['nilai'] >= 80 && $data['nilai'] <= 100) $data['nilai'] = "ممتاز";
+    //     else if($data['nilai'] >= 60 && $data['nilai'] < 80) $data['nilai'] = "جيد جدا";
+    //     else if($data['nilai'] >= 40 && $data['nilai'] < 60) $data['nilai'] = "جيد";
+    //     else if($data['nilai'] >= 20 && $data['nilai'] < 40) $data['nilai'] = "ناقص";
+    //     else if($data['nilai'] >= 0 && $data['nilai'] < 20) $data['nilai'] = "فاشل";
+
+
+    //     // echo json_encode($data);
+    //     $defaultConfig = (new Mpdf\Config\ConfigVariables())->getDefaults();
+    //     $fontDirs = $defaultConfig['fontDir'];
+
+    //     $defaultFontConfig = (new Mpdf\Config\FontVariables())->getDefaults();
+    //     $fontData = $defaultFontConfig['fontdata'];
+
+    //     $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => [210, 330], 'orientation' => 'L', 'margin_left' => '0', 'margin_right' => '0', 'margin_top' => '0', 'margin_bottom' => '0', 'fontDir' => array_merge($fontDirs, [__DIR__ . '/assets/font',]),
+    //     'fontdata' => $fontData + [
+    //         'arab' => [
+    //             'R' => 'tradbdo.ttf',
+    //             'useOTL' => 0xFF,
+    //             'useKashida' => 75,
+    //         ]
+    //     ], 
+    //     ]);
+        
+    //     $mpdf->text_input_as_HTML = true; //(default = false)
+        
+    //     // $mpdf->autoScriptToLang = true;
+    //     // $mpdf->baseScript = 1;
+    //     // $mpdf->autoVietnamese = true;
+    //     // $mpdf->autoArabic = true;
+        
+    //     // $kwitansi['data'] = $this->Admin_model->get_one("ppu_transfer", ["id" => $id]);
+        
+        
+    //     // $kwitansi['id'] = substr($kwitansi['data']['id'],0, 3)."/PPU-Im/".date('m', strtotime($kwitansi['data']['tgl']))."/".date('Y', strtotime($kwitansi['data']['tgl']));
+
+    //     // var_dump($kwitansi);
+    //     $print = $this->load->view('hifdzi_1/sertifikat', $data, TRUE);
+    //     $mpdf->WriteHTML($print);
+    //     $mpdf->Output();
+    // }
     
     // add
         public function add_latihan(){
