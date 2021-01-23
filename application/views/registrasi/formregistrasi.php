@@ -45,6 +45,7 @@
                                     <div class="form-group">
                                         <label for="email">Email</label>
                                         <input type="text" name="email" id="email" class="form-control form-control-sm">
+                                        <small id="emailHelp" class="form-text text-danger">*email tidak wajib diisi</small>
                                     </div>
                                     <div class="form-group">
                                         <label for="catatan">Program Yang Diambil</label>
