@@ -39,7 +39,7 @@
                                         <textarea name="alamat" id="alamat" class="form-control form-control-sm" required></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="no_hp">No Handphone</label>
+                                        <label for="no_hp">No Whatsapp</label>
                                         <input type="text" name="no_hp" id="no_hp" class="form-control form-control-sm" required>
                                     </div>
                                     <div class="form-group">
