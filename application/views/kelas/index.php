@@ -227,7 +227,7 @@
                                                     <i class="fa fa-book mr-2"></i><strong>`+kelas.nama_kelas+`</strong>
                                                 </span>
                                                 <span>
-                                                    <a href="<?= base_url()?>`+kelas.link+`" class="btn btn-primary btn-md"><i class="fa fa-sign-in-alt"></i></a>
+                                                    <a href="<?= base_url()?>`+kelas.link+`" class="btn btn-info btn-sm"><i class="fa fa-sign-in-alt"></i></a>
                                                 </span>
                                             </li>
                                             <li class="list-group-item"><i class="fa fa-user-tie mr-2"></i>`+kelas.guru+`</li>

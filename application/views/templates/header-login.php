@@ -15,8 +15,8 @@
 
     <!-- <link href="<?= base_url()?>assets/css/simple-sidebar.css" rel="stylesheet"> -->
     
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/jquery/jquery-3.5.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/jquery/popper.min.js"></script>
     
     <link rel="icon" href="<?= base_url()?>assets/img/logo.png" type="image/icon type">

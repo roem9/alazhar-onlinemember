@@ -342,7 +342,7 @@
                 success : function(data){
                     let sertifikat = ""
                     if(data.kelas.sertifikat == 1)
-                        sertifikat = `<a href="<?= base_url()?>hifdzi1/syahadah/`+data.kelas.id_sertifikat+`" target="_blank" class="btn btn-md btn-warning text-light mr-1"><i class="fa fa-award"></i></a>`;
+                        sertifikat = `<a href="<?= base_url()?>hifdzi1/syahadah/`+data.kelas.id_sertifikat+`" target="_blank" class="btn btn-sm btn-warning text-light mr-1"><i class="fa fa-award"></i></a>`;
                     else 
                         sertifikat = "";
                     
@@ -372,14 +372,14 @@
                                             <i class="fa fa-book mr-2"></i><strong>`+data.kelas.nama_kelas+`</strong>
                                         </span>
                                         <span>
-                                            <a href="<?= base_url()?>kelas" class="btn btn-md btn-danger"><i class="fa fa-sign-out-alt"></i></a>
+                                            <a href="<?= base_url()?>kelas" class="btn btn-sm btn-danger"><i class="fa fa-sign-out-alt"></i></a>
                                         </span>
                                     </li>
                                     <li class="list-group-item"><i class="fa fa-user-tie mr-2"></i>`+data.kelas.guru+`</li>
                                     <li class="list-group-item d-flex justify-content-between">
                                         <div class="">
                                             `+sertifikat+`
-                                            <a href="#modalDetail" data-toggle="modal" data-id="`+data.kelas.id_kelas+`" class="btn btn-md btn-success detail mr-1"><i class="fa fa-flag"></i></a>
+                                            <a href="#modalDetail" data-toggle="modal" data-id="`+data.kelas.id_kelas+`" class="btn btn-sm btn-success detail mr-1"><i class="fa fa-flag"></i></a>
                                         </div>
                                         <div class="">
                                             `+btn+`
