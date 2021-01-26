@@ -4,6 +4,14 @@
         //     return $data[$id];
         // }
 
+        
+        public function __construct()
+        {
+            parent::__construct();
+            $this->load->model("Admin_model");
+        }
+        
+
         public function materi_pertemuan($id){
             $data[1] = [
                 "0" => "<img src='".base_url()."assets/img/tarkibi_2/1.1.png' class='img-rounded img-fluid'>",
@@ -618,5 +626,35 @@
             $data[1] = [
 
             ];
+        }
+
+        public function add_latihan_isian(){
+            $id_kelas = $this->input->post("id_kelas");
+            $pertemuan = $this->input->post("pertemuan");
+            $text = $this->input->post("text");
+            $id_user = $this->session->userdata('id_user');
+
+            $cek = $this->Admin_model->get_one("latihan_isian_peserta", ["id_kelas" => $id_kelas, "id_user" => $id_user, "pertemuan" => $pertemuan]);
+            if(!$cek){
+                $data = [
+                    "id_kelas" => $id_kelas,
+                    "pertemuan" => $pertemuan,
+                    "jawaban" => $text,
+                    "id_user" => $id_user,
+                ];
+                
+                $this->Admin_model->add_data("latihan_isian_peserta", $data);
+            } else {
+                $data = [
+                    "id_kelas" => $id_kelas,
+                    "pertemuan" => $pertemuan,
+                    "jawaban" => $text,
+                    "id_user" => $id_user,
+                ];
+                
+                $this->Admin_model->edit_data("latihan_isian_peserta", ["id_kelas" => $id_kelas, "id_user" => $id_user, "pertemuan" => $pertemuan], $data);
+            }
+
+            return 1;
         }
     }

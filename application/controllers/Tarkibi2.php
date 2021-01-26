@@ -14,6 +14,22 @@ class Tarkibi2 extends CI_CONTROLLER{
         }
     }
 
+    public function tugas($id_kelas){
+        
+        for ($i=1; $i < 25; $i++) { 
+            $list_pertemuan[$i]['id'] = $i;
+            $list_pertemuan[$i]['pertemuan'] = "Pertemuan ".$i;
+            $list_pertemuan[$i]['md5'] = MD5("Pertemuan ".$i);
+        }
+        
+        $pertemuan = $this->searchForId($_GET['pertemuan'], $list_pertemuan);
+
+        $data['title'] = "Tugas Pertemuan 1";
+        $this->load->view("templates/header-user", $data);
+        $this->load->view("tarkibi_2/tugas/pertemuan1", $data);
+        $this->load->view("templates/footer-user", $data);
+    }
+
     public function kelas($id_kelas){
         $id = $this->session->userdata('id_user');
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
@@ -47,7 +63,11 @@ class Tarkibi2 extends CI_CONTROLLER{
             $data['title'] = $pertemuan['pertemuan'];
             $data['image'] = $this->Tarkibi2_model->materi_pertemuan($pertemuan['id']);
 
-            $data['latihan'] = $this->Tarkibi2_model->latihan($pertemuan['id']);
+            if($pertemuan['id'] == 1){
+                $data['latihan'] = "1";
+            } else {
+                $data['latihan'] = $this->Tarkibi2_model->latihan($pertemuan['id']);
+            }
 
             // latihan
                 // $data['latihan'] = $this->Admin_model->get_one("latihan_peserta", ["MD5(id_kelas)" => $id_kelas, "pertemuan" => $data['title'], "latihan" => "Harian", "id_user" => $id]);
@@ -59,46 +79,77 @@ class Tarkibi2 extends CI_CONTROLLER{
         } else if(!empty($_GET['latihan'])){
             $pertemuan = $this->searchForId($_GET['latihan'], $list_pertemuan);
 
+            
+            $data['id_kelas'] = $data['kelas']['id_kelas'];
+            $data['pertemuan'] = $pertemuan['pertemuan'];
             $data['materi'] = $pertemuan['pertemuan'];
             $data['redirect'] = "tarkibi2/kelas/".$id_kelas."?pertemuan=".MD5($data['materi']);
-            $data['reload'] = "tarkibi2/kelas/".$id_kelas."?latihan=".MD5($data['materi']);
-            $data['id_kelas'] = $data['kelas']['id_kelas'];
 
-            $data['latihan'] = $this->Admin_model->get_one("latihan_peserta", ["MD5(id_kelas)" => $id_kelas, "pertemuan" => $data['materi'], "latihan" => "Harian", "id_user" => $id]);
-            
-            $mufrodat = $this->Tarkibi2_model->latihan($pertemuan['id']);
-
-            $data['petunjuk'] = $mufrodat['petunjuk'];
-            $data['mufrodat'] = $mufrodat['mufrodat'];
-            shuffle($data['mufrodat']);
-            
-            // view
-                if($mufrodat['latihan'] == "latihan ketik"){
-                    $page = "tarkibi_2/latihan-ketik";
-                    $data['title'] = "Latihan " . $pertemuan['pertemuan'];
-
-                    foreach ($data['mufrodat'] as $i => $kata) {
-                        $data['kata'][$i] = $kata;
-                    }
-
-                    shuffle($data['mufrodat']);
-                    shuffle($data['kata']);
-                } else if($mufrodat['latihan'] == "latihan pg"){
-                    $page = "tarkibi_2/latihan-pg";
-                    $data['title'] = "Latihan " . $pertemuan['pertemuan'];
-                    
-                    shuffle($data['mufrodat']);
-                    $data['kata'] = ["مبني", "معرب", "مبني و معرب"];
-                    // var_dump($data);
-                    // exit();
-                }
-            
-                $this->load->view("templates/header-user", $data);
-
-                $this->load->view($page, $data);
+            // jika latihan isian 
+            if($pertemuan['id'] == 1){
                 
-                $this->load->view("templates/footer-user", $data);
-            // view
+                // tambahkan data agar tidak eror 
+                    $latihan = [
+                        "id_user" => $id,
+                        "id_kelas" => $data['id_kelas'],
+                        "pertemuan" => $data['materi'],
+                        "jawaban" => "###############",
+                        "pembahasan" => "###############",
+                    ];
+                    
+                    $cek = $this->Admin_model->get_one("latihan_isian_peserta", ["id_user" => $id, "id_kelas" => $data['id_kelas'], "pertemuan" => $data['materi']]);
+                    if(!$cek){
+                        $this->Admin_model->add_data("latihan_isian_peserta", $latihan);
+                    }
+                // tambahkan data agar tidak eror 
+
+                $data_latihan = $this->Admin_model->get_one("latihan_isian_peserta", ["id_kelas" => $data['id_kelas'], "id_user" => $id]);
+                $data['data_latihan'] = $data_latihan;
+                $data['data_latihan']['jawaban'] = explode("###", $data_latihan['jawaban']);
+                $data['data_latihan']['pembahasan'] = explode("###", $data_latihan['pembahasan']);
+
+                $data['title'] = "Tugas ".$pertemuan['pertemuan'];
+                $page = "tarkibi_2/tugas/pertemuan1";
+            } else {
+                $data['reload'] = "tarkibi2/kelas/".$id_kelas."?latihan=".MD5($data['materi']);
+                $data['id_kelas'] = $data['kelas']['id_kelas'];
+    
+                $data['latihan'] = $this->Admin_model->get_one("latihan_peserta", ["MD5(id_kelas)" => $id_kelas, "pertemuan" => $data['materi'], "latihan" => "Harian", "id_user" => $id]);
+                
+                $mufrodat = $this->Tarkibi2_model->latihan($pertemuan['id']);
+    
+                $data['petunjuk'] = $mufrodat['petunjuk'];
+                $data['mufrodat'] = $mufrodat['mufrodat'];
+                shuffle($data['mufrodat']);
+                
+                // view
+                    if($mufrodat['latihan'] == "latihan ketik"){
+                        $page = "tarkibi_2/latihan-ketik";
+                        $data['title'] = "Latihan " . $pertemuan['pertemuan'];
+    
+                        foreach ($data['mufrodat'] as $i => $kata) {
+                            $data['kata'][$i] = $kata;
+                        }
+    
+                        shuffle($data['mufrodat']);
+                        shuffle($data['kata']);
+                    } else if($mufrodat['latihan'] == "latihan pg"){
+                        $page = "tarkibi_2/latihan-pg";
+                        $data['title'] = "Latihan " . $pertemuan['pertemuan'];
+                        
+                        shuffle($data['mufrodat']);
+                        $data['kata'] = ["مبني", "معرب", "مبني و معرب"];
+                        // var_dump($data);
+                        // exit();
+                    }
+                // view 
+            }
+
+            
+            $this->load->view("templates/header-user", $data);
+            $this->load->view($page, $data);
+            $this->load->view("templates/footer-user", $data);
+
         } else if(!empty($_GET['ujian'])){
             $data['id_kelas'] = $data['kelas']['id_kelas'];
 
@@ -945,6 +996,11 @@ class Tarkibi2 extends CI_CONTROLLER{
     public function add_harakat(){
         $answer = $this->input->post("answer");
         echo json_decode($answer);
+    }
+
+    public function add_latihan_isian(){
+        $data = $this->Tarkibi2_model->add_latihan_isian();
+        echo json_encode("1");
     }
 
     
