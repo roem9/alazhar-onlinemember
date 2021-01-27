@@ -202,13 +202,15 @@ class Kelas extends CI_CONTROLLER{
     // add 
         public function add_hadir(){
             $id_user = $this->session->userdata('id_user');
+            $id_kelas = $this->input->post("id_kelas");
+            $pertemuan = $this->input->post("pertemuan");
             $data = [
-                "id_kelas" => $this->input->post("id_kelas"),
-                "pertemuan" => $this->input->post("pertemuan"),
+                "id_kelas" => $id_kelas,
+                "pertemuan" => $pertemuan,
                 "id_user" => $id_user
             ];
             $cek = $this->Admin_model->get_one("presensi_peserta", $data);
-            if($cek) $this->Admin_model->add_data("presensi_peserta", $data);
+            if(!$cek) $this->Admin_model->add_data("presensi_peserta", $data);
             echo json_encode($data['id_kelas']);
         }
     // add 

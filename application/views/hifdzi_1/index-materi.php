@@ -35,13 +35,13 @@
                     <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
                             <li class="nav-item">
-                                <a href="#" class='nav-link' id="btn-form-1"><i class="fas fa-clock"></i></a>
+                                <a href="javascript:void(0)" class='nav-link' id="btn-form-1"><i class="fas fa-clock"></i></a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class='nav-link active' id="btn-form-2"><i class="fas fa-list-ol"></i></a>
+                                <a href="javascript:void(0)" class='nav-link active' id="btn-form-2"><i class="fas fa-list-ol"></i></a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class='nav-link' id="btn-form-3"><i class="fas fa-list-ol"></i></a>
+                                <a href="javascript:void(0)" class='nav-link' id="btn-form-3"><i class="fas fa-list-ol"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -179,11 +179,11 @@
         $("#dataUjian").hide();
         $("#dataFaq").hide()
 
-        $("#dataKelas > #btnMateri").addClass("btn-info")
+        $("#dataKelas > #btnMateri").addClass("btn-primary")
         $("#btnMateri").addClass("text-light")
-        $("#btnUjian").removeClass("btn-info")
+        $("#btnUjian").removeClass("btn-primary")
         $("#btnUjian").removeClass("text-light")
-        $("#btnFaq").removeClass("btn-info")
+        $("#btnFaq").removeClass("btn-primary")
         $("#btnFaq").removeClass("text-light")
     })
     
@@ -194,11 +194,11 @@
         $("#dataUjian").show();
         $("#dataFaq").hide()
 
-        $("#btnMateri").removeClass("btn-info")
+        $("#btnMateri").removeClass("btn-primary")
         $("#btnMateri").removeClass("text-light")
-        $("#btnUjian").addClass("btn-info")
+        $("#btnUjian").addClass("btn-primary")
         $("#btnUjian").addClass("text-light")
-        $("#btnFaq").removeClass("btn-info")
+        $("#btnFaq").removeClass("btn-primary")
         $("#btnFaq").removeClass("text-light")
     })
 
@@ -210,11 +210,11 @@
         $("#dataUjian").hide();
         $("#dataFaq").show()
 
-        $("#btnMateri").removeClass("btn-info")
+        $("#btnMateri").removeClass("btn-primary")
         $("#btnMateri").removeClass("text-light")
-        $("#btnUjian").removeClass("btn-info")
+        $("#btnUjian").removeClass("btn-primary")
         $("#btnUjian").removeClass("text-light")
-        $("#btnFaq").addClass("btn-info")
+        $("#btnFaq").addClass("btn-primary")
         $("#btnFaq").addClass("text-light")
     })
 
@@ -347,21 +347,21 @@
                         sertifikat = "";
                     
                     if(btn == "materi"){
-                        btn = ` <a href="#" class="btn btn-sm btn-info text-light" id="btnMateri">materi</a>
-                                <a href="#" class="btn btn-sm btn-outline-info" id="btnUjian">ujian</a>`;
-                        // btn = ` <a href="#" class="btn btn-sm btn-info text-light" id="btnMateri">materi</a>
-                        //         <a href="#" class="btn btn-sm btn-outline-info" id="btnUjian">ujian</a>                      
-                        //         <a href="#" data-id="`+data.kelas.id_kelas+`" data-toggle="modal" class="btn btn-sm btn-outline-info" id="btnFaq">FAQ</a>`;
+                        btn = ` <a href="javascript:void(0)" class="btn btn-sm btn-primary text-light" id="btnMateri">materi</a>
+                                <a href="javascript:void(0)" class="btn btn-sm btn-secondary" id="btnUjian">ujian</a>`;
+                        // btn = ` <a href="javascript:void(0)" class="btn btn-sm btn-primary text-light" id="btnMateri">materi</a>
+                        //         <a href="javascript:void(0)" class="btn btn-sm btn-secondary" id="btnUjian">ujian</a>                      
+                        //         <a href="javascript:void(0)" data-id="`+data.kelas.id_kelas+`" data-toggle="modal" class="btn btn-sm btn-secondary" id="btnFaq">FAQ</a>`;
                     } else if(btn == "ujian") {
-                        // btn = ` <a href="#" class="btn btn-sm btn-outline-info" id="btnMateri">materi</a>
-                        //         <a href="#" class="btn btn-sm btn-info text-light" id="btnUjian">ujian</a>                      
-                        //         <a href="#" data-id="`+data.kelas.id_kelas+`" data-toggle="modal" class="btn btn-sm btn-outline-info" id="btnFaq">FAQ</a>`;
-                        btn = ` <a href="#" class="btn btn-sm btn-outline-info" id="btnMateri">materi</a>
-                                <a href="#" class="btn btn-sm btn-info text-light" id="btnUjian">ujian</a>`;
+                        // btn = ` <a href="javascript:void(0)" class="btn btn-sm btn-secondary" id="btnMateri">materi</a>
+                        //         <a href="javascript:void(0)" class="btn btn-sm btn-primary text-light" id="btnUjian">ujian</a>                      
+                        //         <a href="javascript:void(0)" data-id="`+data.kelas.id_kelas+`" data-toggle="modal" class="btn btn-sm btn-secondary" id="btnFaq">FAQ</a>`;
+                        btn = ` <a href="javascript:void(0)" class="btn btn-sm btn-secondary" id="btnMateri">materi</a>
+                                <a href="javascript:void(0)" class="btn btn-sm btn-primary text-light" id="btnUjian">ujian</a>`;
                     } else if(btn == "faq"){
-                        btn = ` <a href="#" class="btn btn-sm btn-outline-info" id="btnMateri">materi</a>
-                                <a href="#" class="btn btn-sm btn-outline-info" id="btnUjian">ujian</a>                      
-                                <a href="#" data-id="`+data.kelas.id_kelas+`" data-toggle="modal" class="btn btn-sm btn-info text-light" id="btnFaq">FAQ</a>`;
+                        btn = ` <a href="javascript:void(0)" class="btn btn-sm btn-secondary" id="btnMateri">materi</a>
+                                <a href="javascript:void(0)" class="btn btn-sm btn-secondary" id="btnUjian">ujian</a>                      
+                                <a href="javascript:void(0)" data-id="`+data.kelas.id_kelas+`" data-toggle="modal" class="btn btn-sm btn-primary text-light" id="btnFaq">FAQ</a>`;
                     }
 
                     let html = "";
@@ -502,7 +502,7 @@
                             if(absen.includes(materi.materi))
                                 symbol = `<i class="fa fa-check-circle text-success"></i>`
                             else 
-                                symbol = `<a href="#" class="btn btn-sm btn-outline-primary" data-id="`+materi.materi+`|`+data.id_kelas+`" id="addHadir"><i class="fa fa-user-check"></i></a>`
+                                symbol = `<a href="javascript:void(0)" class="btn btn-sm btn-outline-primary" data-id="`+materi.materi+`|`+data.id_kelas+`" id="addHadir"><i class="fa fa-user-check"></i></a>`
 
                             html += `<li class="list-group-item">
                                         <div class="d-flex justify-content-between">
