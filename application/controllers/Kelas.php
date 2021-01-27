@@ -43,7 +43,9 @@ class Kelas extends CI_CONTROLLER{
         $id = $this->session->userdata("id_user");
         $data['kelas'] = [];
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
-        $kelas = $this->Admin_model->get_all("kelas_user", ["id_user" => $id, "id_kelas <>" => NULL, "hapus" => 0]);
+        $where = "id_user = $id AND id_kelas <> 'NULL' AND hapus = 0 AND program IN('Hifdzi 1')";
+        // $kelas = $this->Admin_model->get_all("kelas_user", ["id_user" => $id, "id_kelas <>" => NULL, "hapus" => 0, "program" => "Hifdzi 1"]);
+        $kelas = $this->Admin_model->get_all("kelas_user", $where);
         foreach ($kelas as $i => $kelas) {
             $data['kelas'][$i] = $this->Admin_model->get_one("kelas", ["id_kelas" => $kelas['id_kelas']]);
             $data['kelas'][$i]['link'] = strtolower(str_replace(" ", "",$data['kelas'][$i]['program']))."/kelas/".MD5($kelas['id_kelas']);
