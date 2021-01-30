@@ -52,7 +52,7 @@
 
                 $this->Admin_model->add_data("kelas_user", $data);
             }
-            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert"><i class="fa fa-check-circle text-success mr-1"></i> Berhasil mendaftarkan data Anda. Silahkan menunggu konfirmasi dari Admin melalui whatsapp<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert"><i class="fa fa-check-circle text-success mr-1"></i> Berhasil mendaftarkan data Anda. Silahkan menghubungi admin dan berikan bukti transfer<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
             redirect("registrasi");
         }
 
