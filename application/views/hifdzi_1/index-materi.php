@@ -120,10 +120,10 @@
                                     <span>Ujian Form Pekan 4</span>
                                     <span id="nilai-pekan-4">0</span>
                                 </li>
-                                <li class="list-group-item d-flex justify-content-between">
+                                <!-- <li class="list-group-item d-flex justify-content-between">
                                     <span>Ujian Lisan Pekan 4</span>
                                     <span id="nilai-pekan-4-lisan">0</span>
-                                </li>
+                                </li> -->
                                 <li class="list-group-item d-flex justify-content-between">
                                     <span>Ujian Akhir Form</span>
                                     <span id="nilai-akhir-form">0</span>
@@ -342,26 +342,26 @@
                 success : function(data){
                     let sertifikat = ""
                     if(data.kelas.sertifikat == 1)
-                        sertifikat = `<a href="<?= base_url()?>hifdzi1/syahadah/`+data.kelas.id_sertifikat+`" target="_blank" class="btn btn-sm btn-warning text-light mr-1"><i class="fa fa-award"></i></a>`;
+                        sertifikat = `<a href="<?= base_url()?>hifdzi1/syahadah/`+data.kelas.id_sertifikat+`" target="_blank" class="btn btn-md list-group-item-warning mr-1"><i class="fa fa-file-download"></i></a>`;
                     else 
                         sertifikat = "";
                     
                     if(btn == "materi"){
-                        btn = ` <a href="javascript:void(0)" class="btn btn-sm btn-primary text-light" id="btnMateri">materi</a>
-                                <a href="javascript:void(0)" class="btn btn-sm btn-secondary" id="btnUjian">ujian</a>`;
-                        // btn = ` <a href="javascript:void(0)" class="btn btn-sm btn-primary text-light" id="btnMateri">materi</a>
-                        //         <a href="javascript:void(0)" class="btn btn-sm btn-secondary" id="btnUjian">ujian</a>                      
-                        //         <a href="javascript:void(0)" data-id="`+data.kelas.id_kelas+`" data-toggle="modal" class="btn btn-sm btn-secondary" id="btnFaq">FAQ</a>`;
+                        btn = ` <a href="javascript:void(0)" class="btn btn-md btn-primary text-light" id="btnMateri">materi</a>
+                                <a href="javascript:void(0)" class="btn btn-md btn-secondary" id="btnUjian">ujian</a>`;
+                        // btn = ` <a href="javascript:void(0)" class="btn btn-md btn-primary text-light" id="btnMateri">materi</a>
+                        //         <a href="javascript:void(0)" class="btn btn-md btn-secondary" id="btnUjian">ujian</a>                      
+                        //         <a href="javascript:void(0)" data-id="`+data.kelas.id_kelas+`" data-toggle="modal" class="btn btn-md btn-secondary" id="btnFaq">FAQ</a>`;
                     } else if(btn == "ujian") {
-                        // btn = ` <a href="javascript:void(0)" class="btn btn-sm btn-secondary" id="btnMateri">materi</a>
-                        //         <a href="javascript:void(0)" class="btn btn-sm btn-primary text-light" id="btnUjian">ujian</a>                      
-                        //         <a href="javascript:void(0)" data-id="`+data.kelas.id_kelas+`" data-toggle="modal" class="btn btn-sm btn-secondary" id="btnFaq">FAQ</a>`;
-                        btn = ` <a href="javascript:void(0)" class="btn btn-sm btn-secondary" id="btnMateri">materi</a>
-                                <a href="javascript:void(0)" class="btn btn-sm btn-primary text-light" id="btnUjian">ujian</a>`;
+                        // btn = ` <a href="javascript:void(0)" class="btn btn-md btn-secondary" id="btnMateri">materi</a>
+                        //         <a href="javascript:void(0)" class="btn btn-md btn-primary text-light" id="btnUjian">ujian</a>                      
+                        //         <a href="javascript:void(0)" data-id="`+data.kelas.id_kelas+`" data-toggle="modal" class="btn btn-md btn-secondary" id="btnFaq">FAQ</a>`;
+                        btn = ` <a href="javascript:void(0)" class="btn btn-md btn-secondary" id="btnMateri">materi</a>
+                                <a href="javascript:void(0)" class="btn btn-md btn-primary text-light" id="btnUjian">ujian</a>`;
                     } else if(btn == "faq"){
-                        btn = ` <a href="javascript:void(0)" class="btn btn-sm btn-secondary" id="btnMateri">materi</a>
-                                <a href="javascript:void(0)" class="btn btn-sm btn-secondary" id="btnUjian">ujian</a>                      
-                                <a href="javascript:void(0)" data-id="`+data.kelas.id_kelas+`" data-toggle="modal" class="btn btn-sm btn-primary text-light" id="btnFaq">FAQ</a>`;
+                        btn = ` <a href="javascript:void(0)" class="btn btn-md btn-secondary" id="btnMateri">materi</a>
+                                <a href="javascript:void(0)" class="btn btn-md btn-secondary" id="btnUjian">ujian</a>                      
+                                <a href="javascript:void(0)" data-id="`+data.kelas.id_kelas+`" data-toggle="modal" class="btn btn-md btn-primary text-light" id="btnFaq">FAQ</a>`;
                     }
 
                     let html = "";
@@ -378,11 +378,11 @@
                                     <li class="list-group-item"><i class="fa fa-user-tie mr-2"></i>`+data.kelas.guru+`</li>
                                     <li class="list-group-item d-flex justify-content-between">
                                         <div class="">
-                                            `+sertifikat+`
-                                            <a href="#modalDetail" data-toggle="modal" data-id="`+data.kelas.id_kelas+`" class="btn btn-sm btn-success detail mr-1"><i class="fa fa-flag"></i></a>
+                                            `+btn+`
                                         </div>
                                         <div class="">
-                                            `+btn+`
+                                            <a href="#modalDetail" data-toggle="modal" data-id="`+data.kelas.id_kelas+`" class="btn btn-md list-group-item-success detail mr-1"><i class="fa fa-flag"></i></a>
+                                            `+sertifikat+`
                                         </div>
                                     </li>
                                 </ul>
@@ -400,7 +400,7 @@
                                     <div class="card rounded-lg border-primary">
                                     <div class="card-header list-group-item-primary d-flex justify-content-between">
                                         <span class="text-dark"><strong>`+pertemuan.materi+`</strong></span>
-                                        <span class="btn btn-sm btn-outline-dark">`+pertemuan.nilai+`</span>    
+                                        <span class="text-dark"><b>`+pertemuan.nilai+`</b></span>    
                                     </div>`;
                             } else {
                                 html += `
@@ -410,11 +410,11 @@
                             html += `<div class="card-body">`;
 
                             if(pertemuan.nilai != "-"){
-                                html += `<a href="<?= base_url()?>`+data.kelas.link+`?pertemuan=`+pertemuan.link+`" class="btn btn-block btn-sm btn-primary"><span><i class="fa fa-book mr-1"></i> Mulai</span></a>`
+                                html += `<a href="<?= base_url()?>`+data.kelas.link+`?pertemuan=`+pertemuan.link+`" class="btn btn-block btn-md btn-primary"><span><i class="fa fa-book mr-1"></i> Mulai</span></a>`
                             } else {
                                 html += `
                                 <div class="alert alert-warning"><i class="fa fa-exclamation-circle text-warning"></i> Anda belum menyelesaikan latihan pada pertemuan ini</div>
-                                <a href="<?= base_url()?>`+data.kelas.link+`?pertemuan=`+pertemuan.link+`" class="btn btn-block btn-sm btn-danger"><i class="fa fa-book mr-1"></i> Mulai</a>`;
+                                <a href="<?= base_url()?>`+data.kelas.link+`?pertemuan=`+pertemuan.link+`" class="btn btn-block btn-md btn-danger"><i class="fa fa-book mr-1"></i> Mulai</a>`;
                             }
                             html += `
                                     </div>
@@ -435,7 +435,7 @@
                                     <div class="card rounded-lg border-primary">
                                     <div class="card-header list-group-item-primary d-flex justify-content-between">
                                         <span class="text-dark"><strong>`+ujian.materi+`</strong></span>
-                                        <span class="btn btn-sm btn-outline-dark">`+ujian.nilai+`</span>    
+                                        <span class="text-dark"><b>`+ujian.nilai+`</b></span>    
                                     </div>`;
                             } else {
                                 html += `
@@ -445,11 +445,11 @@
                             html += `<div class="card-body">`;
 
                             if(ujian.nilai != "-"){
-                                html += `<a href="<?= base_url()?>`+data.kelas.link+`?ujian=`+ujian.link+`" class="btn btn-block btn-sm btn-primary"><span><i class="fa fa-book mr-1"></i> Mulai</span></a>`
+                                html += `<a href="<?= base_url()?>`+data.kelas.link+`?ujian=`+ujian.link+`" class="btn btn-block btn-md btn-primary"><span><i class="fa fa-book mr-1"></i> Mulai</span></a>`
                             } else {
                                 html += `
                                 <div class="alert alert-warning"><i class="fa fa-exclamation-circle text-warning"></i> Anda belum menyelesaikan ujian ini</div>
-                                <a href="<?= base_url()?>`+data.kelas.link+`?ujian=`+ujian.link+`" class="btn btn-block btn-sm btn-danger"><i class="fa fa-book mr-1"></i> Mulai</a>`;
+                                <a href="<?= base_url()?>`+data.kelas.link+`?ujian=`+ujian.link+`" class="btn btn-block btn-md btn-danger"><i class="fa fa-book mr-1"></i> Mulai</a>`;
                             }
                             html += `
                                     </div>
@@ -502,7 +502,7 @@
                             if(absen.includes(materi.materi))
                                 symbol = `<i class="fa fa-check-circle text-success"></i>`
                             else 
-                                symbol = `<a href="javascript:void(0)" class="btn btn-sm btn-outline-primary" data-id="`+materi.materi+`|`+data.id_kelas+`" id="addHadir"><i class="fa fa-user-check"></i></a>`
+                                symbol = `<a href="javascript:void(0)" class="btn btn-md btn-outline-primary" data-id="`+materi.materi+`|`+data.id_kelas+`" id="addHadir"><i class="fa fa-user-check"></i></a>`
 
                             html += `<li class="list-group-item">
                                         <div class="d-flex justify-content-between">
@@ -574,7 +574,7 @@
                     $("#nilai-pekan-3").html(data.ujian[5]);
                     $("#nilai-pekan-3-lisan").html(data.ujian[6]);
                     $("#nilai-pekan-4").html(data.ujian[7]);
-                    $("#nilai-pekan-4-lisan").html(data.ujian[8]);
+                    // $("#nilai-pekan-4-lisan").html(data.ujian[8]);
                     $("#nilai-akhir-form").html(data.ujian[9]);
                     $("#nilai-akhir-video").html(data.ujian[10]);
                 }

@@ -11,6 +11,7 @@
                             <div class="form-group">
                                 <p>Selamat, Anda telah menyelesaikan Ujian, nilai Anda adalah : </p>
                                 <h3 class="text-center" id="nilaiUp"></h3>
+                                <p class="msg-max"><strong>Anda dapat mengulangi latihan ini untuk mendapatkan nilai maksimal</strong></p>
                                 <a href="<?= base_url($reload)?>" class="btn btn-block btn-success text-light">Ulangi</a>
                                 <a href="<?= base_url($redirect)?>" class="btn btn-block btn-danger text-light">Keluar</a>
                             </div>
@@ -97,25 +98,19 @@
                                             </div>
                                             <?php if($i == 0) :?>
                                                 <div class="d-flex justify-content-center">
-                                                    <a id="right<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-sm btn-success text-light right"><i class="fa fa-angle-right"></i></a>
+                                                    <a id="right<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-md btn-success text-light right"><i class="fa fa-angle-right"></i></a>
                                                 </div>
                                             <?php elseif($i == 49) :?>
                                                 <div class="d-flex justify-content-center">
-                                                    <a id="left<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-sm btn-success text-light left mr-3"><i class="fa fa-angle-left"></i></a>
-                                                    <?php if($latihan) :?>
-                                                        <a id="simpan" class="img-shadow btn btn-sm btn-success text-light mr-3">
-                                                            periksa
-                                                        </a>
-                                                    <?php else :?>
-                                                        <a id="simpan" class="img-shadow btn btn-sm btn-primary text-light mr-3">
-                                                            simpan
-                                                        </a>
-                                                    <?php endif;?>
+                                                    <a id="left<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-md btn-success text-light left mr-3"><i class="fa fa-angle-left"></i></a>
+                                                    <a id="simpan" class="img-shadow btn btn-md btn-primary text-light mr-3">
+                                                        simpan
+                                                    </a>
                                                 </div>
                                             <?php else :?>
                                                 <div class="d-flex justify-content-center">
-                                                    <a id="left<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-sm btn-success text-light left mr-3"><i class="fa fa-angle-left"></i></a>
-                                                    <a id="right<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-sm btn-success text-light right"><i class="fa fa-angle-right"></i></a>
+                                                    <a id="left<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-md btn-success text-light left mr-3"><i class="fa fa-angle-left"></i></a>
+                                                    <a id="right<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-md btn-success text-light right"><i class="fa fa-angle-right"></i></a>
                                                 </div>
                                             <?php endif;?>
                                         </li>
@@ -138,6 +133,7 @@
                             <div class="form-group">
                                 <p>Selamat, Anda telah menyelesaikan Ujian, nilai Anda adalah : </p>
                                 <h3 class="text-center" id="nilaiDown"></h3>
+                                <p class="msg-max"><strong>Anda dapat mengulangi latihan ini untuk mendapatkan nilai maksimal</strong></p>
                                 <a href="<?= base_url($reload)?>" class="btn btn-block btn-success text-light">Ulangi</a>
                                 <a href="<?= base_url($redirect)?>" class="btn btn-block btn-danger text-light">Keluar</a>
                             </div>
@@ -203,8 +199,12 @@
             text: 'yakin akan keluar dari ujian?',
             showCloseButton: true,
             showCancelButton: true,
-            confirmButtonText: '<a href="<?= base_url($redirect)?>">Ya</a>',
+            confirmButtonText: 'Ya',
             cancelButtonText: 'Tidak'
+        }).then(function (result) {
+            if (result.value) {
+                window.location = "<?= base_url($redirect)?>";
+            }
         })
     })
 
@@ -270,6 +270,12 @@
                     $("#hasilLatihanDown").show();
                     $("#nilaiUp").html(nilai);
                     $("#nilaiDown").html(nilai);
+                    
+                    if(nilai == 100){
+                        $(".msg-max").hide();
+                    } else {
+                        $(".msg-max").show();
+                    }
                 }
             })
         }

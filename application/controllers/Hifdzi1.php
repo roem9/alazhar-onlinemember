@@ -1091,7 +1091,7 @@ class Hifdzi1 extends CI_CONTROLLER{
             $tipe = $this->input->post("tipe", TRUE);
 
             $cek = $this->Admin_model->get_one("latihan_peserta", ["id_user" => $id, "pertemuan" => $latihan, "latihan" => $tipe, "id_kelas" => $id_kelas]);
-
+            
             if(!$cek){
                 $data = [
                     "id_kelas" => $id_kelas,
@@ -1102,6 +1102,17 @@ class Hifdzi1 extends CI_CONTROLLER{
                 ];
 
                 $this->Admin_model->add_data("latihan_peserta", $data);
+            } else {
+                if($nilai > $cek['nilai']){
+                    $data = [
+                        "id_kelas" => $id_kelas,
+                        "id_user" => $id,
+                        "pertemuan" => $latihan,
+                        "latihan" => $tipe
+                    ];
+
+                    $this->Admin_model->edit_data("latihan_peserta", $data, ["nilai" => $nilai]);
+                }
             }
 
             // redirect($redirect);
