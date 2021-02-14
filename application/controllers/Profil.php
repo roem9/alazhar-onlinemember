@@ -14,6 +14,7 @@ class Profil extends CI_CONTROLLER{
         $id = $this->session->userdata("id_user");
         $data['title'] = "Profil";
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
+        $data['wa_admin'] = $this->Admin_model->get_one("option", ["field" => "wa_admin"]);
 
         $this->load->view("templates/header-user", $data);
         $this->load->view("profil/index", $data);
