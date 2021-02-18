@@ -17,7 +17,7 @@
         public function add_peserta(){
             $tgl_masuk = date("Y-m-d");
             $user = $this->username($tgl_masuk);
-            $password = date('dmY', strtotime($this->input->post("tgl_lahir", TRUE)));
+            // $password = date('dmY', strtotime($this->input->post("tgl_lahir", TRUE)));
             $program = $this->input->post("program");
             
             $catatan = "";
@@ -34,11 +34,14 @@
                 "t4_lahir" => $this->input->post("t4_lahir", TRUE),
                 "email" => $this->input->post("email", TRUE),
                 "username" => "",
-                "password" => MD5($password),
+                // "password" => MD5($password),
                 // "catatan" => $this->input->post("catatan", TRUE),
                 "catatan" => $catatan,
             ];
             $id = $this->Admin_model->add_data("user", $data);
+
+            $peserta = $this->Admin_model->get_one("user", ["id_user" => $id]);
+            $this->Admin_model->edit_data("user", ["id_user" => $id], ["password" => md5(date('His', strtotime($peserta['tgl_input'])))]);
 
             foreach ($program as $program) {
                 $data = [

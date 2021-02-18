@@ -45,6 +45,14 @@
                 $password = substr($password, 4, 4)."-".substr($password, 2, 2)."-".substr($password, 0, 2);
                 $row = $this->Admin_model->get_one("user", ["username" => $username, "tgl_lahir" => $password]);
             }
+            
+            if(!$row){
+                $peserta = $this->Admin_model->get_one("user", ["username" => $username]);
+                $password = $this->input->post("password", TRUE);
+                if(date('His', strtotime($peserta['tgl_input'])) == $password){
+                    $row = $this->Admin_model->get_one("user", ["username" => $username]);
+                }
+            }
 
             if ($row) {
                 // login berhasil
