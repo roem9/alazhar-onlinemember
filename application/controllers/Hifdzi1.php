@@ -900,14 +900,6 @@ class Hifdzi1 extends CI_CONTROLLER{
             
         } else {
             $data['title'] = "Materi Hifdzi I";
-            
-            // pertemuan
-                // $pertemuan = $this->Admin_model->get_all("materi_kelas", ["MD5(id_kelas)" => $id_kelas], "materi");
-                // foreach ($pertemuan as $i => $pertemuan) {
-                //     $data['pertemuan'][$i]['pertemuan'] = $pertemuan['materi'];
-                //     $data['pertemuan'][$i]['latihan'] = $this->Admin_model->get_one("latihan_peserta", ["MD5(id_kelas)" => $id_kelas, "pertemuan" => $pertemuan['materi'], "latihan" => "Form", "id_user" => $id]);
-                // }
-            // pertemuan
     
             $this->load->view("templates/header-user", $data);
             $this->load->view("hifdzi_1/index-materi", $data);

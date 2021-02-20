@@ -82,7 +82,7 @@
                                                         <?php foreach ($choice as $k => $data) :?>
                                                             <div class="col-12 d-flex justify-content-end mb-3">
                                                                 <label for="<?= $i.$k?>" class="mr-2" id="container-content"><center><b><?= $data?></b></center></label>
-                                                                <input type="radio" class="cek" id="<?= $i.$k?>" name="<?= $i?>1" data-id="<?= $i?>|1" class="btn-primary" value="<?= $data?>">
+                                                                <input type="radio" class="cek" id="<?= $i.$k?>" name="choice<?= $i?>1" data-id="<?= $i?>|1" class="btn-primary" value="<?= $data?>">
                                                             </div>
                                                         <?php endforeach;?>
                                                     </div>
@@ -103,7 +103,7 @@
                                         <?php elseif($i == 9) :?>
                                             <div class="d-flex justify-content-center">
                                                 <a id="left<?= $i?>" data-id="<?= $i?>" class="img-shadow btn btn-md btn-success text-light left mr-3"><i class="fa fa-angle-left"></i></a>
-                                                <a id="simpan" class="img-shadow btn btn-md btn-primary text-light mr-3">
+                                                <a id="simpan" data-id="<?= $i?>" class="img-shadow btn btn-md btn-primary text-light mr-3">
                                                     simpan
                                                 </a>
                                             </div>
@@ -154,20 +154,34 @@
     
     $(".right").click(function(){
         let id = $(this).data("id");
-        id = id + 1;
-        
-        // menampilkan dan menyembunyikan soal 
-            $(".soal").hide();
-            $("#soal"+id).show();
-        // menampilkan dan menyembunyikan soal 
 
-        // index soal 
-            if(id != <?= COUNT($mufrodat)?>){
-                $("#angka").html(id+1);
-            } else {
-                $(".angka").hide();
-            }
-        // index soal 
+        var isChecked = $('input[name="choice'+id+'1"]:checked').val();
+
+        if(isChecked == undefined){
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                text: 'pilih jawaban terlebih dahulu',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        } else {
+            id = id + 1;
+            
+            // menampilkan dan menyembunyikan soal 
+                $(".soal").hide();
+                $("#soal"+id).show();
+            // menampilkan dan menyembunyikan soal 
+
+            // index soal 
+                if(id != <?= COUNT($mufrodat)?>){
+                    $("#angka").html(id+1);
+                } else {
+                    $(".angka").hide();
+                }
+            // index soal 
+        }
+
     })
 
     $(".left").click(function(){
@@ -214,7 +228,7 @@
 
         let html = '';
         for (let i = 0; i < total; i++) {
-            html += $("input[name='"+id+""+1+"']:checked").val();
+            html += $("input[name='choice"+id+""+1+"']:checked").val();
         }
 
         if(html === 'undefined'){
@@ -230,51 +244,73 @@
     })
 
     $("#simpan").click(function(){
-        if(confirm("Yakin telah menyelesaikan latihan Anda?")){
-            let count = 10;
-            let nilai = 0;
-            for (let i = 0; i < count; i++) {
-                cek = $("input[name='j"+i+"']").val();
-                if(cek == 'betul'){
-                    nilai += 10;
-                    $(".left").hide();
-                    $(".right").hide();
-                    $("#simpan").hide();
-                    $("input:radio").attr("disabled",true);
-                } else {
-                    $("#soal-bg"+i).addClass("list-group-item-danger");
-                    $("#kunci-jawaban"+i).addClass("d-flex justify-content-center")
-                    $("#kunci-jawaban"+i).show()
-                    $(".left").hide();
-                    $(".right").hide();
-                    $("#simpan").hide();
-                    $("input:radio").attr("disabled",true);
-                }
-            }
+        let id = $(this).data("id");
 
-            let latihan = "<?= $materi?>";
-            let id_kelas = "<?= $id_kelas?>";
+        var isChecked = $('input[name="choice'+id+'1"]:checked').val();
 
-            // console.log(id_kelas)
-            $.ajax({
-                type : "POST",
-                url : "<?= base_url()?>hifdzi1/add_latihan",
-                dataType : "JSON",
-                data : {latihan: latihan, id_kelas: id_kelas, nilai: nilai, tipe: "Harian"},
-                success : function(data){
-                    // console.log(data)
-                    $(".soal").show();
-                    $(".angka").hide();
-                    $("#hasilLatihanUp").show();
-                    $("#hasilLatihanDown").show();
-                    $("#nilaiUp").html(nilai);
-                    $("#nilaiDown").html(nilai);
-                    
-                    if(nilai == 100){
-                        $(".msg-max").hide();
-                    } else {
-                        $(".msg-max").show();
+        if(isChecked == undefined){
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                text: 'pilih jawaban terlebih dahulu',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        } else {
+            Swal.fire({
+                icon: 'question',
+                text: 'Yakin telah menyelesaikan latihan Anda?',
+                showCloseButton: true,
+                showCancelButton: true,
+                confirmButtonText: 'Ya',
+                cancelButtonText: 'Tidak'
+            }).then(function (result) {
+                if (result.value) {
+                    let count = 10;
+                    let nilai = 0;
+                    for (let i = 0; i < count; i++) {
+                        cek = $("input[name='j"+i+"']").val();
+                        if(cek == 'betul'){
+                            nilai += 10;
+                            $(".left").hide();
+                            $(".right").hide();
+                            $("#simpan").hide();
+                            $("input:radio").attr("disabled",true);
+                        } else {
+                            $("#soal-bg"+i).addClass("list-group-item-danger");
+                            $("#kunci-jawaban"+i).addClass("d-flex justify-content-center")
+                            $("#kunci-jawaban"+i).show()
+                            $(".left").hide();
+                            $(".right").hide();
+                            $("#simpan").hide();
+                            $("input:radio").attr("disabled",true);
+                        }
                     }
+
+                    let latihan = "<?= $materi?>";
+                    let id_kelas = "<?= $id_kelas?>";
+
+                    $.ajax({
+                        type : "POST",
+                        url : "<?= base_url()?>hifdzi1/add_latihan",
+                        dataType : "JSON",
+                        data : {latihan: latihan, id_kelas: id_kelas, nilai: nilai, tipe: "Harian"},
+                        success : function(data){
+                            // console.log(data)
+                            $(".soal").show();
+                            $(".angka").hide();
+                            $("#hasilLatihanUp").show();
+                            $("#hasilLatihanDown").show();
+                            $("#nilaiUp").html(nilai);
+                            $("#nilaiDown").html(nilai);
+                            
+                            if(nilai == 100){
+                                $(".msg-max").hide();
+                            } else {
+                                $(".msg-max").show();
+                            }
+                        }
+                    })
                 }
             })
         }

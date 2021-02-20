@@ -252,13 +252,21 @@
     $('#formListPertemuan').on('click', '#addHadir', function(){
         let data = $(this).data("id");
         data = data.split("|")
+        
         $.ajax({
             type : "POST",
             url : "<?= base_url()?>kelas/add_hadir",
             dataType : "JSON",
             data : {pertemuan:data[0], id_kelas:data[1]},
-            success : function(data){
-                detail(data);
+            success : function(result){
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    text: 'Berhasil menginputkan kehadiran '+data[0],
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                detail(result);
                 reload_data();
             }
         })
