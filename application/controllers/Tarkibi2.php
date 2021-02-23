@@ -41,6 +41,10 @@ class Tarkibi2 extends CI_CONTROLLER{
             $list_pertemuan[$i]['md5'] = MD5("Pertemuan ".$i);
         }
 
+        $isian = array("1", "2", "4", "5", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20");
+        $pg = array("3", "6");
+        $kosong = array("7");
+
         if(!empty($_GET['pertemuan'])){
             $pertemuan = $this->searchForId($_GET['pertemuan'], $list_pertemuan);
             
@@ -63,15 +67,18 @@ class Tarkibi2 extends CI_CONTROLLER{
             $data['title'] = $pertemuan['pertemuan'];
             $data['image'] = $this->Tarkibi2_model->materi_pertemuan($pertemuan['id']);
 
-            if($pertemuan['id'] == 1){
-                $data['latihan'] = "1";
+            // var_dump($pertemuan['id']);
+            // exit();
+                
+            if(in_array($pertemuan['id'], $isian)){
+                $latihan = $this->Admin_model->get_one("latihan_isian_peserta", ["md5(id_kelas)" => $id_kelas, "id_user" => $id, "pertemuan" => $pertemuan['pertemuan']]);
+                $data['latihan'] = $latihan['nilai'];
+            } else if(in_array($pertemuan['id'], $pg)){
+                $latihan = $this->Admin_model->get_one("latihan_peserta", ["md5(id_kelas)" => $id_kelas, "id_user" => $id, "pertemuan" => $pertemuan['pertemuan']]);
+                $data['latihan'] = $latihan['nilai'];
             } else {
-                $data['latihan'] = $this->Tarkibi2_model->latihan($pertemuan['id']);
+                $data['latihan'] = "-";
             }
-
-            // latihan
-                // $data['latihan'] = $this->Admin_model->get_one("latihan_peserta", ["MD5(id_kelas)" => $id_kelas, "pertemuan" => $data['title'], "latihan" => "Harian", "id_user" => $id]);
-            // latihan
             
             $this->load->view("templates/header-user", $data);
             $this->load->view("tarkibi_2/materi-mufrodat", $data);
@@ -79,72 +86,97 @@ class Tarkibi2 extends CI_CONTROLLER{
         } else if(!empty($_GET['latihan'])){
             $pertemuan = $this->searchForId($_GET['latihan'], $list_pertemuan);
 
-            
             $data['id_kelas'] = $data['kelas']['id_kelas'];
             $data['pertemuan'] = $pertemuan['pertemuan'];
             $data['materi'] = $pertemuan['pertemuan'];
             $data['redirect'] = "tarkibi2/kelas/".$id_kelas."?pertemuan=".MD5($data['materi']);
 
-            // jika latihan isian 
-            if($pertemuan['id'] == 1){
-                
+            if(in_array($pertemuan['id'], $isian)){
+                switch ($pertemuan['id']) {
+                    case 1:
+                        $text = "###############";
+                        break;
+                    case 2:
+                        $text = "######################################################################################################################################################";
+                        break;
+                    case 4:
+                        $text = "#################################################################################";
+                        break;
+                    case 5:
+                        $text = "############################################################################################################################################################################################################################################################";
+                        break;
+                    case 8:
+                        $text = "##############################";
+                        break;
+                    case 9:
+                        $text = "##############################";
+                        break;
+                    case 10:
+                        $text = "###############";
+                        break;
+                    case 11:
+                        $text = "##############################";
+                        break;
+                    case 12:
+                        $text = "##############################";
+                        break;
+                    case 13:
+                        $text = "###########################################################################";
+                        break;
+                    case 14:
+                        $text = "##############################";
+                        break;
+                    case 15:
+                        $text = "###############";
+                        break;
+                    case 16:
+                        $text = "###############";
+                        break;
+                    case 17:
+                        $text = "###############";
+                        break;
+                    case 18:
+                        $text = "###############";
+                        break;
+                    case 19:
+                        $text = "###############";
+                        break;
+                    case 20:
+                        $text = "##############################";
+                        break;
+                        
+                    // default:
+                    //     $text = "-";
+                }
+
                 // tambahkan data agar tidak eror 
                     $latihan = [
                         "id_user" => $id,
                         "id_kelas" => $data['id_kelas'],
                         "pertemuan" => $data['materi'],
-                        "jawaban" => "###############",
-                        "pembahasan" => "###############",
+                        "jawaban" => $text,
+                        "pembahasan" => $text,
                     ];
                     
                     $cek = $this->Admin_model->get_one("latihan_isian_peserta", ["id_user" => $id, "id_kelas" => $data['id_kelas'], "pertemuan" => $data['materi']]);
                     if(!$cek){
                         $this->Admin_model->add_data("latihan_isian_peserta", $latihan);
                     }
-                // tambahkan data agar tidak eror 
-
-                $data_latihan = $this->Admin_model->get_one("latihan_isian_peserta", ["id_kelas" => $data['id_kelas'], "id_user" => $id]);
+                // tambahkan data agar tidak eror       
+                
+                $data_latihan = $this->Admin_model->get_one("latihan_isian_peserta", ["id_kelas" => $data['id_kelas'], "id_user" => $id, "pertemuan" => $pertemuan['pertemuan']]);
                 $data['data_latihan'] = $data_latihan;
+                $data['data_latihan']['id_kumpul'] = md5($data_latihan['id']);
                 $data['data_latihan']['jawaban'] = explode("###", $data_latihan['jawaban']);
                 $data['data_latihan']['pembahasan'] = explode("###", $data_latihan['pembahasan']);
 
                 $data['title'] = "Tugas ".$pertemuan['pertemuan'];
-                $page = "tarkibi_2/tugas/pertemuan1";
-            } else {
-                $data['reload'] = "tarkibi2/kelas/".$id_kelas."?latihan=".MD5($data['materi']);
-                $data['id_kelas'] = $data['kelas']['id_kelas'];
-    
-                $data['latihan'] = $this->Admin_model->get_one("latihan_peserta", ["MD5(id_kelas)" => $id_kelas, "pertemuan" => $data['materi'], "latihan" => "Harian", "id_user" => $id]);
-                
-                $mufrodat = $this->Tarkibi2_model->latihan($pertemuan['id']);
-    
-                $data['petunjuk'] = $mufrodat['petunjuk'];
-                $data['mufrodat'] = $mufrodat['mufrodat'];
-                shuffle($data['mufrodat']);
-                
-                // view
-                    if($mufrodat['latihan'] == "latihan ketik"){
-                        $page = "tarkibi_2/latihan-ketik";
-                        $data['title'] = "Latihan " . $pertemuan['pertemuan'];
-    
-                        foreach ($data['mufrodat'] as $i => $kata) {
-                            $data['kata'][$i] = $kata;
-                        }
-    
-                        shuffle($data['mufrodat']);
-                        shuffle($data['kata']);
-                    } else if($mufrodat['latihan'] == "latihan pg"){
-                        $page = "tarkibi_2/latihan-pg";
-                        $data['title'] = "Latihan " . $pertemuan['pertemuan'];
-                        
-                        shuffle($data['mufrodat']);
-                        $data['kata'] = ["مبني", "معرب", "مبني و معرب"];
-                        // var_dump($data);
-                        // exit();
-                    }
-                // view 
+                $page = "tarkibi_2/tugas/".strtolower(str_replace(" ", "", $pertemuan['pertemuan']));    
+            } else if(in_array($pertemuan['id'], $pg)){
+                $data['title'] = "Tugas ".$pertemuan['pertemuan'];
+                $page = "tarkibi_2/tugas/".strtolower(str_replace(" ", "", $pertemuan['pertemuan']));
+                $data['reload'] = "tarkibi2/kelas/".$id_kelas."?latihan=".md5($pertemuan['pertemuan']);
             }
-
             
             $this->load->view("templates/header-user", $data);
             $this->load->view($page, $data);
@@ -937,6 +969,68 @@ class Tarkibi2 extends CI_CONTROLLER{
 
     }
 
+    public function ajax_one(){
+        $id = $this->session->userdata("id_user");
+        $id_kelas = $_GET['id_kelas'];
+        $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
+        $data['kelas'] = $this->Admin_model->get_one("kelas", ["MD5(id_kelas)" => $id_kelas]);
+        $data['kelas']['link'] = strtolower(str_replace(" ", "",$data['kelas']['program']))."/kelas/".$id_kelas;
+        
+        // sertifikat 
+        $kelas = $this->Admin_model->get_one("kelas_user", ["id_user" => $id, "md5(id_kelas)" => $id_kelas]);
+        $data['kelas']['id_sertifikat'] = md5($kelas['id']);
+        $data['kelas']['sertifikat'] = $kelas['sertifikat'];
+
+        if($data['kelas']['id_civitas'] != 0) {
+            $pengajar = $this->Admin_model->get_one("civitas", ["id_civitas" => $data['kelas']['id_civitas']]);
+            $data['kelas']['guru'] = $pengajar['nama_civitas'];
+        } else {
+            $data['kelas']['guru'] = "-";
+        }
+        $data['program'] = $data['kelas']['program'];
+
+        $data['pertemuan'] = [];
+
+        $pertemuan = $this->Admin_model->get_all("materi_kelas", ["md5(id_kelas)" => $id_kelas], "id");
+        foreach ($pertemuan as $i => $pertemuan) {
+            $data['pertemuan'][$i] = $pertemuan;
+            $data['pertemuan'][$i]['link'] = md5($pertemuan['materi']);
+            $nilai = $this->Admin_model->get_one("latihan_peserta", ["md5(id_kelas)" => $id_kelas, "pertemuan" => $pertemuan['materi'], "id_user" => $id]);
+            if($nilai){
+                $data['pertemuan'][$i]['nilai'] = $nilai['nilai'];
+            } else {
+                $nilai = $this->Admin_model->get_one("latihan_isian_peserta", ["md5(id_kelas)" => $id_kelas, "pertemuan" => $pertemuan['materi'], "id_user" => $id]);
+                
+                if($nilai){
+                    $data['pertemuan'][$i]['nilai'] = $nilai['nilai'];
+                } else {
+                    $data['pertemuan'][$i]['nilai'] = "-";
+                }
+            }
+
+            if($pertemuan['materi'] == "Pertemuan 7"){
+                $data['pertemuan'][$i]['nilai'] = '<i class="fa fa-check"></i>';
+            }
+        }
+
+        $data['ujian'] = [];
+        $ujian = $this->Admin_model->get_all("ujian_kelas", ["md5(id_kelas)" => $id_kelas]);
+        foreach ($ujian as $i => $ujian) {
+            $data['ujian'][$i] = $ujian;
+            $data['ujian'][$i]['link'] = md5($ujian['materi']);
+            $nilai = $this->Admin_model->get_one("latihan_peserta", ["md5(id_kelas)" => $id_kelas, "pertemuan" => $ujian['materi'], "id_user" => $id, "latihan" => "Form"]);
+            if($nilai){
+                $data['ujian'][$i]['nilai'] = $nilai['nilai'];
+            } else {
+                $data['ujian'][$i]['nilai'] = "-";
+            }
+        }
+
+        $data['faq'] = $this->Admin_model->get_all("faq", ["md5(id_kelas)" => $id_kelas]);
+
+        echo json_encode($data);
+    }
+
     public function latihan($id){
         $data['reload'] = "";
         $data['redirect'] = "";
@@ -1001,6 +1095,73 @@ class Tarkibi2 extends CI_CONTROLLER{
     public function add_latihan_isian(){
         $data = $this->Tarkibi2_model->add_latihan_isian();
         echo json_encode("1");
+    }
+
+    public function add_latihan(){
+        $id = $this->session->userdata('id_user');
+        // $redirect = $this->input->post("redirect", TRUE);
+        $latihan = $this->input->post("latihan", TRUE);
+        $id_kelas = $this->input->post("id_kelas", TRUE);
+        $nilai = $this->input->post("nilai", TRUE);
+        $tipe = $this->input->post("tipe", TRUE);
+
+        $cek = $this->Admin_model->get_one("latihan_peserta", ["id_user" => $id, "pertemuan" => $latihan, "latihan" => $tipe, "id_kelas" => $id_kelas]);
+        
+        if(!$cek){
+            $data = [
+                "id_kelas" => $id_kelas,
+                "id_user" => $id,
+                "pertemuan" => $latihan,
+                "nilai" => $nilai,
+                "latihan" => $tipe
+            ];
+
+            $this->Admin_model->add_data("latihan_peserta", $data);
+        } else {
+            if($nilai > $cek['nilai']){
+                $data = [
+                    "id_kelas" => $id_kelas,
+                    "id_user" => $id,
+                    "pertemuan" => $latihan,
+                    "latihan" => $tipe
+                ];
+
+                $this->Admin_model->edit_data("latihan_peserta", $data, ["nilai" => $nilai]);
+            }
+        }
+
+        // redirect($redirect);
+        echo json_encode("1");
+        // echo json_encode($data);
+    }
+
+    public function kumpul_tugas($id){
+        $data = $this->Admin_model->get_one("latihan_isian_peserta", ["md5(id)" => $id]);
+        $jawaban = explode("###", $data['jawaban']);
+
+        $kosong = false;
+
+        foreach ($jawaban as $i => $value) {
+            if($i < COUNT($jawaban)){
+                if($value == ""){
+                    $kosong = true;
+                }
+            }
+        }
+
+        if($kosong === false){
+            echo json_encode("1");
+        } else {
+            $this->Admin_model->edit_data("latihan_isian_peserta", ["md5(id)" => $id], ["periksa" => 2]);
+            echo json_encode(base_url().'tarkibi2/kelas/'.md5($data["id_kelas"]).'?latihan='.md5($data['pertemuan']));
+        }
+    }
+
+    public function edit_jawaban($id){
+        $data = $this->Admin_model->get_one("latihan_isian_peserta", ["md5(id)" => $id]);
+
+        $this->Admin_model->edit_data("latihan_isian_peserta", ["md5(id)" => $id], ["periksa" => 0]);
+        echo json_encode(base_url().'tarkibi2/kelas/'.md5($data["id_kelas"]).'?latihan='.md5($data['pertemuan']));
     }
 
     

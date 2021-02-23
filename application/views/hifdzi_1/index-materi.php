@@ -350,7 +350,7 @@
                 success : function(data){
                     let sertifikat = ""
                     if(data.kelas.sertifikat == 1)
-                        sertifikat = `<a href="<?= base_url()?>hifdzi1/syahadah/`+data.kelas.id_sertifikat+`" target="_blank" class="btn btn-md list-group-item-warning mr-1"><i class="fa fa-file-download"></i></a>`;
+                        sertifikat = `<a href="<?= base_url()?>sertifikat/peserta/`+data.kelas.id_sertifikat+`" target="_blank" class="btn btn-md list-group-item-warning mr-1"><i class="fa fa-file-download"></i></a>`;
                     else 
                         sertifikat = "";
                     

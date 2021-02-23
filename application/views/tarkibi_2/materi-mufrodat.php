@@ -25,13 +25,29 @@
                         </div>
                     <?php endif;?>
                 </div>
-                <?php if($latihan):?>
+                <?php if($latihan != "" && $latihan != "-"):?>
                     <div class="col-12 mb-3">
                         <ul class="list-group">
                             <li class="list-group-item list-group-item-warning">Latihan</li>
                             <li class="list-group-item d-flex">
-                                <a href="<?= base_url()?>tarkibi2/kelas/<?= $link?>?latihan=<?= MD5($title)?>" class="btn btn-sm btn-block btn-success mr-3">
-                                    <div class="d-flex justify-content-between">Latihan 1 </div>
+                                <a href="<?= base_url()?>tarkibi2/kelas/<?= $link?>?latihan=<?= MD5($title)?>" class="btn btn-md btn-block btn-success mr-3">
+                                    <div class="d-flex">Latihan </div>
+                                </a>
+                                <span class="btn btn-md btn-outline-dark"><?= $latihan?></span>
+                            </li>
+                        </ul>
+                    </div>
+                <?php elseif($latihan == "-"):?>
+                    <div class="col-12">
+                        <div class="alert alert-info"><i class="fa fa-info-circle text-info"></i> tidak ada latihan pada pertemuan ini.</div>
+                    </div>
+                <?php else :?>
+                    <div class="col-12 mb-3">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-warning">Latihan</li>
+                            <li class="list-group-item d-flex">
+                                <a href="<?= base_url()?>tarkibi2/kelas/<?= $link?>?latihan=<?= MD5($title)?>" class="btn btn-md btn-block btn-danger mr-3">
+                                    <div class="d-flex">Latihan </div>
                                 </a>
                             </li>
                         </ul>
