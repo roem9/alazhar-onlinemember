@@ -3,6 +3,21 @@
                 <div class="col-12 col-md-12 mb-3">
                     <a id="backHome" class="btn btn-sm btn-danger text-light"><i class="fa fa-times mr-1"></i>keluar</a>
                 </div>
+                <div class="col-12 mb-3">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <select id="fontSize" class="form-control form-control-md">
+                                <option value="16px">Pilih Ukuran Tulisan</option>
+                                <option value="20px">20</option>
+                                <option value="25px">25</option>
+                                <option value="30px">30</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <div class="alert alert-info"><i class="fa fa-info-circle text-info"></i> Pilihlah jawaban yang tepat dari soal-soal berikut ini :</div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-12 mb-3" id="hasilLatihanUp">
@@ -25,7 +40,7 @@
                             if($i < 10) : ?>
                             <div class="col-12 col-md-12 mb-3 soal" id="soal<?= $i?>">
                                 <ul class="list-group">
-                                    <li class="list-group-item" id="soal-bg<?= $i?>">
+                                    <li class="list-group-item fontSize" id="soal-bg<?= $i?>">
                                         <div class="form-group">
                                             <?php if($i%2 == 0) :?>
                                                 <div class="d-flex justify-content-between">
@@ -88,11 +103,11 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div id="kunci-jawaban<?=$i?>" style="display: none">
+                                            <div id="kunci-jawaban<?=$i?>" class="kunci-jawaban">
                                                 <?php if($i%2 == 0) :?>
-                                                    <h5><?= $kalimat['kata_arab']?></h5>
+                                                    <b><?= $kalimat['kata_arab']?></b>
                                                 <?php else :?>
-                                                    <h5><?= $kalimat['arti']?></h5>
+                                                    <b><?= $kalimat['arti']?></b>
                                                 <?php endif;?>
                                             </div>
                                         </div>
@@ -151,7 +166,13 @@
     $("#hasilLatihanDown").hide();
     $(".soal").hide();
     $("#soal0").show();
+    $(".kunci-jawaban").hide();
     
+    $("#fontSize").change(function(){
+        let size = $(this).val();
+        $(".fontSize").css("font-size",size);
+    })
+
     $(".right").click(function(){
         let id = $(this).data("id");
 
