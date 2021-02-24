@@ -398,7 +398,12 @@
 
                     $("#dataKelas").html(html);
 
-                    html = ""
+                    html = `<div class="col-12 mb-3">
+                                <ul class="list-group">
+                                    <li class="list-group-item"><a href="<?= base_url()?>hifdzi1/how_to/<?= md5($kelas['id_kelas'])?>" class="btn btn-md btn-secondary btn-block"><i class="fa fa-question mr-2"></i>Cara Penggunaan</a></li>
+                                </ul>
+                            </div>`;
+                            
                     // html += `<div id="dataMateri">`;
                     data.pertemuan.forEach(pertemuan => {
                         html +=     
