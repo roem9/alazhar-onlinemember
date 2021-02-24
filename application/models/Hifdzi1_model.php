@@ -2223,133 +2223,133 @@
             
             $data[7] = [
                 [
-                    "id" => "316",                        
+                    "id" => "316",                      
                     "kata" => "رَبَّي-يُرَبِّي-تَرْبِيَّةً",
                     "kata_arab" => "رَبَّي-يُرَبِّي-تَرْبِيَّةً",
                     "arti" => "Mendidik",
                     "hal" => "1",
                 ],
                 [
-                    "id" => "317",                        
+                    "id" => "317",                      
                     "kata" => "حَضَنَ-يَحْضُنُ-حَضَانَةً",
                     "kata_arab" => "حَضَنَ-يَحْضُنُ-حَضَانَةً",
                     "arti" => "Mengasuh",
                     "hal" => "1",
                 ],
                 [
-                    "id" => "318",                        
+                    "id" => "318",                      
                     "kata" => "أَحَبَّ-يُحِبُّ-مَحَبَّةً",
                     "kata_arab" => "أَحَبَّ-يُحِبُّ-مَحَبَّةً",
                     "arti" => "Mencintai",
                     "hal" => "1",
                 ],
                 [
-                    "id" => "319",                        
+                    "id" => "319",                      
                     "kata" => "رَحِمَ-يَرْحَمُ-رَحْمَةً",
                     "kata_arab" => "رَحِمَ-يَرْحَمُ-رَحْمَةً",
                     "arti" => "Menyayangi",
                     "hal" => "1",
                 ],
                 [
-                    "id" => "320",                        
+                    "id" => "320",                      
                     "kata" => "اِحْتَرَمَ-يَحْتَرِمُ-اِحْتِرَامًا",
                     "kata_arab" => "اِحْتَرَمَ-يَحْتَرِمُ-اِحْتِرَامًا",
                     "arti" => "Menghormati",
                     "hal" => "1",
                 ],
                 [
-                    "id" => "321",                        
+                    "id" => "321",                      
                     "kata" => "جَرَحَ-يَجْرَحُ-جَرْحًا",
                     "kata_arab" => "جَرَحَ-يَجْرَحُ-جَرْحًا",
                     "arti" => "Melukai",
                     "hal" => "1",
                 ],
                 [
-                    "id" => "322",                        
+                    "id" => "322",                      
                     "kata" => "أَهَانَ-يُهِيْنُ-إِهَانَةً",
                     "kata_arab" => "أَهَانَ-يُهِيْنُ-إِهَانَةً",
                     "arti" => "Menghina",
                     "hal" => "1",
                 ],
                 [
-                    "id" => "323",                        
+                    "id" => "323",                      
                     "kata" => "دَعَا-يَدْعُو-دَعْوَةً",
                     "kata_arab" => "دَعَا-يَدْعُو-دَعْوَةً",
                     "arti" => "Mengajak",
                     "hal" => "1",
                 ],
                 [
-                    "id" => "324",                        
+                    "id" => "324",                      
                     "kata" => "أَمَرَ-يَأْمُرُ-أَمْرًا",
                     "kata_arab" => "أَمَرَ-يَأْمُرُ-أَمْرًا",
                     "arti" => "Memerintah",
                     "hal" => "1",
                 ],
                 [
-                    "id" => "325",                        
+                    "id" => "325",                      
                     "kata" => "رَضِعَ-يَرْضَعُ-رَضَاعَةً",
                     "kata_arab" => "رَضِعَ-يَرْضَعُ-رَضَاعَةً",
                     "arti" => "Menyusu",
                     "hal" => "1",
                 ],
                 [
-                    "id" => "326",                        
+                    "id" => "326",                      
                     "kata" => "أَرْضَعَ-يُرْضِعُ-إِرْضَاعًا",
                     "kata_arab" => "أَرْضَعَ-يُرْضِعُ-إِرْضَاعًا",
                     "arti" => "Menyusui",
                     "hal" => "1",
                 ],
                 [
-                    "id" => "327",                        
+                    "id" => "327",                      
                     "kata" => "نَصَحَ-يَنْصَحُ-نَصِيْحَةً",
                     "kata_arab" => "نَصَحَ-يَنْصَحُ-نَصِيْحَةً",
                     "arti" => "Menasehati",
                     "hal" => "1",
                 ],
                 [
-                    "id" => "328",                        
+                    "id" => "328",                      
                     "kata" => "نَصَرَ-يَنْصُرُ-نَصْرًا",
                     "kata_arab" => "نَصَرَ-يَنْصُرُ-نَصْرًا",
                     "arti" => "Menolong",
                     "hal" => "2",
                 ],
                 [
-                    "id" => "329",                        
+                    "id" => "329",                      
                     "kata" => "بَلَغَ-يَبْلُغُ-بُلُوغًا",
                     "kata_arab" => "بَلَغَ-يَبْلُغُ-بُلُوغًا",
                     "arti" => "Sampai",
                     "hal" => "2",
                 ],
                 [
-                    "id" => "330",                        
+                    "id" => "330",                      
                     "kata" => "مَزَحَ-يَمْزَحُ-مِزَاحًا",
                     "kata_arab" => "مَزَحَ-يَمْزَحُ-مِزَاحًا",
                     "arti" => "Bercanda",
                     "hal" => "2",
                 ],
                 [
-                    "id" => "331",                        
+                    "id" => "331",                      
                     "kata" => "اِعْتَرَفَ-يَعْتَرِفُ-اِعْتِرَافًا",
                     "kata_arab" => "اِعْتَرَفَ-يَعْتَرِفُ-اِعْتِرَافًا",
                     "arti" => "Mengakui",
                     "hal" => "2",
                 ],
                 [
-                    "id" => "332",                        
+                    "id" => "332",                      
                     "kata" => "رَجَى-يَرْجُو-رَجَاءً",
                     "kata_arab" => "رَجَى-يَرْجُو-رَجَاءً",
                     "arti" => "Berharap",
                     "hal" => "2",
                 ],
                 [
-                    "id" => "333",                        
+                    "id" => "333",                      
                     "kata" => "صَارَ-يَصِيْرُ-صَيْرًا",
                     "kata_arab" => "صَارَ-يَصِيْرُ-صَيْرًا",
                     "arti" => "Menjadi",
                     "hal" => "2",
                 ],
                 [
-                    "id" => "334",                        
+                    "id" => "334",                      
                     "kata" => "اِحْتَاجَ-يَحْتَاجُ-اِحْتِيَاجًا",
                     "kata_arab" => "اِحْتَاجَ-يَحْتَاجُ-اِحْتِيَاجًا",
                     "arti" => "Membutuhkan",
@@ -7257,209 +7257,212 @@
 
         public function materi_pertemuan($id){
             $data[1] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/1.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/1.1.mpeg' type='audio/mpeg'></audio>",  
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/1.2.jpeg' class='img-rounded img-fluid'>",  
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/1.2.mpeg' type='audio/mpeg'></audio>",  
-            ];
+                // <div class='text-right'><a href='' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div>
 
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/1.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/1.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/1.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/1.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/1.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/1.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/1.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/1.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                
+            ];
+            
             $data[2] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/2.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/2.1.mpeg' type='audio/mpeg'></audio>",  
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/2.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/2.2.mpeg' type='audio/mpeg'></audio>",  
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/2.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/2.3.mpeg' type='audio/mpeg'></audio>",  
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/2.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/2.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/2.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/2.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/2.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/2.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/2.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/2.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "4" => "<div><img src='".base_url()."assets/img/hifdzi_1/2.3.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/2.3.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "5" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/2.3.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/2.3.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
 
             $data[3] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/3.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/3.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/3.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/3.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/3.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/3.3.mpeg' type='audio/mpeg'></audio>",
-                "6" => "<img src='".base_url()."assets/img/hifdzi_1/3.4.jpeg' class='img-rounded img-fluid'>",
-                "7" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/3.4.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/3.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/3.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/3.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/3.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/3.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/3.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/3.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/3.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "4" => "<div><img src='".base_url()."assets/img/hifdzi_1/3.3.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/3.3.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "5" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/3.3.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/3.3.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "6" => "<div><img src='".base_url()."assets/img/hifdzi_1/3.4.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/3.4.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "7" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/3.4.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/3.4.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
 
             $data[4] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/4.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/4.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/4.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/4.2.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/4.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/4.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/4.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/4.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/4.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/4.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/4.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/4.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
 
             $data[5] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/5.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/5.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/5.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/5.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/5.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/5.3.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/5.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/5.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/5.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/5.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/5.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/5.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/5.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/5.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "4" => "<div><img src='".base_url()."assets/img/hifdzi_1/5.3.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/5.3.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "5" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/5.3.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/5.3.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
 
             $data[6] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/6.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/6.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/6.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/6.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/6.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/6.3.mpeg' type='audio/mpeg'></audio>",
-                "6" => "<img src='".base_url()."assets/img/hifdzi_1/6.4.jpeg' class='img-rounded img-fluid'>",
-                "7" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/6.4.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/6.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/6.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/6.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/6.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/6.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/6.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/6.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/6.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "4" => "<div><img src='".base_url()."assets/img/hifdzi_1/6.3.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/6.3.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "5" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/6.3.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/6.3.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "6" => "<div><img src='".base_url()."assets/img/hifdzi_1/6.4.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/6.4.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "7" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/6.4.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/6.4.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
 
             $data[7] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/7.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/7.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/7.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/7.2.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/7.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/7.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/7.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/7.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/7.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/7.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/7.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/7.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
 
             $data[8] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/8.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/8.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/8.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/8.2.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/8.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/8.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/8.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/8.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/8.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/8.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/8.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/8.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
             
             $data[9] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/9.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/9.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/9.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/9.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/9.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/9.3.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/9.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/9.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/9.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/9.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/9.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/9.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/9.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/9.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "4" => "<div><img src='".base_url()."assets/img/hifdzi_1/9.3.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/9.3.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "5" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/9.3.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/9.3.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
             
             $data[10] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/10.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/10.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/10.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/10.2.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/10.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/10.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/10.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/10.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/10.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/10.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/10.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/10.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
             
             $data[11] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/11.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/11.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/11.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/11.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/11.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/11.3.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/11.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/11.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/11.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/11.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/11.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/11.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/11.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/11.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "4" => "<div><img src='".base_url()."assets/img/hifdzi_1/11.3.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/11.3.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "5" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/11.3.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/11.3.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
 
             $data[12] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/12.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/12.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/12.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/12.2.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/12.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/12.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/12.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/12.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/12.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/12.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/12.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/12.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
             
             $data[13] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/13.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/13.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/13.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/13.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/13.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/13.3.mpeg' type='audio/mpeg'></audio>",
-                "6" => "<img src='".base_url()."assets/img/hifdzi_1/13.4.jpeg' class='img-rounded img-fluid'>",
-                "7" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/13.4.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/13.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/13.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/13.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/13.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/13.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/13.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/13.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/13.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "4" => "<div><img src='".base_url()."assets/img/hifdzi_1/13.3.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/13.3.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "5" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/13.3.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/13.3.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "6" => "<div><img src='".base_url()."assets/img/hifdzi_1/13.4.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/13.4.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "7" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/13.4.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/13.4.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
             
             $data[14] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/14.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/14.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/14.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/14.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/14.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/14.3.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/14.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/14.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/14.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/14.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/14.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/14.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/14.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/14.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "4" => "<div><img src='".base_url()."assets/img/hifdzi_1/14.3.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/14.3.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "5" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/14.3.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/14.3.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
             
             $data[15] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/15.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/15.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/15.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/15.2.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/15.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/15.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/15.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/15.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/15.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/15.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/15.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/15.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
             
             $data[16] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/16.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/16.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/16.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/16.2.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/16.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/16.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/16.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/16.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/16.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/16.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/16.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/16.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
             
             $data[17] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/17.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/17.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/17.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/17.2.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/17.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/17.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/17.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/17.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/17.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/17.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/17.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/17.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
             
             $data[18] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/18.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/18.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/18.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/18.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/18.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/18.3.mpeg' type='audio/mpeg'></audio>",
-                "6" => "<img src='".base_url()."assets/img/hifdzi_1/18.4.jpeg' class='img-rounded img-fluid'>",
-                "7" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/18.4.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/18.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/18.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/18.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/18.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/18.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/18.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/18.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/18.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "4" => "<div><img src='".base_url()."assets/img/hifdzi_1/18.3.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/18.3.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "5" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/18.3.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/18.3.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "6" => "<div><img src='".base_url()."assets/img/hifdzi_1/18.4.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/18.4.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "7" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/18.4.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/18.4.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
             
             $data[19] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/19.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/19.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/19.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/19.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/19.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/19.3.mpeg' type='audio/mpeg'></audio>",
-                "6" => "<img src='".base_url()."assets/img/hifdzi_1/19.4.jpeg' class='img-rounded img-fluid'>",
-                "7" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/19.4.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/19.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/19.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/19.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/19.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/19.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/19.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/19.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/19.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "4" => "<div><img src='".base_url()."assets/img/hifdzi_1/19.3.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/19.3.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "5" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/19.3.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/19.3.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "6" => "<div><img src='".base_url()."assets/img/hifdzi_1/19.4.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/19.4.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "7" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/19.4.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/19.4.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
             
             $data[20] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/20.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/20.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/20.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/20.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/20.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/20.3.mpeg' type='audio/mpeg'></audio>",
-                "6" => "<img src='".base_url()."assets/img/hifdzi_1/20.4.jpeg' class='img-rounded img-fluid'>",
-                "7" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/20.4.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/20.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/20.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/20.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/20.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/20.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/20.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/20.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/20.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "4" => "<div><img src='".base_url()."assets/img/hifdzi_1/20.3.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/20.3.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "5" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/20.3.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/20.3.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "6" => "<div><img src='".base_url()."assets/img/hifdzi_1/20.4.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/20.4.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "7" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/20.4.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/20.4.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
             
             $data[21] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/21.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/21.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/21.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/21.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/21.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/21.3.mpeg' type='audio/mpeg'></audio>",
-                "6" => "<img src='".base_url()."assets/img/hifdzi_1/21.4.jpeg' class='img-rounded img-fluid'>",
-                "7" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/21.4.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/21.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/21.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/21.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/21.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/21.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/21.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/21.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/21.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "4" => "<div><img src='".base_url()."assets/img/hifdzi_1/21.3.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/21.3.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "5" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/21.3.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/21.3.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "6" => "<div><img src='".base_url()."assets/img/hifdzi_1/21.4.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/21.4.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "7" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/21.4.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/21.4.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
             
             $data[22] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/22.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/22.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/22.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/22.2.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/22.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/22.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/22.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/22.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/22.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/22.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/22.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/22.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
             
             $data[23] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/23.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/23.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/23.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/23.2.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/23.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/23.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/23.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/23.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/23.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/23.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/23.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/23.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
             
             $data[24] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/24.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/24.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/24.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/24.2.mpeg' type='audio/mpeg'></audio>",
+                "0" => "<div><img src='".base_url()."assets/img/hifdzi_1/24.1.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/24.1.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "1" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/24.1.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/24.1.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "2" => "<div><img src='".base_url()."assets/img/hifdzi_1/24.2.jpeg' class='img-rounded img-fluid'><div class='text-right'><a href='".base_url()."assets/img/hifdzi_1/24.2.jpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
+                "3" => "<div><audio controls><source src='".base_url()."assets/sound/hifdzi_1/24.2.mpeg' type='audio/mpeg'></audio><div class='text-right'><a href='".base_url()."assets/sound/hifdzi_1/24.2.mpeg' class='btn btn-sm btn-success' download><i class='fa fa-download'></i> Download</a></div></div>",
             ];
             
             return $data[$id];
