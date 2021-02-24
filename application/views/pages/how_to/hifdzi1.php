@@ -3,6 +3,7 @@
                 <div class="col-12">
                     <ul class="list-group">
                         <li class="list-group-item"><b><center>Cara Penggunaan app.arabiconline.id Kelas Hifdzi 1</center></b></li>
+                        <li class="list-group-item">Kunjungi Aplikasi di : <a href="https://app.arabiconline.id" class="text-primary">https://app.arabiconline.id</a></li>
                         <li class="list-group-item">1. Cara Login Ke member Area</li>
                         <li class="list-group-item">
                             <div class="embed-responsive embed-responsive-16by9">

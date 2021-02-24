@@ -56,10 +56,14 @@
             <div class="col-12 mb-3 text-center">
                 <img src="<?= base_url()?>assets/img/logo.png" width="75" class="img-fluid img-shadow">
             </div>
-            <a href="<?= base_url()?>profil" class="list-group-item list-group-item-action <?php if($title == 'Profil'){echo 'bg-primary text-light';}else{echo 'bg-light text-dark';}?>"><i class="fa fa-user mr-3"></i>Profil</a>
-            <a href="<?= base_url()?>kelas" class="list-group-item list-group-item-action <?php if($title == 'List Kelas'){echo 'bg-primary text-light';}else{echo 'bg-light text-dark';}?>"><i class="fa fa-book mr-3"></i>Kelas</a>
-            <a href="<?= base_url()?>sertifikat" class="list-group-item list-group-item-action <?php if($title == 'List Sertifikat'){echo 'bg-primary text-light';}else{echo 'bg-light text-dark';}?>"><i class="fa fa-award mr-3"></i>Sertifikat</a>
-            <a href="<?= base_url()?>auth/logout" class="list-group-item list-group-item-action" onclick="return confirm('Yakin akan keluar?')"><i class="fa fa-sign-out-alt mr-3"></i>Logout</a>
+            <?php if($this->session->userdata('id_user')) :?>
+                <a href="<?= base_url()?>profil" class="list-group-item list-group-item-action <?php if($title == 'Profil'){echo 'bg-primary text-light';}else{echo 'bg-light text-dark';}?>"><i class="fa fa-user mr-3"></i>Profil</a>
+                <a href="<?= base_url()?>kelas" class="list-group-item list-group-item-action <?php if($title == 'List Kelas'){echo 'bg-primary text-light';}else{echo 'bg-light text-dark';}?>"><i class="fa fa-book mr-3"></i>Kelas</a>
+                <a href="<?= base_url()?>sertifikat" class="list-group-item list-group-item-action <?php if($title == 'List Sertifikat'){echo 'bg-primary text-light';}else{echo 'bg-light text-dark';}?>"><i class="fa fa-award mr-3"></i>Sertifikat</a>
+                <a href="<?= base_url()?>auth/logout" class="list-group-item list-group-item-action" onclick="return confirm('Yakin akan keluar?')"><i class="fa fa-sign-out-alt mr-3"></i>Logout</a>
+            <?php else :?>
+                <a href="<?= base_url()?>auth" class="list-group-item list-group-item-action"><i class="fa fa-sign-in-alt mr-3"></i>Login</a>
+            <?php endif;?>
         </div>
     </nav>
 
