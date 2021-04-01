@@ -7496,4 +7496,106 @@
 
             return $hal[$id];
         }
+
+        public function tugas_tambahan($id){
+            $data[1] = '<li class="list-group-item">1. dengan apa kamu menyapu lantai ?</li>
+                <li class="list-group-item">2. berapa umurmu sekarang ?</li>
+                <li class="list-group-item">3. rumahku jauh dari masjid.</li>';
+
+            $data[2] = '<li class="list-group-item">1. fatimah tidah masuk ke kelas.</li>
+                <li class="list-group-item">2. aku datang kepadamu supaya kamu mengajariku bahasa arab.</li>
+                <li class="list-group-item">3. sungguh beruntung orang-orang yang beriman.</li>';
+
+            $data[3] = '<li class="list-group-item">1. 29</li>
+                <li class="list-group-item">2. 17</li>
+                <li class="list-group-item">3. 99</li>
+                <li class="list-group-item">4. 700</li>
+                <li class="list-group-item">5. 66</li>';
+
+            $data[4] = '<li class="list-group-item">1. perempuan itu bekerja di dalam rumah.</li>
+                <li class="list-group-item">2. sebentar lagi ustadz akan datang.</li>
+                <li class="list-group-item">3. kita akan bertemu lagi nanti.</li>';
+
+            $data[5] = '<li class="list-group-item">1. jangan lupa membersihkan gigimu.</li>
+                <li class="list-group-item">2. mata kaki itu berada dibawah pergelangan kaki.</li>
+                <li class="list-group-item">3. taruhlah kalung ini di lehermu.</li>';
+
+            $data[6] = '<li class="list-group-item">1. aku mengambil bola ini di sungai.</li>
+                <li class="list-group-item">2. kenapa kamu menggaruk tanganmu terus menerus ?</li>
+                <li class="list-group-item">3. aku punya saudari yang cantik.</li>';
+
+            $data[7] = '<li class="list-group-item">1. aku mengajak kalian kerumahku untuk makan malam bersama.</li>
+                <li class="list-group-item">2. jangan galau, aku bersamamu.</li>
+                <li class="list-group-item">3. semua hadirin diam ketika khutbah sedang berlangsung.</li>';
+
+            $data[8] = '<li class="list-group-item">1. ayahku adalah laki-laki yang jujur.</li>
+                <li class="list-group-item">2. kamu adalah istri yang romantis.</li>
+                <li class="list-group-item">3. sesungguhnya Allah itu menyayangi umatnya.</li>';
+
+            $data[9] = '<li class="list-group-item">1. minumlah air. Karena kamu haus.</li>
+                <li class="list-group-item">2. dia adalah orang yang gemuk dan kuat.</li>
+                <li class="list-group-item">3. saya buru-buru pergi ke bandara.</li>';
+
+            $data[10] = '<li class="list-group-item">1. bersihkan halaman dengan sapu!</li>
+                <li class="list-group-item">2. nyalakan lampunya mas!</li>
+                <li class="list-group-item">3. atap itu warnanya putih.</li>';
+
+            $data[11] = '<li class="list-group-item">1. letakkan tanganmu diatas kepala!</li>
+                <li class="list-group-item">2. murid-murid masuk kedalam kelas jam 7.</li>
+                <li class="list-group-item">3. sungai didesaku dangkal.</li>';
+
+            $data[12] = '<li class="list-group-item">1. ambil air yang bersih kemudian buang air yang keruh!</li>
+                <li class="list-group-item">2. masa remaja adalah masa yang mengkhawatirkan.</li>
+                <li class="list-group-item">3. berikan saya tugas yang mudah ustadzku!</li>';
+
+            $data[13] = '<li class="list-group-item">1. perempuan itu memakai kerudung.</li>
+                <li class="list-group-item">2. harga emas tahun ini mahal.</li>
+                <li class="list-group-item">3. dia sedang menyetrika pakaiannya menggunakan setrika.</li>';
+
+            $data[14] = '<li class="list-group-item">1. anak ini mengigau didalam tidurnya.</li>
+                <li class="list-group-item">2. rapikan pirang-piringnya di rak piring.</li>
+                <li class="list-group-item">3. saya telah memotong timun menggunakan pisau.</li>';
+
+            $data[15] = '<li class="list-group-item">1. cuaca pada musim semi dingin sekali</li>
+                <li class="list-group-item">2. ahmad sedang mengupas apel.</li>
+                <li class="list-group-item">3. sebuah kabel terpotong di sebelah dapur.</li>';
+
+            $data[16] = '<li class="list-group-item">1. berikan aku seember air untuk menyiram kebun.</li>
+                <li class="list-group-item">2. tutup kerannya sebelum keluar dari kamar mandi.</li>
+                <li class="list-group-item">3. basuhlah wajahmu sebelum tidur.</li>';
+
+            $data[17] = '<li class="list-group-item">1. sebuah tiang berada didepan sekolah.</li>
+                <li class="list-group-item">2. dia seorang mahasiswa di universitas ini.</li>
+                <li class="list-group-item">3. sertifikat jadi setelah selesai belajar.</li>';
+
+            $data[18] = '<li class="list-group-item">1. ulangannya bulan depan.</li>
+                <li class="list-group-item">2. saya memahami pelajaran ini dengan sempurna.</li>
+                <li class="list-group-item">3. saya membeli bencin di pom bensin.</li>';
+
+            $data[19] = '<li class="list-group-item">1. saya akan memboncengmu dengan sepeda ini.</li>
+                <li class="list-group-item">2. seharusnya perawat memeriksa pasein dengan lembut.</li>
+                <li class="list-group-item">3. dimana kamu dapat kelinci ini temanku?</li>';
+
+            $data[20] = '<li class="list-group-item">1. kelelawar terbang dimalam hari untuk memakan nyamuk.</li>
+                <li class="list-group-item">2. kurma disunnahkan ketika buka puasa.</li>
+                <li class="list-group-item">3. mereka sedang mencangkul tanah disawah.</li>';
+
+            $data[21] = '<li class="list-group-item">1. sayur mayur dipasar bermacam-macam.</li>
+                <li class="list-group-item">2. jalan sukarno hatta sekarang macet.</li>
+                <li class="list-group-item">3. candi borobudur terletak di magelang.</li>';
+
+            $data[22] = '<li class="list-group-item">1. pelangi akan nampak setelah hujan.</li>
+                <li class="list-group-item">2. seorang anak sedang bereang disungai.</li>
+                <li class="list-group-item">3. salju turun pada musim dingin.</li>';
+
+            $data[23] = '<li class="list-group-item">1. hakim itu menghukumi dengan adil.</li>
+                <li class="list-group-item">2. penjual itu akan menjual banyak buku.</li>
+                <li class="list-group-item">3. seorang pilot sedang terbang dilangit.</li>';
+
+            $data[24] = '<li class="list-group-item">1. daun-daun sedang berjatuhan di musim gugur.</li>
+                <li class="list-group-item">2. seorang atlit sedang beratih olahraga.</li>
+                <li class="list-group-item">3. para menteri sedang berkumpul di kantor pemerintahan.</li>';
+
+            return $data[$id];
+        }
     }

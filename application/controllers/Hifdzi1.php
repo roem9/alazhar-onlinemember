@@ -50,6 +50,8 @@ class Hifdzi1 extends CI_CONTROLLER{
             // latihan
                 $data['latihan'] = $this->Admin_model->get_one("latihan_peserta", ["MD5(id_kelas)" => $id_kelas, "pertemuan" => $data['title'], "latihan" => "Harian", "id_user" => $id]);
             // latihan
+
+            $data['tambahan'] = $this->Hifdzi1_model->tugas_tambahan($pertemuan['id']);
             
             $this->load->view("templates/header-user", $data);
             $this->load->view("hifdzi_1/materi-mufrodat", $data);

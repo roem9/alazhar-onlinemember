@@ -8,6 +8,14 @@
                         <?= $image?>
                     </div>
                 <?php endforeach;?>
+
+                <div class="col-12">
+                    <div class="alert alert-warning"><i class="fa fa-exclamation-circle text-warning mr-1"></i>Tugas Tambahan. Penggal kalimat berikut menjadi perkata kemudian terjemahkan kata demi kata</div>
+                    <ul class="list-group mb-3">
+                        <?= $tambahan?>
+                    </ul>
+                </div>
+
                 <div class="col-12 mb-3">
                     <?php if($back != "" && $next == "") :?>
                         <div class="d-flex justify-content-start">
