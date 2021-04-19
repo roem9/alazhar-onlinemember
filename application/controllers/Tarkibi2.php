@@ -106,7 +106,7 @@ class Tarkibi2 extends CI_CONTROLLER{
                         $text = "############################################################################################################################################################################################################################################################";
                         break;
                     case 8:
-                        $text = "##############################";
+                        $text = "#################################";
                         break;
                     case 9:
                         $text = "##############################";
@@ -1164,6 +1164,49 @@ class Tarkibi2 extends CI_CONTROLLER{
         echo json_encode(base_url().'tarkibi2/kelas/'.md5($data["id_kelas"]).'?latihan='.md5($data['pertemuan']));
     }
 
+    
+    public function get_detail_kelas(){
+        $id_user = $this->session->userdata('id_user');
+        $id = $this->input->post("id");
+        $data = $this->Admin_model->get_one("kelas", ["id_kelas" => $id]);
+        $data['pertemuan'] = $this->Admin_model->get_all("materi_kelas", ["id_kelas" => $id], "id");
+        
+
+        // nilai tugas harian 
+            foreach ($data['pertemuan'] as $i => $pertemuan) {
+                $data['nilai'][$i]['pertemuan'] = $pertemuan['materi'];
+                $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => $pertemuan['materi'], "latihan" => "Form"]);
+                if($nilai) {
+                    $data['nilai'][$i]['nilai'] = $nilai['nilai'];
+                } else {
+                    $nilai = $this->Admin_model->get_one("latihan_isian_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => $pertemuan['materi']]);
+                    if($nilai) {
+                        $data['nilai'][$i]['nilai'] = $nilai['nilai'];
+                    } else {
+                        $data['nilai'][$i]['nilai'] = 0;
+                    }
+                }
+            }
+        // nilai tugas harian 
+
+        // nilai review
+            $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Review 1", "latihan" => "Review"]);
+            if($nilai){$data['review'][0] = $nilai['nilai'];} else {$data['review'][0] = 0;};
+            $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Review 2", "latihan" => "Review"]);
+            if($nilai){$data['review'][1] = $nilai['nilai'];} else {$data['review'][1] = 0;};
+            $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Review 3", "latihan" => "Review"]);
+            if($nilai){$data['review'][2] = $nilai['nilai'];} else {$data['review'][2] = 0;};
+            $nilai = $this->Admin_model->get_one("latihan_peserta", ["id_kelas" => $id, "id_user" => $id_user, "pertemuan" => "Review 4", "latihan" => "Review"]);
+            if($nilai){$data['review'][3] = $nilai['nilai'];} else {$data['review'][3] = 0;};
+        // nilai review
+        
+        $data['absen'] = $this->Admin_model->get_all("presensi_peserta", ["id_kelas" => $id, "id_user" => $id_user]);
+        $peserta = $this->Admin_model->get_all("kelas_user", ["id_kelas" => $id]);
+        foreach ($peserta as $i => $peserta) {
+            $data['peserta'][$i] = $this->Admin_model->get_one("user", ["id_user" => $peserta['id_user']]);
+        }
+        echo json_encode($data);
+    }
     
     // search 
         // untuk mencari pertemuan

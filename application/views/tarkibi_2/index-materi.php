@@ -62,75 +62,32 @@
                         </div>
 
                         <div id="form-2">
-                            <div class="row">
-                                <div class="col-12">
-                                    <select name="jenis_nilai" id="jenis_nilai" class="form-control form-control-sm mb-2">
-                                        <option value="Harian">Tugas Harian Form</option>
-                                        <option value="Tambahan">Tugas Harian Tambahan</option>
-                                        <option value="Hafalan">Tugas Harian Hafalan</option>
-                                    </select>
-                                </div>
-                            </div>
                             <ul class="list-group">
                                 <li class="list-group-item list-group-item-info titleNilai">Nilai Tugas Harian</li>
                             </ul>
                             <ul class="list-group">
                                 <div id="list-tugas-harian"></div>
                             </ul>
-                            <ul class="list-group">
-                                <div id="list-tugas-tambahan"></div>
-                            </ul>
-                            <ul class="list-group">
-                                <div id="list-tugas-hafalan"></div>
-                            </ul>
                         </div>
 
                         <div class="card" id="form-3">
                             <ul class="list-group">
-                                <li class="list-group-item list-group-item-info">Nilai Ujian</li>
+                                <li class="list-group-item list-group-item-info">Nilai Tugas Review</li>
                                 <li class="list-group-item d-flex justify-content-between">
-                                    <span>Ujian Form Pekan 1</span>
-                                    <span id="nilai-pekan-1">0</span>
+                                    <span>Review Pekan 1</span>
+                                    <span id="nilai-review-1"></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between">
-                                    <span>Ujian Lisan Pekan 1</span>
-                                    <span id="nilai-pekan-1-lisan">0</span>
+                                    <span>Review Pekan 2</span>
+                                    <span id="nilai-review-2"></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between">
-                                    <span>Ujian Form Pekan 2</span>
-                                    <span id="nilai-pekan-2">0</span>
+                                    <span>Review Pekan 3</span>
+                                    <span id="nilai-review-3"></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between">
-                                    <span>Ujian Lisan Pekan 2</span>
-                                    <span id="nilai-pekan-2-lisan">0</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                    <span>Ujian Pertengahan</span>
-                                    <span id="nilai-pertengahan">0</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                    <span>Ujian Form Pekan 3</span>
-                                    <span id="nilai-pekan-3">0</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                    <span>Ujian Lisan Pekan 3</span>
-                                    <span id="nilai-pekan-3-lisan">0</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                    <span>Ujian Form Pekan 4</span>
-                                    <span id="nilai-pekan-4">0</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                    <span>Ujian Lisan Pekan 4</span>
-                                    <span id="nilai-pekan-4-lisan">0</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                    <span>Ujian Akhir Form</span>
-                                    <span id="nilai-akhir-form">0</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                    <span>Ujian Akhir Video</span>
-                                    <span id="nilai-akhir-video">0</span>
+                                    <span>Review Pekan 4</span>
+                                    <span id="nilai-review-4"></span>
                                 </li>
                             </ul>
                         </div>
@@ -264,26 +221,6 @@
         })
     });
 
-    $("#jenis_nilai").change(function(){
-        let data = $(this).val();
-        if(data == "Harian"){
-            $(".titleNilai").html("Nilai Tugas Harian");
-            $("#list-tugas-harian").show();
-            $("#list-tugas-tambahan").hide();
-            $("#list-tugas-hafalan").hide();
-        } else if(data == "Tambahan"){
-            $(".titleNilai").html("Nilai Tugas Tambahan");
-            $("#list-tugas-harian").hide();
-            $("#list-tugas-tambahan").show();
-            $("#list-tugas-hafalan").hide();
-        } else if(data == "Hafalan"){
-            $(".titleNilai").html("Nilai Tugas Hafalan");
-            $("#list-tugas-harian").hide();
-            $("#list-tugas-tambahan").hide();
-            $("#list-tugas-hafalan").show();
-        }
-    })
-
     // search faq
         $("#search_faq").on("change paste keyup", function() {
             let search = $(this).val();
@@ -348,11 +285,13 @@
                     
                     if(btn == "materi"){
                         btn = ` <a href="#" class="btn btn-md btn-primary text-light" id="btnMateri">materi</a>
-                                <a href="#" class="btn btn-md btn-secondary" id="btnUjian">ujian</a>`;
+                                `;
+                                // <a href="#" class="btn btn-md btn-secondary" id="btnUjian">ujian</a>
                                 // <a href="#" data-id="`+data.kelas.id_kelas+`" data-toggle="modal" class="btn btn-md btn-outline-secondary" id="btnFaq">FAQ</a>`;
                     } else if(btn == "ujian") {
                         btn = ` <a href="#" class="btn btn-md btn-secondary" id="btnMateri">materi</a>
-                                <a href="#" class="btn btn-md btn-primary text-light" id="btnUjian">ujian</a>`;                    
+                                `;                    
+                                // <a href="#" class="btn btn-md btn-primary text-light" id="btnUjian">ujian</a>
                                 // <a href="#" data-id="`+data.kelas.id_kelas+`" data-toggle="modal" class="btn btn-md btn-outline-info" id="btnFaq">FAQ</a>`;
                     } else if(btn == "faq"){
                         btn = ` <a href="#" class="btn btn-md btn-outline-info" id="btnMateri">materi</a>
@@ -475,7 +414,7 @@
         
         function detail(id){
             $.ajax({
-                url : "<?=base_url()?>kelas/get_detail_kelas",
+                url : "<?=base_url()?>tarkibi2/get_detail_kelas",
                 method : "POST",
                 data : {id : id},
                 async : true,
@@ -528,51 +467,22 @@
                     
                     html = "";
                     data.nilai.forEach((nilai, i) => {
-                        html += `<li class="list-group-item">
-                                    <div class="d-flex justify-content-between">
-                                        <label for="per`+i+`">`+nilai.pertemuan+`</label>
-                                        <span>`+nilai.nilai+`</span>
-                                    </div>
-                                </li>`;
+                        if(nilai.pertemuan != 'Pertemuan 7'){
+                            html += `<li class="list-group-item">
+                                        <div class="d-flex justify-content-between">
+                                            <label for="per`+i+`">`+nilai.pertemuan+`</label>
+                                            <span>`+nilai.nilai+`</span>
+                                        </div>
+                                    </li>`;
+                        }
                     });
                     
                     $("#list-tugas-harian").html(html);
-                    
-                    html = "";
-                    data.nilai_tambahan.forEach((nilai, i) => {
-                        html += `<li class="list-group-item">
-                                    <div class="d-flex justify-content-between">
-                                        <label for="per`+i+`">`+nilai.pertemuan+`</label>
-                                        <span>`+nilai.nilai+`</span>
-                                    </div>
-                                </li>`;
-                    });
-                    
-                    $("#list-tugas-tambahan").html(html);
-                    
-                    html = "";
-                    data.nilai_hafalan.forEach((nilai, i) => {
-                        html += `<li class="list-group-item">
-                                    <div class="d-flex justify-content-between">
-                                        <label for="per`+i+`">`+nilai.pertemuan+`</label>
-                                        <span>`+nilai.nilai+`</span>
-                                    </div>
-                                </li>`;
-                    });
-                    
-                    $("#list-tugas-hafalan").html(html);
 
-                    $("#nilai-pekan-1").html(data.ujian[0]);
-                    $("#nilai-pekan-1-lisan").html(data.ujian[1]);
-                    $("#nilai-pekan-2").html(data.ujian[2]);
-                    $("#nilai-pekan-2-lisan").html(data.ujian[3]);
-                    $("#nilai-pertengahan").html(data.ujian[4]);
-                    $("#nilai-pekan-3").html(data.ujian[5]);
-                    $("#nilai-pekan-3-lisan").html(data.ujian[6]);
-                    $("#nilai-pekan-4").html(data.ujian[7]);
-                    $("#nilai-pekan-4-lisan").html(data.ujian[8]);
-                    $("#nilai-akhir-form").html(data.ujian[9]);
-                    $("#nilai-akhir-video").html(data.ujian[10]);
+                    $("#nilai-review-1").html(data.review[0]);
+                    $("#nilai-review-2").html(data.review[1]);
+                    $("#nilai-review-3").html(data.review[2]);
+                    $("#nilai-review-4").html(data.review[3]);
                 }
                 
             })

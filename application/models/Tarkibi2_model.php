@@ -14,214 +14,196 @@
 
         public function materi_pertemuan($id){
             $data[1] = [
-                "0" => "<img src='".base_url()."assets/img/tarkibi_2/1.1.png' class='img-rounded img-fluid'>",
-                "1" => "<img src='".base_url()."assets/img/tarkibi_2/1.2.png' class='img-rounded img-fluid'>",
-                "2" => "<img src='".base_url()."assets/img/tarkibi_2/1.3.png' class='img-rounded img-fluid'>",
-                "3" => "<img src='".base_url()."assets/img/tarkibi_2/1.4.png' class='img-rounded img-fluid'>",
-                "4" => "<img src='".base_url()."assets/img/tarkibi_2/1.5.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/1.1.mpeg' type='audio/mpeg'></audio>", 
-                "6" => "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/1.2.mpeg' type='audio/mpeg'></audio>", 
-                "7" => "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/1.3.mpeg' type='audio/mpeg'></audio>", 
+                "<img src='".base_url()."assets/img/tarkibi_2/1.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/1.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/1.3.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/1.4.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/1.png' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/1.1.png' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/1.1.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/1.2.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/1.3.mp3' type='audio/mp3'></audio>",
             ];
 
             $data[2] = [
-                "0" => "<img src='".base_url()."assets/img/tarkibi_2/2.1.jpg' class='img-rounded img-fluid'>",
-                "1" => "<img src='".base_url()."assets/img/tarkibi_2/2.2.jpg' class='img-rounded img-fluid'>",
-                "2" => "<img src='".base_url()."assets/img/tarkibi_2/2.3.jpg' class='img-rounded img-fluid'>",
-                "3" => "<img src='".base_url()."assets/img/tarkibi_2/2.4.jpeg' class='img-rounded img-fluid'>",
-                "4" => "<img src='".base_url()."assets/img/tarkibi_2/2.5.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/2.1.mpeg' type='audio/mpeg'></audio>", 
+                "<img src='".base_url()."assets/img/tarkibi_2/2.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/2.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/2.3.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/2.4.jpeg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/2.5.jpeg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/2.1.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/2.2.mp3' type='audio/mp3'></audio>",
             ];
 
             $data[3] = [
-                "0" => "<img src='".base_url()."assets/img/tarkibi_2/3.1.jpg' class='img-rounded img-fluid'>",
-                "1" => "<img src='".base_url()."assets/img/tarkibi_2/3.2.jpg' class='img-rounded img-fluid'>",
-                "2" => "<img src='".base_url()."assets/img/tarkibi_2/3.3.jpg' class='img-rounded img-fluid'>",
-                "3" => "<img src='".base_url()."assets/img/tarkibi_2/3.4.jpg' class='img-rounded img-fluid'>",
-                "4" => "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/3.1.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/3.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/3.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/3.3.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/3.4.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/3.1.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/3.2.mp3' type='audio/mp3'></audio>",
             ];
 
             $data[4] = [
-                "0" => "<img src='".base_url()."assets/img/tarkibi_2/4.1.jpg' class='img-rounded img-fluid'>",
-                "1" => "<img src='".base_url()."assets/img/tarkibi_2/4.2.jpg' class='img-rounded img-fluid'>",
-                "2" => "<img src='".base_url()."assets/img/tarkibi_2/4.3.jpg' class='img-rounded img-fluid'>",
-                "3" => "<img src='".base_url()."assets/img/tarkibi_2/4.4.jpg' class='img-rounded img-fluid'>",
-                "4" => "<img src='".base_url()."assets/img/tarkibi_2/4.5.jpg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/4.1.mpeg' type='audio/mpeg'></audio>",
-                "6" => "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/4.2.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/4.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/4.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/4.3.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/4.4.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/4.5.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/4.1.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/4.2.mp3' type='audio/mp3'></audio>",
             ];
 
             $data[5] = [
-                "0" => "<img src='".base_url()."assets/img/tarkibi_2/5.1.jpg' class='img-rounded img-fluid'>",
-                "1" => "<img src='".base_url()."assets/img/tarkibi_2/5.2.jpg' class='img-rounded img-fluid'>",
-                "2" => "<img src='".base_url()."assets/img/tarkibi_2/5.3.jpg' class='img-rounded img-fluid'>",
-                "3" => "<img src='".base_url()."assets/img/tarkibi_2/5.4.jpg' class='img-rounded img-fluid'>",
-                "4" => "<img src='".base_url()."assets/img/tarkibi_2/5.5.jpg' class='img-rounded img-fluid'>",
-                "5" => "<img src='".base_url()."assets/img/tarkibi_2/5.6.jpg' class='img-rounded img-fluid'>",
-                "6" => "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/5.1.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/5.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/5.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/5.3.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/5.4.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/5.5.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/5.6.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/5.1.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/5.2.mp3' type='audio/mp3'></audio>",
             ];
 
             $data[6] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/6.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/6.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/6.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/6.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/6.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/6.3.mpeg' type='audio/mpeg'></audio>",
-                "6" => "<img src='".base_url()."assets/img/hifdzi_1/6.4.jpeg' class='img-rounded img-fluid'>",
-                "7" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/6.4.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/6.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/6.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/6.3.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/6.4.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/6.mp3' type='audio/mp3'></audio>",
             ];
 
             $data[7] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/7.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/7.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/7.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/7.2.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/7.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/7.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/7.3.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/7.mp3' type='audio/mp3'></audio>",
             ];
 
             $data[8] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/8.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/8.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/8.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/8.2.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/8.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/8.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/8.3.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/8.4.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/8.5.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/8.6.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/8.7.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/8.1.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/8.2.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/8.3.mp3' type='audio/mp3'></audio>",
             ];
             
             $data[9] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/9.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/9.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/9.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/9.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/9.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/9.3.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/9.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/9.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/9.3.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/9.4.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/9.5.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/9.6.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/9.1.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/9.2.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/9.3.mp3' type='audio/mp3'></audio>",
             ];
             
             $data[10] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/10.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/10.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/10.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/10.2.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/10.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/10.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/10.3.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/10.4.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/10.5.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/10.mp3' type='audio/mp3'></audio>",
             ];
             
             $data[11] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/11.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/11.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/11.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/11.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/11.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/11.3.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/11.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/11.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/11.3.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/11.4.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/11.5.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/11.6.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/11.1.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/11.2.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/11.3.mp3' type='audio/mp3'></audio>",
             ];
 
             $data[12] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/12.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/12.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/12.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/12.2.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/12.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/12.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/12.3.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/12.mp3' type='audio/mp3'></audio>",
             ];
             
             $data[13] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/13.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/13.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/13.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/13.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/13.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/13.3.mpeg' type='audio/mpeg'></audio>",
-                "6" => "<img src='".base_url()."assets/img/hifdzi_1/13.4.jpeg' class='img-rounded img-fluid'>",
-                "7" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/13.4.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/13.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/13.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/13.3.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/13.4.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/13.5.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/13.1.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/13.2.mp3' type='audio/mp3'></audio>",
             ];
             
             $data[14] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/14.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/14.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/14.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/14.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/14.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/14.3.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/14.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/14.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/14.3.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/14.4.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/14.5.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/14.1.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/14.2.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/14.3.mp3' type='audio/mp3'></audio>",
             ];
             
             $data[15] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/15.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/15.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/15.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/15.2.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/15.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/15.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/15.3.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/15.mp3' type='audio/mp3'></audio>",
             ];
             
             $data[16] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/16.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/16.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/16.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/16.2.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/16.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/16.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/16.3.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/16.1.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/16.2.mp3' type='audio/mp3'></audio>",
             ];
             
             $data[17] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/17.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/17.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/17.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/17.2.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/17.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/17.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/17.3.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/17.4.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/17.5.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/17.1.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/17.2.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/17.3.mp3' type='audio/mp3'></audio>",
             ];
             
             $data[18] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/18.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/18.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/18.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/18.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/18.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/18.3.mpeg' type='audio/mpeg'></audio>",
-                "6" => "<img src='".base_url()."assets/img/hifdzi_1/18.4.jpeg' class='img-rounded img-fluid'>",
-                "7" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/18.4.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/18.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/18.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/18.3.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/18.1.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/18.2.mp3' type='audio/mp3'></audio>",
             ];
             
             $data[19] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/19.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/19.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/19.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/19.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/19.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/19.3.mpeg' type='audio/mpeg'></audio>",
-                "6" => "<img src='".base_url()."assets/img/hifdzi_1/19.4.jpeg' class='img-rounded img-fluid'>",
-                "7" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/19.4.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/19.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/19.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/19.3.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/19.mp3' type='audio/mp3'></audio>",
             ];
             
             $data[20] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/20.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/20.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/20.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/20.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/20.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/20.3.mpeg' type='audio/mpeg'></audio>",
-                "6" => "<img src='".base_url()."assets/img/hifdzi_1/20.4.jpeg' class='img-rounded img-fluid'>",
-                "7" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/20.4.mpeg' type='audio/mpeg'></audio>",
-            ];
-            
-            $data[21] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/21.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/21.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/21.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/21.2.mpeg' type='audio/mpeg'></audio>",
-                "4" => "<img src='".base_url()."assets/img/hifdzi_1/21.3.jpeg' class='img-rounded img-fluid'>",
-                "5" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/21.3.mpeg' type='audio/mpeg'></audio>",
-                "6" => "<img src='".base_url()."assets/img/hifdzi_1/21.4.jpeg' class='img-rounded img-fluid'>",
-                "7" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/21.4.mpeg' type='audio/mpeg'></audio>",
-            ];
-            
-            $data[22] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/22.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/22.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/22.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/22.2.mpeg' type='audio/mpeg'></audio>",
-            ];
-            
-            $data[23] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/23.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/23.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/23.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/23.2.mpeg' type='audio/mpeg'></audio>",
-            ];
-            
-            $data[24] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/24.1.jpeg' class='img-rounded img-fluid'>",
-                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/24.1.mpeg' type='audio/mpeg'></audio>",
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/24.2.jpeg' class='img-rounded img-fluid'>",
-                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/24.2.mpeg' type='audio/mpeg'></audio>",
+                "<img src='".base_url()."assets/img/tarkibi_2/20.1.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/20.2.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/20.3.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/20.4.jpg' class='img-rounded img-fluid'>",
+                "<img src='".base_url()."assets/img/tarkibi_2/20.5.jpg' class='img-rounded img-fluid'>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/20.1.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/20.2.mp3' type='audio/mp3'></audio>",
+                "<audio controls><source src='".base_url()."assets/sound/tarkibi_2/20.3.mp3' type='audio/mp3'></audio>",
             ];
             
             return $data[$id];

@@ -312,7 +312,7 @@
                         type : "POST",
                         url : "<?= base_url()?>tarkibi2/add_latihan",
                         dataType : "JSON",
-                        data : {latihan: latihan, id_kelas: id_kelas, nilai: nilai, tipe: ""},
+                        data : {latihan: latihan, id_kelas: id_kelas, nilai: nilai, tipe: "Form"},
                         success : function(data){
                             $("#msg-info").hide();
                             $("#allSoal").hide();
