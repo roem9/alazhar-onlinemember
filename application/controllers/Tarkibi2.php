@@ -73,11 +73,15 @@ class Tarkibi2 extends CI_CONTROLLER{
             if(in_array($pertemuan['id'], $isian)){
                 $latihan = $this->Admin_model->get_one("latihan_isian_peserta", ["md5(id_kelas)" => $id_kelas, "id_user" => $id, "pertemuan" => $pertemuan['pertemuan']]);
                 if($latihan)
-                $data['latihan'] = $latihan['nilai'];
+                    $data['latihan'] = $latihan['nilai'];
+                else
+                    $data['latihan'] = "-";
             } else if(in_array($pertemuan['id'], $pg)){
                 $latihan = $this->Admin_model->get_one("latihan_peserta", ["md5(id_kelas)" => $id_kelas, "id_user" => $id, "pertemuan" => $pertemuan['pertemuan']]);
                 if($latihan)
-                $data['latihan'] = $latihan['nilai'];
+                    $data['latihan'] = $latihan['nilai'];
+                else
+                    $data['latihan'] = "-";
             } else {
                 $data['latihan'] = "-";
             }
