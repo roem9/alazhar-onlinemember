@@ -3,6 +3,17 @@
                 <div class="col-12 col-md-12 mb-3">
                     <a id="backHome" class="btn btn-sm btn-danger text-light"><i class="fa fa-times mr-1"></i>keluar</a>
                 </div>
+                <div class="col-12 mb-3">
+                    <div class="form-group">
+                        <!-- <label for="font">Ukuran Font</label> -->
+                        <select name="font" id="font" class="form-control form-control-md">
+                            <option value="16px">Ganti Ukuran Font</option>
+                            <option value="20px">20</option>
+                            <option value="22px">22</option>
+                            <option value="24px">24</option>
+                        </select>
+                    </div>
+                </div>
                 
                 <div class="col-12 mb-3">
                     <a href="javascript:void(0)" class="btn btn-md btn-block btn-success" id="allSoal">Tampilkan Semua Soal</a>
@@ -333,5 +344,8 @@
             })
         }
     })
-
+    $("#font").change(function(){
+        let font = $(this).val();
+        $(".soal label").css("font-size", font)
+    })
 </script>

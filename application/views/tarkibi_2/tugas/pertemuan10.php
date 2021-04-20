@@ -28,7 +28,17 @@
                 <div class="mb-3">
                     <a id="backHome" class="btn btn-md btn-danger text-light"><i class="fa fa-times mr-1"></i>keluar</a>
                 </div>
-
+                <div class="col-12 p-0 mb-3">
+                    <div class="form-group">
+                        <!-- <label for="font">Ukuran Font</label> -->
+                        <select name="font" id="font" class="form-control form-control-md">
+                            <option value="16px">Ganti Ukuran Font</option>
+                            <option value="20px">20</option>
+                            <option value="22px">22</option>
+                            <option value="24px">24</option>
+                        </select>
+                    </div>
+                </div>
                 <div class="col-12 p-0 mb-3">
                     <a href="javascript:void(0)" class="btn btn-md btn-block btn-success" id="allSoal">Tampilkan Semua Soal</a>
                 </div>
@@ -92,10 +102,12 @@
                                     </div>
                                 <?php else :?>
                                     <div class="text-right">
-                                        <center>في يوم العطلة</center> 
-                                        تذهب فاطمة إلى بستان الحيوان مع عائلتها. و تلقى بصاحباتها هناك. هم ينظرون الفيل و القرد و الثور و التمساح و الحية. فاطمة عندها صاحبة، اسمها زينب. هي تخاف من القرد. و لن تنظر القرد بسبب الخوف. و يدورون حول الحيوانات الكثيرة حتى النهار. <br>
-                                        و بعد مشاهدة الحيوان، هم يريدون أن يذهبوا إلى المطعم ليأكلوا، لأنهم يشعرون بالجوع. و يصلون إلى المطعم يتناولون الغداء هناك. و لم تأكل فاطمة لأنها قد أكلت في البيت. و هم يشربون الماء و الشاي و العصير. <br>
-                                        و ترجع فاطمة مع عائلتها إلى البيت. و هم يركبون السيارة، و لم يركبوا الحافلة. و تشعر بالفرحة، و تشكر إلى الله، لأنها قد شاهدت الحيوانات. و يصلون إلى البيت و يستريحون.
+                                        <label for="">
+                                            <center>في يوم العطلة</center> 
+                                            تذهب فاطمة إلى بستان الحيوان مع عائلتها. و تلقى بصاحباتها هناك. هم ينظرون الفيل و القرد و الثور و التمساح و الحية. فاطمة عندها صاحبة، اسمها زينب. هي تخاف من القرد. و لن تنظر القرد بسبب الخوف. و يدورون حول الحيوانات الكثيرة حتى النهار. <br>
+                                            و بعد مشاهدة الحيوان، هم يريدون أن يذهبوا إلى المطعم ليأكلوا، لأنهم يشعرون بالجوع. و يصلون إلى المطعم يتناولون الغداء هناك. و لم تأكل فاطمة لأنها قد أكلت في البيت. و هم يشربون الماء و الشاي و العصير. <br>
+                                            و ترجع فاطمة مع عائلتها إلى البيت. و هم يركبون السيارة، و لم يركبوا الحافلة. و تشعر بالفرحة، و تشكر إلى الله، لأنها قد شاهدت الحيوانات. و يصلون إلى البيت و يستريحون.
+                                        </label>
                                     </div>
                                 <?php endif ?>
                                 <?php if($data_latihan['periksa'] == 1) :?>
@@ -244,7 +256,7 @@
         } else {
             Swal.fire({
                 icon: 'question',
-                text: 'yakin akan mengumpulkan tugas Anda?',
+                text: 'Pastikan untuk menyimpan pekerjaan Anda terlebih dahulu. yakin akan mengumpulkan tugas Anda?',
                 showCloseButton: true,
                 showCancelButton: true,
                 confirmButtonText: 'Ya',
@@ -367,7 +379,10 @@
             }
         })
     })
-    
+    $("#font").change(function(){
+        let font = $(this).val();
+        $(".soal label").css("font-size", font)
+    })
     // $("textarea").on({
     //     keydown: function(e) {
     //     if (e.which === 32 || e.which === 13)

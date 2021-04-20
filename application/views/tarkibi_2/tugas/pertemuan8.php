@@ -28,7 +28,17 @@
                 <div class="mb-3">
                     <a id="backHome" class="btn btn-md btn-danger text-light"><i class="fa fa-times mr-1"></i>keluar</a>
                 </div>
-
+                <div class="col-12 p-0 mb-3">
+                    <div class="form-group">
+                        <!-- <label for="font">Ukuran Font</label> -->
+                        <select name="font" id="font" class="form-control form-control-md">
+                            <option value="16px">Ganti Ukuran Font</option>
+                            <option value="20px">20</option>
+                            <option value="22px">22</option>
+                            <option value="24px">24</option>
+                        </select>
+                    </div>
+                </div>
                 <div class="col-12 p-0 mb-3">
                     <a href="javascript:void(0)" class="btn btn-md btn-block btn-success" id="allSoal">Tampilkan Semua Soal</a>
                 </div>
@@ -117,9 +127,11 @@
                                         <div class="alert alert-info"><i class="fa fa-info-circle text-info"></i> Tentuntuka mana Mubtada’ dan Khobarnya ! Dan tentukan mubtada’ nya berupa apa? Dan khobarnya berupa apa ? dan juga dianalisis seperti contoh!</div>
                                     </div>
                                     <div class="text-right">
-                                        <p>هذا حسن. هو طالب مجتهد فى هذه المدرسة. عنده صديق، اسمه سليم. و هما يذهبان إلى الفصل معا. فى الفصل طلاب و طالبات. هم يدرسون اللغة العربية جيدا. الطلاب يجلسون جانب الطالبات. </p>
-                                        <p>الأستاذ يعلّمهم فى الفصل. و هو يكتب الدرس على السبورة. و جانب السبورة خزانة. فيها كتب كثيرة. الطلاب يستطيعون أن يقرأوها فى الإستراحة. الطلاب و الطالبات يدرسون حتى النهار.</p>
-                                        <p>هم يرجعون إلى بيوتهم بعد صلاة الظهر. حسن أمه أمينة. و أبوه إبراهيم. أبوه تاجر غني فى القرية. وأمها ربة البيت. و حسن يساعدهما كل يوم. و حسن عنده حوض السمك. فيه أسماك كثيرة. جانب الحوض حديقة. فيها شجرتان كبيرتان. حسن يلعب تحت الشجرة.</p>
+                                        <label for="">
+                                            <p>هذا حسن. هو طالب مجتهد فى هذه المدرسة. عنده صديق، اسمه سليم. و هما يذهبان إلى الفصل معا. فى الفصل طلاب و طالبات. هم يدرسون اللغة العربية جيدا. الطلاب يجلسون جانب الطالبات. </p>
+                                            <p>الأستاذ يعلّمهم فى الفصل. و هو يكتب الدرس على السبورة. و جانب السبورة خزانة. فيها كتب كثيرة. الطلاب يستطيعون أن يقرأوها فى الإستراحة. الطلاب و الطالبات يدرسون حتى النهار.</p>
+                                            <p>هم يرجعون إلى بيوتهم بعد صلاة الظهر. حسن أمه أمينة. و أبوه إبراهيم. أبوه تاجر غني فى القرية. وأمها ربة البيت. و حسن يساعدهما كل يوم. و حسن عنده حوض السمك. فيه أسماك كثيرة. جانب الحوض حديقة. فيها شجرتان كبيرتان. حسن يلعب تحت الشجرة.</p>
+                                        </label>
                                     </div>
                                 <?php endif ?>
                                 <!-- <label for="" ><?= $soal['no'].". ".$soal['soal']?></label> -->
@@ -253,7 +265,7 @@
         } else {
             Swal.fire({
                 icon: 'question',
-                text: 'yakin akan mengumpulkan tugas Anda?',
+                text: 'Pastikan untuk menyimpan pekerjaan Anda terlebih dahulu. yakin akan mengumpulkan tugas Anda?',
                 showCloseButton: true,
                 showCancelButton: true,
                 confirmButtonText: 'Ya',
@@ -363,7 +375,10 @@
             }
         })
     })
-    
+    $("#font").change(function(){
+        let font = $(this).val();
+        $(".soal label").css("font-size", font)
+    })
     // $("textarea").on({
     //     keydown: function(e) {
     //     if (e.which === 32 || e.which === 13)
