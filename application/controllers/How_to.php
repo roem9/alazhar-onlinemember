@@ -18,6 +18,14 @@ class How_to extends CI_Controller {
         $this->load->view("pages/how_to/hifdzi1", $data);
         $this->load->view("templates/footer-user", $data);
     }
+
+    public function tarkibi2(){
+        $data['title'] = "Cara Penggunaan TARKIBI 2";
+
+        $this->load->view("templates/header-user", $data);
+        $this->load->view("pages/how_to/tarkibi2", $data);
+        $this->load->view("templates/footer-user", $data);
+    }
     
 
 }
