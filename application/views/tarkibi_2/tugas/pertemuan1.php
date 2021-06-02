@@ -69,7 +69,7 @@
                                     <div class="pembahasan mb-3"><b><span class="text-danger">Pembahasan : </span></b> <br><?= $data_latihan['pembahasan'][1]?></div>
                                 <?php endif;?>
                             <?php elseif($data_latihan['periksa'] == 2) :?>   
-                                <div class="jawaban mb-3"><b>Jawaban :</b> <br><span style="font-size: 22px"><?= $data_latihan['jawaban'][0]?></span></div>
+                                <div class="jawaban mb-3"><b>Jawaban :</b> <br><span style="font-size: 22px"><?= $data_latihan['jawaban'][1]?></span></div>
                             <?php else:?>
                                 <textarea name="jawaban[]" id="jawaban2" cols="30" rows="5" class="form-control form-control-lg"><?= $data_latihan['jawaban'][1]?></textarea>
                                 <small id="msg-empty-1" class="form-text text-danger">
@@ -104,7 +104,7 @@
                                     <div class="pembahasan mb-3"><b><span class="text-danger">Pembahasan : </span></b> <br><?= $data_latihan['pembahasan'][2]?></div>
                                 <?php endif;?>
                             <?php elseif($data_latihan['periksa'] == 2) :?>   
-                                <div class="jawaban mb-3"><b>Jawaban :</b> <br><span style="font-size: 22px"><?= $data_latihan['jawaban'][0]?></span></div>
+                                <div class="jawaban mb-3"><b>Jawaban :</b> <br><span style="font-size: 22px"><?= $data_latihan['jawaban'][2]?></span></div>
                             <?php else:?>
                                 <textarea name="jawaban[]" id="jawaban3" cols="30" rows="5" class="form-control form-control-lg"><?= $data_latihan['jawaban'][2]?></textarea>
                                 <small id="msg-empty-2" class="form-text text-danger">
@@ -139,7 +139,7 @@
                                     <div class="pembahasan mb-3"><b><span class="text-danger">Pembahasan : </span></b> <br><?= $data_latihan['pembahasan'][3]?></div>
                                 <?php endif;?>
                             <?php elseif($data_latihan['periksa'] == 2) :?>   
-                                <div class="jawaban mb-3"><b>Jawaban :</b> <br><span style="font-size: 22px"><?= $data_latihan['jawaban'][0]?></span></div>
+                                <div class="jawaban mb-3"><b>Jawaban :</b> <br><span style="font-size: 22px"><?= $data_latihan['jawaban'][3]?></span></div>
                             <?php else:?>
                                 <textarea name="jawaban[]" id="jawaban4" cols="30" rows="5" class="form-control form-control-lg"><?= $data_latihan['jawaban'][3]?></textarea>
                                 <small id="msg-empty-3" class="form-text text-danger">
@@ -174,7 +174,7 @@
                                     <div class="pembahasan mb-3"><b><span class="text-danger">Pembahasan : </span></b> <br><?= $data_latihan['pembahasan'][4]?></div>
                                 <?php endif;?>
                             <?php elseif($data_latihan['periksa'] == 2) :?>   
-                                <div class="jawaban mb-3"><b>Jawaban :</b> <br><span style="font-size: 22px"><?= $data_latihan['jawaban'][0]?></span></div>
+                                <div class="jawaban mb-3"><b>Jawaban :</b> <br><span style="font-size: 22px"><?= $data_latihan['jawaban'][4]?></span></div>
                             <?php else:?>
                                 <textarea name="jawaban[]" id="jawaban5" cols="30" rows="5" class="form-control form-control-lg"><?= $data_latihan['jawaban'][4]?></textarea>
                                 <small id="msg-empty-4" class="form-text text-danger">
