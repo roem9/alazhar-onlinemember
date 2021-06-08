@@ -468,7 +468,7 @@
                                 <?php elseif($data_latihan['periksa'] == 2) :?>   
                                     <div class="jawaban mb-3"><b>Jawaban :</b> <br><span style="font-size: 22px"><?= $data_latihan['jawaban'][$i]?></span></div>
                                 <?php else:?>
-                                    <textarea name="jawaban[]" id="jawaban<?= $i+1?>" cols="30" rows="5" class="form-control form-control-lg"><?= $soal['jawaban']?></textarea>
+                                    <textarea name="jawaban[]" id="jawaban<?= $i+1?>" cols="30" rows="5" class="form-control form-control-lg"><?= $data_latihan['jawaban'][$i]?></textarea>
                                     <small id="msg-empty-<?=$i?>" class="form-text text-danger">
                                         <?php 
                                             if($data_latihan['jawaban'][$i] == ""):
