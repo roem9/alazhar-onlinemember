@@ -703,7 +703,8 @@
 
     $("textarea").on({
         keydown: function(e) {
-        if ((e.which === 32 || e.which === 13) || (($(this).val() == "أَنْ " || $(this).val() == "لَمْ ") && (e.which === 8 || e.which === 46 )))
+        // if ((e.which === 32 || e.which === 13) || (($(this).val() == "أَنْ " || $(this).val() == "لَمْ ") && (e.which === 8 || e.which === 46 )))
+        if ((e.which === 13) || (($(this).val() == "أَنْ " || $(this).val() == "لَمْ ") && (e.which === 8 || e.which === 46 )))
             return false;
         },
         keyup: function(){
