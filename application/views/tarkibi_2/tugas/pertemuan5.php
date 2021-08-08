@@ -710,10 +710,10 @@
         keyup: function(){
         this.value = this.value.toLowerCase();
         },
-        change: function() {
-            this.value = this.value.replace(/\s/g, "");
+        // change: function() {
+        //     this.value = this.value.replace(/\s/g, "");
             
-        }
+        // }
     });
 
     $("#font").change(function(){
