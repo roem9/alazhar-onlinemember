@@ -416,19 +416,20 @@
         })
     })
 
-    $("textarea").on({
-        keydown: function(e) {
-        if (e.which === 32 || e.which === 13)
-            return false;
-        },
-        keyup: function(){
-        this.value = this.value.toLowerCase();
-        },
-        change: function() {
-            this.value = this.value.replace(/\s/g, "");
+    // $("textarea").on({
+    //     keydown: function(e) {
+    //     if (e.which === 32 || e.which === 13)
+    //         return false;
+    //     },
+    //     keyup: function(){
+    //     this.value = this.value.toLowerCase();
+    //     },
+    //     change: function() {
+    //         this.value = this.value.replace(/\s/g, "");
             
-        }
-    });
+    //     }
+    // });
+    
     $("#font").change(function(){
         let font = $(this).val();
         $(".soal label").css("font-size", font)

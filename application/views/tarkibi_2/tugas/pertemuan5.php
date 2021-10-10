@@ -701,20 +701,20 @@
         })
     })
 
-    $("textarea").on({
-        keydown: function(e) {
-        // if ((e.which === 32 || e.which === 13) || (($(this).val() == "أَنْ " || $(this).val() == "لَمْ ") && (e.which === 8 || e.which === 46 )))
-        if ((e.which === 13) || (($(this).val() == "أَنْ " || $(this).val() == "لَمْ ") && (e.which === 8 || e.which === 46 )))
-            return false;
-        },
-        keyup: function(){
-        this.value = this.value.toLowerCase();
-        },
-        // change: function() {
-        //     this.value = this.value.replace(/\s/g, "");
+    // $("textarea").on({
+    //     keydown: function(e) {
+    //     // if ((e.which === 32 || e.which === 13) || (($(this).val() == "أَنْ " || $(this).val() == "لَمْ ") && (e.which === 8 || e.which === 46 )))
+    //     if ((e.which === 13) || (($(this).val() == "أَنْ " || $(this).val() == "لَمْ ") && (e.which === 8 || e.which === 46 )))
+    //         return false;
+    //     },
+    //     keyup: function(){
+    //     this.value = this.value.toLowerCase();
+    //     },
+    //     // change: function() {
+    //     //     this.value = this.value.replace(/\s/g, "");
             
-        // }
-    });
+    //     // }
+    // });
 
     $("#font").change(function(){
         let font = $(this).val();
